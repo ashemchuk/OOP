@@ -1,8 +1,11 @@
 package ru.ashemchuk;
+
 /*
  * heap sort :)
  */
+
 public class Heapsort {
+
     public static int[] sort(int [] array) {
         int len = array.length;
         for (int i = len / 2 - 1; i >= 0; i--) {
@@ -18,7 +21,8 @@ public class Heapsort {
         }
         return array;
     }
-    private static void heapify (int[] array, int n, int i) {
+
+    private static void heapify(int[] array, int n, int i) {
         int max = i;
         int l = 2 * i + 1;
         int r = 2 * i + 2;
