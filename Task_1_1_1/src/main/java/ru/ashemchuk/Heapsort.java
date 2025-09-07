@@ -1,5 +1,7 @@
 package ru.ashemchuk;
-
+/*
+ * heap sort :)
+ */
 public class Heapsort {
     public static int[] sort(int [] array) {
         int len = array.length;
