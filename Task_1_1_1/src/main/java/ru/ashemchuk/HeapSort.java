@@ -1,10 +1,17 @@
 package ru.ashemchuk;
 
 /*
- * heap sort :)
+ * class for a heap sort of array
  */
 
-public class Heapsort {
+public class HeapSort {
+
+    /*
+    * 1. make a heap
+    * 2. swap last elem with first
+    * 3. sift new first elem  down
+    * @param array - array to sort
+    */
 
     public static int[] sort(int [] array) {
         int len = array.length;
@@ -21,6 +28,13 @@ public class Heapsort {
         }
         return array;
     }
+
+    /*
+    * fixing a heap (sifting)
+    * @param array - array
+    * @param n - array's length
+    * @param i - index of elem we sift
+    * */
 
     private static void heapify(int[] array, int n, int i) {
         int max = i;
