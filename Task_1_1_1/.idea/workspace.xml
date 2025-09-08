@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b924c04-57ee-4f3e-812f-59f27edc1b18" name="Changes" comment="kotlin config files to groovy, add comment(?) to heapsort class for doc">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ashemchuk/Heapsort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ashemchuk/HeapSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/ashemchuk/HeapsortTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/ashemchuk/HeapsortTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/ashemchuk/HeapsortTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/ashemchuk/HeapSortTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
