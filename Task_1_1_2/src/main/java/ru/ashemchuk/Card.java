@@ -48,7 +48,7 @@ public class Card {
         if (isHole) {
             return "<hole card>";
         }
-        return suit.getDisplay() + " of " + rank.getDisplay();
+        return suit.getDisplay() + " of " + rank.getDisplay() + "(" + getRank().getWorth() + ")";
     }
 
 }

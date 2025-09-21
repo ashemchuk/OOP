@@ -17,10 +17,13 @@ public class Dealer extends Player{
 
     public Hand turn(Deck deck) {
         System.out.println("Dealer's turn");
+        System.out.println("-------");
 
-        System.out.print("Dealer open hole card: " + holeCard.open().toString());
+        System.out.println("Dealer open hole card: " + holeCard.open());
+        System.out.println("\tDealer's cards" + hand);
         while (hand.getTotalWorth() < 17) {
-            System.out.println("Dealer open card: " + takeCard(deck).toString());
+            System.out.println("Dealer open card: " + takeCard(deck));
+            System.out.println("\tDealer's cards: " + hand);
         }
         return hand;
     }

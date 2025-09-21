@@ -9,8 +9,12 @@ public class User extends Player{
         super(hand);
     }
     public Hand turn(Deck deck) {
-        System.out.println("User, your turn!");
+        System.out.println("Your turn!");
+        System.out.println("-------");
         while (true) {
+            if (hand.getTotalWorth() >= 21) {
+                return hand;
+            }
             System.out.println("Enter \"1\" to take a card and \"0\" to stop...");
             int nextInput = console.nextInt();
             if (nextInput == 0) {
@@ -20,7 +24,7 @@ public class User extends Player{
             if (nextInput == 1) {
                 System.out.println("You open card: " + takeCard(deck).toString());
             }
-            System.out.println(hand.getCards().toString());
+            System.out.println("\tYour cards: " + hand);
         }
         return hand;
     }

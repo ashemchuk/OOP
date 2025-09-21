@@ -31,4 +31,16 @@ public class Hand {
                 .reduce(0, Integer::sum);
     }
 
+    @Override
+    public String toString() {
+        return this.getCards().toString() + " => " + this.getTotalWorth();
+    }
+
+    public String toString(boolean isHole) {
+        String out = this.getCards().toString();
+        if (!isHole) {
+            out += " => " + this.getTotalWorth();
+        }
+        return out;
+    }
 }
