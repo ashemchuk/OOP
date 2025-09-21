@@ -1,11 +1,17 @@
 package ru.ashemchuk;
 
 public abstract class Player {
-    private Hand hand;
+    protected Hand hand;
 
     public Player(Hand hand) {
         this.hand = hand;
     }
+
+    public Hand getHand() {
+        return this.hand;
+    }
+
+    public abstract Hand turn(Deck deck);
 
     public Card takeCard(Deck deck) {
         Card card = deck.pull();

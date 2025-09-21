@@ -19,6 +19,10 @@ public class Hand {
         return this;
     }
 
+    public void clear() {
+        cards.clear();
+    }
+
     public int getTotalWorth() {
         //I'm proud of this :)
         return cards

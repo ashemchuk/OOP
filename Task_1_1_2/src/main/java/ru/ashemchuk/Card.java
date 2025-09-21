@@ -26,6 +26,11 @@ public class Card {
         return this;
     }
 
+    public Card open() {
+        isHole = false;
+        return this;
+    }
+
     public Rank getRank() {
         return rank;
     }
@@ -43,7 +48,7 @@ public class Card {
         if (isHole) {
             return "<hole card>";
         }
-        return suit.getDisplay() + "of" + rank.getDisplay();
+        return suit.getDisplay() + " of " + rank.getDisplay();
     }
 
 }
