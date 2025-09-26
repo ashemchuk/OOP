@@ -1,7 +1,26 @@
 package ru.ashemchuk;
 
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Random;
+
 public class Deck {
+    final List<Card> cards = new LinkedList<>();
+    static Random random = new Random();
     public Card pull() {
-        return Card.randomOf();
+        if (cards.isEmpty()) {
+            fill();
+        }
+        Card card = cards.get(random.nextInt(cards.size()));
+        cards.remove(card);
+        return card;
+    }
+
+    private void fill() {
+        for (Rank rank : Rank.values()) {
+            for (Suit suit: Suit.values()) {
+                cards.add(new Card(suit, rank));
+            }
+        }
     }
 }
