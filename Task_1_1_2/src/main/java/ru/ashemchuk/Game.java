@@ -1,24 +1,16 @@
 package ru.ashemchuk;
 
 public class Game {
-    private static Output out = new Output();
-    private Deck deck;
-    private Dealer dealer;
-    private User user;
+    private static final Output out = new Output();
+    private final Deck deck;
+    private final Dealer dealer;
+    private final User user;
     private int round = 1;
 
     public Game() {
         this.deck = new Deck();
         this.dealer = new Dealer(new Hand());
         this.user = new User(new Hand());
-    }
-
-    public Dealer getDealer() {
-        return dealer;
-    }
-
-    public User getUser() {
-        return user;
     }
 
     public int getRound() {

@@ -3,7 +3,7 @@ package ru.ashemchuk;
 import java.util.Scanner;
 
 public class User extends Player {
-    private static Scanner in = new Scanner(System.in);
+    private final static Scanner in = new Scanner(System.in);
 
     public User(Hand hand) {
         super(hand);
@@ -19,7 +19,7 @@ public class User extends Player {
                 case 0:
                     return false;
                 case 1:
-                    output.printMove(this, takeCard(deck), hand);
+                    output.printMove(this, takeCard(deck));
                     break;
                 default:
                     output.printBadInput();

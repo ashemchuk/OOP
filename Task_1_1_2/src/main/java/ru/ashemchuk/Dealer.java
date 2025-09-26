@@ -7,17 +7,16 @@ public class Dealer extends Player {
         super(hand);
     }
 
-    public Card takeCard(Deck deck, boolean isHole) {
+    public void takeCard(Deck deck, boolean isHole) {
         Card card = super.takeCard(deck);
         if (isHole) {
             card.withHole();
             holeCard = card;
         }
-        return card;
     }
 
     public boolean turn(Deck deck) {
-        output.printMove(this, takeCard(deck), hand);
+        output.printMove(this, takeCard(deck));
         return hand.getTotalWorth() < 17;
     }
 

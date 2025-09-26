@@ -16,7 +16,7 @@ public class Output {
         System.out.println("Enter \"1\" to take a card and \"0\" to stop...");
     }
 
-    public void printMove(Player player, Card card, Hand hand) {
+    public void printMove(Player player, Card card) {
         System.out.println(player.getTitle() + " open card: " + card);
         printHand(player);
     }

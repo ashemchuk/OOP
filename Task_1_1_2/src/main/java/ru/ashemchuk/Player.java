@@ -1,8 +1,8 @@
 package ru.ashemchuk;
 
 public abstract class Player {
-    protected static Output output = new Output();
-    protected Hand hand;
+    protected static final Output output = new Output();
+    protected final Hand hand;
     protected int score;
 
     public Player(Hand hand) {
@@ -13,12 +13,10 @@ public abstract class Player {
         return this.hand;
     }
 
-    public abstract boolean turn(Deck deck);
-
     public abstract String getTitle();
 
-    public int addScore(int amount) {
-        return score += amount;
+    public void addScore(int amount) {
+        score += amount;
     }
 
     public int getScore() {
