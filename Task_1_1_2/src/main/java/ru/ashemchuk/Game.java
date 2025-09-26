@@ -1,11 +1,11 @@
 package ru.ashemchuk;
 
 public class Game {
+    private static Output out = new Output();
     private Deck deck;
     private Dealer dealer;
     private User user;
     private int round = 1;
-    private static Output out = new Output();
 
     public Game() {
         this.deck = new Deck();
@@ -30,6 +30,7 @@ public class Game {
             round();
         }
     }
+
     public void round() {
         out.printRoundStart(this);
 
@@ -43,11 +44,13 @@ public class Game {
         out.printHand(dealer);
 
         out.printTurn(user);
-        while(user.turn(deck)){}
+        while (user.turn(deck)) {
+        }
         dealer.openHoleCard();
         if (user.hand.getTotalWorth() < 21) {
             out.printTurn(dealer);
-            while(dealer.turn(deck)){}
+            while (dealer.turn(deck)) {
+            }
         }
 
         out.printWinner(user, dealer);

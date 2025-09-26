@@ -2,12 +2,13 @@ package ru.ashemchuk;
 
 import java.util.Scanner;
 
-public class User extends Player{
+public class User extends Player {
     private static Scanner in = new Scanner(System.in);
 
     public User(Hand hand) {
         super(hand);
     }
+
     public boolean turn(Deck deck) {
         output.printInputPrompt();
 
@@ -23,8 +24,7 @@ public class User extends Player{
                 default:
                     output.printBadInput();
             }
-        }
-        catch (Exception ex) {
+        } catch (Exception ex) {
             in.nextLine();
             output.printBadInput();
         }
@@ -32,6 +32,6 @@ public class User extends Player{
     }
 
     public String getTitle() {
-        return  "User";
+        return "User";
     }
 }

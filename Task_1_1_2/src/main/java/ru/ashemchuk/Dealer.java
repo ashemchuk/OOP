@@ -1,7 +1,8 @@
 package ru.ashemchuk;
 
-public class Dealer extends Player{
+public class Dealer extends Player {
     private Card holeCard;
+
     public Dealer(Hand hand) {
         super(hand);
     }
@@ -14,13 +15,16 @@ public class Dealer extends Player{
         }
         return card;
     }
+
     public boolean turn(Deck deck) {
         output.printMove(this, takeCard(deck), hand);
         return hand.getTotalWorth() < 17;
     }
-    public void openHoleCard(){
+
+    public void openHoleCard() {
         holeCard.open();
     }
+
     public String getTitle() {
         return "Dealer";
     }

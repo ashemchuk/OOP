@@ -5,8 +5,9 @@ import java.util.List;
 import java.util.Random;
 
 public class Deck {
-    final List<Card> cards = new LinkedList<>();
     static Random random = new Random();
+    final List<Card> cards = new LinkedList<>();
+
     public Card pull() {
         if (cards.isEmpty()) {
             fill();
@@ -18,7 +19,7 @@ public class Deck {
 
     private void fill() {
         for (Rank rank : Rank.values()) {
-            for (Suit suit: Suit.values()) {
+            for (Suit suit : Suit.values()) {
                 cards.add(new Card(suit, rank));
             }
         }

@@ -1,9 +1,10 @@
 package ru.ashemchuk;
 
 public class Card {
-    private boolean isHole = false; // 2nd dealer's card (hidden)
     private final Rank rank;
     private final Suit suit;
+    private boolean isHole = false; // 2nd dealer's card (hidden)
+
     Card(Suit suit, Rank rank) {
         this.suit = suit;
         this.rank = rank;

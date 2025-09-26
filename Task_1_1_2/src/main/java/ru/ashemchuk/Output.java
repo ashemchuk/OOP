@@ -2,14 +2,14 @@ package ru.ashemchuk;
 
 public class Output {
 
-    public void printRoundStart (Game game) {
-        System.out.println("Round "  + game.getRound());
+    public void printRoundStart(Game game) {
+        System.out.println("Round " + game.getRound());
         System.out.println("Dealer dealt the cards");
 
     }
 
     public void printHand(Player player) {
-        System.out.println("\t" + player.getTitle() +", your cards: " + player.getHand());
+        System.out.println("\t" + player.getTitle() + ", your cards: " + player.getHand());
     }
 
     public void printInputPrompt() {
@@ -27,7 +27,7 @@ public class Output {
         System.out.println();
     }
 
-    public void printBadInput(){
+    public void printBadInput() {
         System.out.println("Bad input:(");
     }
 
@@ -61,5 +61,5 @@ public class Output {
     public void printScores(Player p1, Player p2) {
         System.out.printf("%s %d:%d %s\n", p1.getTitle(), p1.getScore(), p2.getScore(), p2.getTitle());
     }
-    
+
 }
