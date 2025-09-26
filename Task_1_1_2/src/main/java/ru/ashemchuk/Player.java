@@ -2,6 +2,8 @@ package ru.ashemchuk;
 
 public abstract class Player {
     protected Hand hand;
+    protected static Output output = new Output();
+    protected int score;
 
     public Player(Hand hand) {
         this.hand = hand;
@@ -11,7 +13,16 @@ public abstract class Player {
         return this.hand;
     }
 
-    public abstract Hand turn(Deck deck);
+    public abstract boolean turn(Deck deck);
+    public abstract String getTitle();
+
+    public int addScore(int amount) {
+        return score += amount;
+    }
+
+    public int getScore() {
+        return score;
+    }
 
     public Card takeCard(Deck deck) {
         Card card = deck.pull();

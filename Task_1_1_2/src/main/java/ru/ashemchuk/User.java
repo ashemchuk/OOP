@@ -3,29 +3,35 @@ package ru.ashemchuk;
 import java.util.Scanner;
 
 public class User extends Player{
-    private Scanner console = new Scanner(System.in);
+    private static Scanner in = new Scanner(System.in);
 
     public User(Hand hand) {
         super(hand);
     }
-    public Hand turn(Deck deck) {
-        System.out.println("Your turn!");
-        System.out.println("-------");
-        while (true) {
-            if (hand.getTotalWorth() >= 21) {
-                return hand;
+    public boolean turn(Deck deck) {
+        output.printInputPrompt();
+
+        try {
+            int next = in.nextInt();
+            in.nextLine();
+            switch (next) {
+                case 0:
+                    return false;
+                case 1:
+                    output.printMove(this, takeCard(deck), hand);
+                    break;
+                default:
+                    output.printBadInput();
             }
-            System.out.println("Enter \"1\" to take a card and \"0\" to stop...");
-            int nextInput = console.nextInt();
-            if (nextInput == 0) {
-                System.out.println();
-                break;
-            }
-            if (nextInput == 1) {
-                System.out.println("You open card: " + takeCard(deck).toString());
-            }
-            System.out.println("\tYour cards: " + hand);
         }
-        return hand;
+        catch (Exception ex) {
+            in.nextLine();
+            output.printBadInput();
+        }
+        return hand.getTotalWorth() < 21;
+    }
+
+    public String getTitle() {
+        return  "User";
     }
 }

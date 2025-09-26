@@ -33,12 +33,8 @@ public class Hand {
 
     @Override
     public String toString() {
-        return this.getCards().toString() + " => " + this.getTotalWorth();
-    }
-
-    public String toString(boolean isHole) {
         String out = this.getCards().toString();
-        if (!isHole) {
+        if (!cards.stream().map(Card::getIsHole).reduce(false, (acc, x) -> x || acc)) {
             out += " => " + this.getTotalWorth();
         }
         return out;
