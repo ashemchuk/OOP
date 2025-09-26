@@ -38,7 +38,7 @@ class DealerTest {
 
         Card taken = dealer.takeCard(deck);
         Rank rank = taken.getRank();
-        assertEquals(Rank.ACE, rank);
+        assertEquals(Rank.ACE_DOWNGRADED, rank);
         assertEquals(1, rank.getWorth());
     }
 }

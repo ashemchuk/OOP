@@ -52,7 +52,7 @@ public abstract class Player {
         Card card = deck.pull();
         int worth = hand.getTotalWorth();
         if (worth > 21 && card.getRank() == Rank.ACE) {
-            card.getRank().downgrade();
+            card.downgrade();
         }
         hand.addCard(card);
         return card;

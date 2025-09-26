@@ -16,7 +16,8 @@ public enum Rank {
 	JACK("Jack", 10),
 	QUEEN("Queen", 10),
 	KING("King", 10),
-	ACE("Ace", 11);
+	ACE("Ace", 11),
+    ACE_DOWNGRADED("Ace", 1);
 
     private final String display;
     private int worth;
@@ -43,15 +44,6 @@ public enum Rank {
      */
     public String getDisplay() { // rank or display???
         return display;
-    }
-
-    /**
-     * downgrades ace card rank
-     */
-    public void downgrade() {
-        if (this == ACE) {
-            this.worth = 1;
-        }
     }
 }
 

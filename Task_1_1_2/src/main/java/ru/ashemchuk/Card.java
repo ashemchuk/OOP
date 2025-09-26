@@ -4,7 +4,7 @@ package ru.ashemchuk;
  * Classic 52-pcs games deck card
  */
 public class Card {
-    private final Rank rank;
+    private Rank rank;
     private final Suit suit;
     private boolean isHole = false; // 2nd dealer's card (hidden)
 
@@ -40,6 +40,15 @@ public class Card {
      */
     public Rank getRank() {
         return rank;
+    }
+
+    /**
+     * downgrades ace card rank
+     */
+    public void downgrade() {
+        if (getRank() == Rank.ACE) {
+            this.rank = Rank.ACE_DOWNGRADED;
+        }
     }
 
     /**

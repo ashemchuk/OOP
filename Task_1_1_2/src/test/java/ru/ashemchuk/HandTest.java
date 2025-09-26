@@ -13,12 +13,11 @@ class HandTest {
 
         Card ace = new Card(Suit.DIAMOND, Rank.ACE);
         hand.addCard(ace);
-        // FIXME: uncomment when understand flaps reason in ci
-        // assertEquals("[Diamond of Ace(11)] => 11", hand.toString());
+        assertEquals("[Diamond of Ace(11)] => 11", hand.toString());
         assertEquals(1, hand.getCards().size());
         assertEquals(11, hand.getTotalWorth());
 
-        ace.getRank().downgrade();
+        ace.downgrade();
         assertEquals(1, hand.getTotalWorth());
 
         hand.clear();
