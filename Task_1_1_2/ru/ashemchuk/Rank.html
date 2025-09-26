@@ -82,6 +82,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public enum </span><span class="element-name type-name-label">Rank</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Enum.html" title="class or interface in java.lang" class="external-link">Enum</a>&lt;<a href="Rank.html" title="enum class in ru.ashemchuk">Rank</a>&gt;</span></div>
+<div class="block">Classic card ranks</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -104,30 +105,32 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code><a href="#ACE" class="member-name-link">ACE</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#EIGHT" class="member-name-link">EIGHT</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#ACE_DOWNGRADED" class="member-name-link">ACE_DOWNGRADED</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#FIVE" class="member-name-link">FIVE</a></code></div>
+<div class="col-first even-row-color"><code><a href="#EIGHT" class="member-name-link">EIGHT</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#FOUR" class="member-name-link">FOUR</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#FIVE" class="member-name-link">FIVE</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#JACK" class="member-name-link">JACK</a></code></div>
+<div class="col-first even-row-color"><code><a href="#FOUR" class="member-name-link">FOUR</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#KING" class="member-name-link">KING</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#JACK" class="member-name-link">JACK</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#NINE" class="member-name-link">NINE</a></code></div>
+<div class="col-first even-row-color"><code><a href="#KING" class="member-name-link">KING</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#QUEEN" class="member-name-link">QUEEN</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#NINE" class="member-name-link">NINE</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#SEVEN" class="member-name-link">SEVEN</a></code></div>
+<div class="col-first even-row-color"><code><a href="#QUEEN" class="member-name-link">QUEEN</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#SIX" class="member-name-link">SIX</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#SEVEN" class="member-name-link">SEVEN</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#TEN" class="member-name-link">TEN</a></code></div>
+<div class="col-first even-row-color"><code><a href="#SIX" class="member-name-link">SIX</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code><a href="#THREE" class="member-name-link">THREE</a></code></div>
+<div class="col-first odd-row-color"><code><a href="#TEN" class="member-name-link">TEN</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
-<div class="col-first even-row-color"><code><a href="#TWO" class="member-name-link">TWO</a></code></div>
+<div class="col-first even-row-color"><code><a href="#THREE" class="member-name-link">THREE</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code><a href="#TWO" class="member-name-link">TWO</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 </section>
 </li>
@@ -142,23 +145,20 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#downgrade()" class="member-name-link">downgrade</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDisplay()" class="member-name-link">getDisplay</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDisplay()" class="member-name-link">getDisplay</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getWorth()" class="member-name-link">getWorth</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getWorth()" class="member-name-link">getWorth</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Rank.html" title="enum class in ru.ashemchuk">Rank</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#valueOf(java.lang.String)" class="member-name-link">valueOf</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Rank.html" title="enum class in ru.ashemchuk">Rank</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#valueOf(java.lang.String)" class="member-name-link">valueOf</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Returns the enum constant of this class with the specified name.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Rank.html" title="enum class in ru.ashemchuk">Rank</a>[]</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#values()" class="member-name-link">values</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Rank.html" title="enum class in ru.ashemchuk">Rank</a>[]</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#values()" class="member-name-link">values</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Returns an array containing the constants of this enum class, in
 the order they are declared.</div>
 </div>
@@ -260,6 +260,12 @@ the order they are declared.</div>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Rank.html" title="enum class in ru.ashemchuk">Rank</a></span>&nbsp;<span class="element-name">ACE</span></div>
 </section>
 </li>
+<li>
+<section class="detail" id="ACE_DOWNGRADED">
+<h3>ACE_DOWNGRADED</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="Rank.html" title="enum class in ru.ashemchuk">Rank</a></span>&nbsp;<span class="element-name">ACE_DOWNGRADED</span></div>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -303,18 +309,20 @@ not permitted.)</div>
 <section class="detail" id="getWorth()">
 <h3>getWorth</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getWorth</span>()</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>rank's worth</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getDisplay()">
 <h3>getDisplay</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getDisplay</span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="downgrade()">
-<h3>downgrade</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">downgrade</span>()</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>rank's display string</dd>
+</dl>
 </section>
 </li>
 </ul>

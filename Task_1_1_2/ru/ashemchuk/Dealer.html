@@ -78,6 +78,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Dealer</span>
 <span class="extends-implements">extends <a href="Player.html" title="class in ru.ashemchuk">Player</a></span></div>
+<div class="block">Dealer</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -122,14 +123,20 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#openHoleCard()" class="member-name-link">openHoleCard</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">opens hole card</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#takeCard(ru.ashemchuk.Deck,boolean)" class="member-name-link">takeCard</a><wbr>(<a href="Deck.html" title="class in ru.ashemchuk">Deck</a>&nbsp;deck,
  boolean&nbsp;isHole)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">takes card from deck, hole if specified</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#turn(ru.ashemchuk.Deck)" class="member-name-link">turn</a><wbr>(<a href="Deck.html" title="class in ru.ashemchuk">Deck</a>&nbsp;deck)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">do dealers turn</div>
+</div>
 </div>
 </div>
 </div>
@@ -154,6 +161,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="&lt;init&gt;(ru.ashemchuk.Hand)">
 <h3>Dealer</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Dealer</span><wbr><span class="parameters">(<a href="Hand.html" title="class in ru.ashemchuk">Hand</a>&nbsp;hand)</span></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>hand</code> - </dd>
+</dl>
 </section>
 </li>
 </ul>
@@ -168,6 +179,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getHoleCard()">
 <h3>getHoleCard</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Card.html" title="class in ru.ashemchuk">Card</a></span>&nbsp;<span class="element-name">getHoleCard</span>()</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>hole card</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -175,18 +190,32 @@ loadScripts(document, 'script');</script>
 <h3>takeCard</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">takeCard</span><wbr><span class="parameters">(<a href="Deck.html" title="class in ru.ashemchuk">Deck</a>&nbsp;deck,
  boolean&nbsp;isHole)</span></div>
+<div class="block">takes card from deck, hole if specified</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>deck</code> - </dd>
+<dd><code>isHole</code> - </dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="turn(ru.ashemchuk.Deck)">
 <h3>turn</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">turn</span><wbr><span class="parameters">(<a href="Deck.html" title="class in ru.ashemchuk">Deck</a>&nbsp;deck)</span></div>
+<div class="block">do dealers turn</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>deck</code> - </dd>
+<dt>Returns:</dt>
+<dd>should dealer do more moves?</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="openHoleCard()">
 <h3>openHoleCard</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">openHoleCard</span>()</div>
+<div class="block">opens hole card</div>
 </section>
 </li>
 <li>
@@ -196,6 +225,8 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Player.html#getTitle()">getTitle</a></code>&nbsp;in class&nbsp;<code><a href="Player.html" title="class in ru.ashemchuk">Player</a></code></dd>
+<dt>Returns:</dt>
+<dd>Dealer's display string</dd>
 </dl>
 </section>
 </li>

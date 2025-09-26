@@ -78,6 +78,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">User</span>
 <span class="extends-implements">extends <a href="Player.html" title="class in ru.ashemchuk">Player</a></span></div>
+<div class="block">User</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -99,7 +100,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(ru.ashemchuk.Hand)" class="member-name-link">User</a><wbr>(<a href="Hand.html" title="class in ru.ashemchuk">Hand</a>&nbsp;hand)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">default constructor</div>
+</div>
 </div>
 </section>
 </li>
@@ -119,7 +122,12 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#turn(ru.ashemchuk.Deck)" class="member-name-link">turn</a><wbr>(<a href="Deck.html" title="class in ru.ashemchuk">Deck</a>&nbsp;deck)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">do user turn:
+ - promting user to input
+ - awaiting user's input, then validating
+ - checking hand worth</div>
+</div>
 </div>
 </div>
 </div>
@@ -144,6 +152,11 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="&lt;init&gt;(ru.ashemchuk.Hand)">
 <h3>User</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">User</span><wbr><span class="parameters">(<a href="Hand.html" title="class in ru.ashemchuk">Hand</a>&nbsp;hand)</span></div>
+<div class="block">default constructor</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>hand</code> - </dd>
+</dl>
 </section>
 </li>
 </ul>
@@ -158,6 +171,16 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="turn(ru.ashemchuk.Deck)">
 <h3>turn</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">turn</span><wbr><span class="parameters">(<a href="Deck.html" title="class in ru.ashemchuk">Deck</a>&nbsp;deck)</span></div>
+<div class="block">do user turn:
+ - promting user to input
+ - awaiting user's input, then validating
+ - checking hand worth</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>deck</code> - </dd>
+<dt>Returns:</dt>
+<dd>user's hand worth</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -167,6 +190,8 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Player.html#getTitle()">getTitle</a></code>&nbsp;in class&nbsp;<code><a href="Player.html" title="class in ru.ashemchuk">Player</a></code></dd>
+<dt>Returns:</dt>
+<dd>user's name display string</dd>
 </dl>
 </section>
 </li>
