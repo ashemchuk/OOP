@@ -7,6 +7,10 @@ public class Dealer extends Player {
         super(hand);
     }
 
+    public Card getHoleCard() {
+        return holeCard;
+    }
+
     public void takeCard(Deck deck, boolean isHole) {
         Card card = super.takeCard(deck);
         if (isHole) {
