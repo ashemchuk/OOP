@@ -1,5 +1,8 @@
 package ru.ashemchuk;
 
+/**
+ * Classic card ranks
+ */
 public enum Rank {
     TWO("Two", 2),
 	THREE("Three", 3),
@@ -18,19 +21,33 @@ public enum Rank {
     private final String display;
     private int worth;
 
+    /**
+     * default constructor
+     * @param display
+     * @param worth
+     */
     Rank(String display, int worth) {
         this.display = display;
         this.worth = worth;
     }
 
+    /**
+     * @return rank's worth
+     */
     public int getWorth() {
         return worth;
     }
 
+    /**
+     * @return rank's display string
+     */
     public String getDisplay() { // rank or display???
         return display;
     }
 
+    /**
+     * downgrades ace card rank
+     */
     public void downgrade() {
         if (this == ACE) {
             this.worth = 1;

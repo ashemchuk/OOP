@@ -1,5 +1,8 @@
 package ru.ashemchuk;
 
+/**
+ * Game-logic class
+ */
 public class Game {
     private static final Output out = new Output();
     private final Deck deck;
@@ -7,22 +10,34 @@ public class Game {
     private final User user;
     private int round = 1;
 
+    /**
+     * default constructor
+     */
     public Game() {
         this.deck = new Deck();
         this.dealer = new Dealer(new Hand());
         this.user = new User(new Hand());
     }
 
+    /**
+     * @return number round
+     */
     public int getRound() {
         return round;
     }
 
+    /**
+     * runs game loop, until someone gets 3 wins
+     */
     public void runGame() {
         while (user.getScore() < 3 && dealer.getScore() < 3) {
             round();
         }
     }
 
+    /**
+     * do one round cycle
+     */
     public void round() {
         out.printRoundStart(this);
 
