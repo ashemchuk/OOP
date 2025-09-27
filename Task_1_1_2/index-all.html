@@ -56,21 +56,23 @@ loadScripts(document, 'script');</script>
 <dt><a href="ru/ashemchuk/Rank.html#ACE_DOWNGRADED" class="member-name-link">ACE_DOWNGRADED</a> - Enum constant in enum class ru.ashemchuk.<a href="ru/ashemchuk/Rank.html" title="enum class in ru.ashemchuk">Rank</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="ru/ashemchuk/Hand.html#addCard(ru.ashemchuk.Card)" class="member-name-link">addCard(Card)</a> - Method in class ru.ashemchuk.<a href="ru/ashemchuk/Hand.html" title="class in ru.ashemchuk">Hand</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Adds a card to the hand.</div>
+</dd>
 <dt><a href="ru/ashemchuk/Player.html#addScore(int)" class="member-name-link">addScore(int)</a> - Method in class ru.ashemchuk.<a href="ru/ashemchuk/Player.html" title="class in ru.ashemchuk">Player</a></dt>
 <dd>
-<div class="block">add points to player's score</div>
+<div class="block">Adds points to the player's score.</div>
 </dd>
 </dl>
 <h2 class="title" id="I:C">C</h2>
 <dl class="index">
 <dt><a href="ru/ashemchuk/Card.html" class="type-name-link" title="class in ru.ashemchuk">Card</a> - Class in <a href="ru/ashemchuk/package-summary.html">ru.ashemchuk</a></dt>
 <dd>
-<div class="block">Classic 52-pcs games deck card</div>
+<div class="block">Represents a playing card from a standard 52-card deck.</div>
 </dd>
 <dt><a href="ru/ashemchuk/Hand.html#clear()" class="member-name-link">clear()</a> - Method in class ru.ashemchuk.<a href="ru/ashemchuk/Hand.html" title="class in ru.ashemchuk">Hand</a></dt>
 <dd>
-<div class="block">clears hand</div>
+<div class="block">Removes all cards from the hand, making it empty.</div>
 </dd>
 <dt><a href="ru/ashemchuk/Suit.html#CLUB" class="member-name-link">CLUB</a> - Enum constant in enum class ru.ashemchuk.<a href="ru/ashemchuk/Suit.html" title="enum class in ru.ashemchuk">Suit</a></dt>
 <dd>&nbsp;</dd>
@@ -79,19 +81,23 @@ loadScripts(document, 'script');</script>
 <dl class="index">
 <dt><a href="ru/ashemchuk/Dealer.html" class="type-name-link" title="class in ru.ashemchuk">Dealer</a> - Class in <a href="ru/ashemchuk/package-summary.html">ru.ashemchuk</a></dt>
 <dd>
-<div class="block">Dealer</div>
+<div class="block">Represents a dealer in a card game, extending the Player class.</div>
 </dd>
 <dt><a href="ru/ashemchuk/Dealer.html#%3Cinit%3E(ru.ashemchuk.Hand)" class="member-name-link">Dealer(Hand)</a> - Constructor for class ru.ashemchuk.<a href="ru/ashemchuk/Dealer.html" title="class in ru.ashemchuk">Dealer</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Constructs a Dealer with the specified hand.</div>
+</dd>
 <dt><a href="ru/ashemchuk/Deck.html" class="type-name-link" title="class in ru.ashemchuk">Deck</a> - Class in <a href="ru/ashemchuk/package-summary.html">ru.ashemchuk</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Represents a deck of playing cards from a standard 52-card deck.</div>
+</dd>
 <dt><a href="ru/ashemchuk/Deck.html#%3Cinit%3E()" class="member-name-link">Deck()</a> - Constructor for class ru.ashemchuk.<a href="ru/ashemchuk/Deck.html" title="class in ru.ashemchuk">Deck</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="ru/ashemchuk/Suit.html#DIAMOND" class="member-name-link">DIAMOND</a> - Enum constant in enum class ru.ashemchuk.<a href="ru/ashemchuk/Suit.html" title="enum class in ru.ashemchuk">Suit</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="ru/ashemchuk/Card.html#downgrade()" class="member-name-link">downgrade()</a> - Method in class ru.ashemchuk.<a href="ru/ashemchuk/Card.html" title="class in ru.ashemchuk">Card</a></dt>
 <dd>
-<div class="block">downgrades ace card rank</div>
+<div class="block">Downgrades an Ace card to its lower value.</div>
 </dd>
 </dl>
 <h2 class="title" id="I:E">E</h2>
@@ -110,40 +116,68 @@ loadScripts(document, 'script');</script>
 <dl class="index">
 <dt><a href="ru/ashemchuk/Game.html" class="type-name-link" title="class in ru.ashemchuk">Game</a> - Class in <a href="ru/ashemchuk/package-summary.html">ru.ashemchuk</a></dt>
 <dd>
-<div class="block">Game-logic class</div>
+<div class="block">Manages the core game logic for a card game (likely Blackjack).</div>
 </dd>
 <dt><a href="ru/ashemchuk/Game.html#%3Cinit%3E(ru.ashemchuk.Deck,ru.ashemchuk.Dealer,ru.ashemchuk.User,ru.ashemchuk.Output)" class="member-name-link">Game(Deck, Dealer, User, Output)</a> - Constructor for class ru.ashemchuk.<a href="ru/ashemchuk/Game.html" title="class in ru.ashemchuk">Game</a></dt>
 <dd>
-<div class="block">default constructor</div>
+<div class="block">Constructs a new Game with the specified components.</div>
 </dd>
 <dt><a href="ru/ashemchuk/Hand.html#getCards()" class="member-name-link">getCards()</a> - Method in class ru.ashemchuk.<a href="ru/ashemchuk/Hand.html" title="class in ru.ashemchuk">Hand</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the list of cards currently in the hand.</div>
+</dd>
 <dt><a href="ru/ashemchuk/Rank.html#getDisplay()" class="member-name-link">getDisplay()</a> - Method in enum class ru.ashemchuk.<a href="ru/ashemchuk/Rank.html" title="enum class in ru.ashemchuk">Rank</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the display name of this rank.</div>
+</dd>
 <dt><a href="ru/ashemchuk/Suit.html#getDisplay()" class="member-name-link">getDisplay()</a> - Method in enum class ru.ashemchuk.<a href="ru/ashemchuk/Suit.html" title="enum class in ru.ashemchuk">Suit</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the display name of this suit.</div>
+</dd>
 <dt><a href="ru/ashemchuk/Player.html#getHand()" class="member-name-link">getHand()</a> - Method in class ru.ashemchuk.<a href="ru/ashemchuk/Player.html" title="class in ru.ashemchuk">Player</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the player's current hand of cards.</div>
+</dd>
 <dt><a href="ru/ashemchuk/Dealer.html#getHoleCard()" class="member-name-link">getHoleCard()</a> - Method in class ru.ashemchuk.<a href="ru/ashemchuk/Dealer.html" title="class in ru.ashemchuk">Dealer</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the dealer's hole card (face-down card).</div>
+</dd>
 <dt><a href="ru/ashemchuk/Card.html#getIsHole()" class="member-name-link">getIsHole()</a> - Method in class ru.ashemchuk.<a href="ru/ashemchuk/Card.html" title="class in ru.ashemchuk">Card</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Checks if this card is a hole card (face down).</div>
+</dd>
 <dt><a href="ru/ashemchuk/Card.html#getRank()" class="member-name-link">getRank()</a> - Method in class ru.ashemchuk.<a href="ru/ashemchuk/Card.html" title="class in ru.ashemchuk">Card</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the rank of this card.</div>
+</dd>
 <dt><a href="ru/ashemchuk/Game.html#getRound()" class="member-name-link">getRound()</a> - Method in class ru.ashemchuk.<a href="ru/ashemchuk/Game.html" title="class in ru.ashemchuk">Game</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the current round number.</div>
+</dd>
 <dt><a href="ru/ashemchuk/Player.html#getScore()" class="member-name-link">getScore()</a> - Method in class ru.ashemchuk.<a href="ru/ashemchuk/Player.html" title="class in ru.ashemchuk">Player</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the player's current score.</div>
+</dd>
 <dt><a href="ru/ashemchuk/Dealer.html#getTitle()" class="member-name-link">getTitle()</a> - Method in class ru.ashemchuk.<a href="ru/ashemchuk/Dealer.html" title="class in ru.ashemchuk">Dealer</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the title used for displaying the dealer.</div>
+</dd>
 <dt><a href="ru/ashemchuk/Player.html#getTitle()" class="member-name-link">getTitle()</a> - Method in class ru.ashemchuk.<a href="ru/ashemchuk/Player.html" title="class in ru.ashemchuk">Player</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the display title/name of the player.</div>
+</dd>
 <dt><a href="ru/ashemchuk/User.html#getTitle()" class="member-name-link">getTitle()</a> - Method in class ru.ashemchuk.<a href="ru/ashemchuk/User.html" title="class in ru.ashemchuk">User</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the display title for the user.</div>
+</dd>
 <dt><a href="ru/ashemchuk/Hand.html#getTotalWorth()" class="member-name-link">getTotalWorth()</a> - Method in class ru.ashemchuk.<a href="ru/ashemchuk/Hand.html" title="class in ru.ashemchuk">Hand</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Calculates the total point value of all cards in the hand.</div>
+</dd>
 <dt><a href="ru/ashemchuk/Rank.html#getWorth()" class="member-name-link">getWorth()</a> - Method in enum class ru.ashemchuk.<a href="ru/ashemchuk/Rank.html" title="enum class in ru.ashemchuk">Rank</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the point value of this rank.</div>
+</dd>
 </dl>
 <h2 class="title" id="I:H">H</h2>
 <dl class="index">
@@ -151,11 +185,11 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="ru/ashemchuk/Hand.html" class="type-name-link" title="class in ru.ashemchuk">Hand</a> - Class in <a href="ru/ashemchuk/package-summary.html">ru.ashemchuk</a></dt>
 <dd>
-<div class="block">Player's hand with cards</div>
+<div class="block">Represents a player's hand containing playing cards.</div>
 </dd>
 <dt><a href="ru/ashemchuk/Hand.html#%3Cinit%3E()" class="member-name-link">Hand()</a> - Constructor for class ru.ashemchuk.<a href="ru/ashemchuk/Hand.html" title="class in ru.ashemchuk">Hand</a></dt>
 <dd>
-<div class="block">default constructor</div>
+<div class="block">Constructs an empty hand.</div>
 </dd>
 <dt><a href="ru/ashemchuk/Suit.html#HEART" class="member-name-link">HEART</a> - Enum constant in enum class ru.ashemchuk.<a href="ru/ashemchuk/Suit.html" title="enum class in ru.ashemchuk">Suit</a></dt>
 <dd>&nbsp;</dd>
@@ -174,11 +208,11 @@ loadScripts(document, 'script');</script>
 <dl class="index">
 <dt><a href="ru/ashemchuk/Main.html#main(java.lang.String%5B%5D)" class="member-name-link">main(String[])</a> - Static method in class ru.ashemchuk.<a href="ru/ashemchuk/Main.html" title="class in ru.ashemchuk">Main</a></dt>
 <dd>
-<div class="block">Application entrypoint</div>
+<div class="block">Application entry point that initializes and starts the card game.</div>
 </dd>
 <dt><a href="ru/ashemchuk/Main.html" class="type-name-link" title="class in ru.ashemchuk">Main</a> - Class in <a href="ru/ashemchuk/package-summary.html">ru.ashemchuk</a></dt>
 <dd>
-<div class="block">Main application class</div>
+<div class="block">Main application class for the card game.</div>
 </dd>
 <dt><a href="ru/ashemchuk/Main.html#%3Cinit%3E()" class="member-name-link">Main()</a> - Constructor for class ru.ashemchuk.<a href="ru/ashemchuk/Main.html" title="class in ru.ashemchuk">Main</a></dt>
 <dd>&nbsp;</dd>
@@ -192,17 +226,17 @@ loadScripts(document, 'script');</script>
 <dl class="index">
 <dt><a href="ru/ashemchuk/Card.html#open()" class="member-name-link">open()</a> - Method in class ru.ashemchuk.<a href="ru/ashemchuk/Card.html" title="class in ru.ashemchuk">Card</a></dt>
 <dd>
-<div class="block">open hole card</div>
+<div class="block">Reveals a hole card by setting its hole status to false.</div>
 </dd>
 <dt><a href="ru/ashemchuk/Dealer.html#openHoleCard()" class="member-name-link">openHoleCard()</a> - Method in class ru.ashemchuk.<a href="ru/ashemchuk/Dealer.html" title="class in ru.ashemchuk">Dealer</a></dt>
 <dd>
-<div class="block">opens hole card</div>
+<div class="block">Reveals the dealer's hole card by turning it face up.</div>
 </dd>
 <dt><a href="ru/ashemchuk/Player.html#output" class="member-name-link">output</a> - Static variable in class ru.ashemchuk.<a href="ru/ashemchuk/Player.html" title="class in ru.ashemchuk">Player</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="ru/ashemchuk/Output.html" class="type-name-link" title="class in ru.ashemchuk">Output</a> - Class in <a href="ru/ashemchuk/package-summary.html">ru.ashemchuk</a></dt>
 <dd>
-<div class="block">User console output use-cases</div>
+<div class="block">Handles all console output operations for the card game.</div>
 </dd>
 <dt><a href="ru/ashemchuk/Output.html#%3Cinit%3E()" class="member-name-link">Output()</a> - Constructor for class ru.ashemchuk.<a href="ru/ashemchuk/Output.html" title="class in ru.ashemchuk">Output</a></dt>
 <dd>&nbsp;</dd>
@@ -211,46 +245,48 @@ loadScripts(document, 'script');</script>
 <dl class="index">
 <dt><a href="ru/ashemchuk/Player.html" class="type-name-link" title="class in ru.ashemchuk">Player</a> - Class in <a href="ru/ashemchuk/package-summary.html">ru.ashemchuk</a></dt>
 <dd>
-<div class="block">Player</div>
+<div class="block">Abstract base class representing a player in the card game.</div>
 </dd>
 <dt><a href="ru/ashemchuk/Player.html#%3Cinit%3E(ru.ashemchuk.Hand)" class="member-name-link">Player(Hand)</a> - Constructor for class ru.ashemchuk.<a href="ru/ashemchuk/Player.html" title="class in ru.ashemchuk">Player</a></dt>
 <dd>
-<div class="block">default constructor</div>
+<div class="block">Constructs a player with the specified hand.</div>
 </dd>
 <dt><a href="ru/ashemchuk/Output.html#printBadInput()" class="member-name-link">printBadInput()</a> - Method in class ru.ashemchuk.<a href="ru/ashemchuk/Output.html" title="class in ru.ashemchuk">Output</a></dt>
 <dd>
-<div class="block">Prints warning about bad input</div>
+<div class="block">Prints a warning message for invalid user input.</div>
 </dd>
 <dt><a href="ru/ashemchuk/Output.html#printHand(ru.ashemchuk.Player)" class="member-name-link">printHand(Player)</a> - Method in class ru.ashemchuk.<a href="ru/ashemchuk/Output.html" title="class in ru.ashemchuk">Output</a></dt>
 <dd>
-<div class="block">Prints player's cards in hand</div>
+<div class="block">Prints a player's current hand of cards.</div>
 </dd>
 <dt><a href="ru/ashemchuk/Output.html#printInputPrompt()" class="member-name-link">printInputPrompt()</a> - Method in class ru.ashemchuk.<a href="ru/ashemchuk/Output.html" title="class in ru.ashemchuk">Output</a></dt>
 <dd>
-<div class="block">Prints user action prompt</div>
+<div class="block">Prints the input prompt for the user's turn.</div>
 </dd>
 <dt><a href="ru/ashemchuk/Output.html#printMove(ru.ashemchuk.Player,ru.ashemchuk.Card)" class="member-name-link">printMove(Player, Card)</a> - Method in class ru.ashemchuk.<a href="ru/ashemchuk/Output.html" title="class in ru.ashemchuk">Output</a></dt>
 <dd>
-<div class="block">Prints player's move</div>
+<div class="block">Prints a player's move when they draw a card.</div>
 </dd>
 <dt><a href="ru/ashemchuk/Output.html#printRoundStart(ru.ashemchuk.Game)" class="member-name-link">printRoundStart(Game)</a> - Method in class ru.ashemchuk.<a href="ru/ashemchuk/Output.html" title="class in ru.ashemchuk">Output</a></dt>
 <dd>
-<div class="block">Prints round's start preamble</div>
+<div class="block">Prints the round start announcement with the current round number.</div>
 </dd>
 <dt><a href="ru/ashemchuk/Output.html#printScores(ru.ashemchuk.Player,ru.ashemchuk.Player)" class="member-name-link">printScores(Player, Player)</a> - Method in class ru.ashemchuk.<a href="ru/ashemchuk/Output.html" title="class in ru.ashemchuk">Output</a></dt>
 <dd>
-<div class="block">Print both players scores</div>
+<div class="block">Prints the current scores of both players.</div>
 </dd>
 <dt><a href="ru/ashemchuk/Output.html#printTurn(ru.ashemchuk.Player)" class="member-name-link">printTurn(Player)</a> - Method in class ru.ashemchuk.<a href="ru/ashemchuk/Output.html" title="class in ru.ashemchuk">Output</a></dt>
 <dd>
-<div class="block">Prints players turn preamble</div>
+<div class="block">Prints the turn announcement for a player.</div>
 </dd>
 <dt><a href="ru/ashemchuk/Output.html#printWinner(ru.ashemchuk.Player,ru.ashemchuk.Player)" class="member-name-link">printWinner(Player, Player)</a> - Method in class ru.ashemchuk.<a href="ru/ashemchuk/Output.html" title="class in ru.ashemchuk">Output</a></dt>
 <dd>
-<div class="block">Calculates and printing turn's winner</div>
+<div class="block">Determines and prints the winner of the current round.</div>
 </dd>
 <dt><a href="ru/ashemchuk/Deck.html#pull()" class="member-name-link">pull()</a> - Method in class ru.ashemchuk.<a href="ru/ashemchuk/Deck.html" title="class in ru.ashemchuk">Deck</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Draws a random card from the deck.</div>
+</dd>
 </dl>
 <h2 class="title" id="I:Q">Q</h2>
 <dl class="index">
@@ -261,17 +297,17 @@ loadScripts(document, 'script');</script>
 <dl class="index">
 <dt><a href="ru/ashemchuk/Rank.html" class="type-name-link" title="enum class in ru.ashemchuk">Rank</a> - Enum Class in <a href="ru/ashemchuk/package-summary.html">ru.ashemchuk</a></dt>
 <dd>
-<div class="block">Classic card ranks</div>
+<div class="block">Represents the ranks of playing cards in a standard deck.</div>
 </dd>
 <dt><a href="ru/ashemchuk/Game.html#round()" class="member-name-link">round()</a> - Method in class ru.ashemchuk.<a href="ru/ashemchuk/Game.html" title="class in ru.ashemchuk">Game</a></dt>
 <dd>
-<div class="block">do one round cycle</div>
+<div class="block">Executes one complete round of the game.</div>
 </dd>
 <dt><a href="ru/ashemchuk/package-summary.html">ru.ashemchuk</a> - package ru.ashemchuk</dt>
 <dd>&nbsp;</dd>
 <dt><a href="ru/ashemchuk/Game.html#runGame()" class="member-name-link">runGame()</a> - Method in class ru.ashemchuk.<a href="ru/ashemchuk/Game.html" title="class in ru.ashemchuk">Game</a></dt>
 <dd>
-<div class="block">runs game loop, until someone gets 3 wins</div>
+<div class="block">Runs the main game loop until either the user or dealer reaches 3 wins.</div>
 </dd>
 </dl>
 <h2 class="title" id="I:S">S</h2>
@@ -286,37 +322,38 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="ru/ashemchuk/Suit.html" class="type-name-link" title="enum class in ru.ashemchuk">Suit</a> - Enum Class in <a href="ru/ashemchuk/package-summary.html">ru.ashemchuk</a></dt>
 <dd>
-<div class="block">Classic card suits</div>
+<div class="block">Represents the four classic suits of playing cards in a standard deck.</div>
 </dd>
 </dl>
 <h2 class="title" id="I:T">T</h2>
 <dl class="index">
 <dt><a href="ru/ashemchuk/Player.html#takeCard(ru.ashemchuk.Deck)" class="member-name-link">takeCard(Deck)</a> - Method in class ru.ashemchuk.<a href="ru/ashemchuk/Player.html" title="class in ru.ashemchuk">Player</a></dt>
 <dd>
-<div class="block">takes card from deck, downgrade if it needs, and pushing into hand</div>
+<div class="block">Takes a card from the deck, applies special rules if needed, and adds it to the hand.</div>
 </dd>
 <dt><a href="ru/ashemchuk/Dealer.html#takeCard(ru.ashemchuk.Deck,boolean)" class="member-name-link">takeCard(Deck, boolean)</a> - Method in class ru.ashemchuk.<a href="ru/ashemchuk/Dealer.html" title="class in ru.ashemchuk">Dealer</a></dt>
 <dd>
-<div class="block">takes card from deck, hole if specified</div>
+<div class="block">Takes a card from the deck, optionally marking it as a hole card.</div>
 </dd>
 <dt><a href="ru/ashemchuk/Rank.html#TEN" class="member-name-link">TEN</a> - Enum constant in enum class ru.ashemchuk.<a href="ru/ashemchuk/Rank.html" title="enum class in ru.ashemchuk">Rank</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="ru/ashemchuk/Rank.html#THREE" class="member-name-link">THREE</a> - Enum constant in enum class ru.ashemchuk.<a href="ru/ashemchuk/Rank.html" title="enum class in ru.ashemchuk">Rank</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="ru/ashemchuk/Card.html#toString()" class="member-name-link">toString()</a> - Method in class ru.ashemchuk.<a href="ru/ashemchuk/Card.html" title="class in ru.ashemchuk">Card</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns a string representation of this card.</div>
+</dd>
 <dt><a href="ru/ashemchuk/Hand.html#toString()" class="member-name-link">toString()</a> - Method in class ru.ashemchuk.<a href="ru/ashemchuk/Hand.html" title="class in ru.ashemchuk">Hand</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns a string representation of the hand.</div>
+</dd>
 <dt><a href="ru/ashemchuk/Dealer.html#turn(ru.ashemchuk.Deck)" class="member-name-link">turn(Deck)</a> - Method in class ru.ashemchuk.<a href="ru/ashemchuk/Dealer.html" title="class in ru.ashemchuk">Dealer</a></dt>
 <dd>
-<div class="block">do dealers turn</div>
+<div class="block">Executes the dealer's turn according to standard casino rules.</div>
 </dd>
 <dt><a href="ru/ashemchuk/User.html#turn(ru.ashemchuk.Deck)" class="member-name-link">turn(Deck)</a> - Method in class ru.ashemchuk.<a href="ru/ashemchuk/User.html" title="class in ru.ashemchuk">User</a></dt>
 <dd>
-<div class="block">do user turn:
- - promting user to input
- - awaiting user's input, then validating
- - checking hand worth</div>
+<div class="block">Executes the user's turn by prompting for input and processing the decision.</div>
 </dd>
 <dt><a href="ru/ashemchuk/Rank.html#TWO" class="member-name-link">TWO</a> - Enum constant in enum class ru.ashemchuk.<a href="ru/ashemchuk/Rank.html" title="enum class in ru.ashemchuk">Rank</a></dt>
 <dd>&nbsp;</dd>
@@ -325,11 +362,11 @@ loadScripts(document, 'script');</script>
 <dl class="index">
 <dt><a href="ru/ashemchuk/User.html" class="type-name-link" title="class in ru.ashemchuk">User</a> - Class in <a href="ru/ashemchuk/package-summary.html">ru.ashemchuk</a></dt>
 <dd>
-<div class="block">User</div>
+<div class="block">Represents the human user player in the card game.</div>
 </dd>
 <dt><a href="ru/ashemchuk/User.html#%3Cinit%3E(ru.ashemchuk.Hand)" class="member-name-link">User(Hand)</a> - Constructor for class ru.ashemchuk.<a href="ru/ashemchuk/User.html" title="class in ru.ashemchuk">User</a></dt>
 <dd>
-<div class="block">default constructor</div>
+<div class="block">Constructs a user player with the specified hand.</div>
 </dd>
 </dl>
 <h2 class="title" id="I:V">V</h2>
@@ -357,7 +394,7 @@ the order they are declared.</div>
 <dl class="index">
 <dt><a href="ru/ashemchuk/Card.html#withHole()" class="member-name-link">withHole()</a> - Method in class ru.ashemchuk.<a href="ru/ashemchuk/Card.html" title="class in ru.ashemchuk">Card</a></dt>
 <dd>
-<div class="block">hide card (for 2nd dealer's card)</div>
+<div class="block">Marks this card as a hole card (face down).</div>
 </dd>
 </dl>
 <a href="#I:A">A</a>&nbsp;<a href="#I:C">C</a>&nbsp;<a href="#I:D">D</a>&nbsp;<a href="#I:E">E</a>&nbsp;<a href="#I:F">F</a>&nbsp;<a href="#I:G">G</a>&nbsp;<a href="#I:H">H</a>&nbsp;<a href="#I:J">J</a>&nbsp;<a href="#I:K">K</a>&nbsp;<a href="#I:M">M</a>&nbsp;<a href="#I:N">N</a>&nbsp;<a href="#I:O">O</a>&nbsp;<a href="#I:P">P</a>&nbsp;<a href="#I:Q">Q</a>&nbsp;<a href="#I:R">R</a>&nbsp;<a href="#I:S">S</a>&nbsp;<a href="#I:T">T</a>&nbsp;<a href="#I:U">U</a>&nbsp;<a href="#I:V">V</a>&nbsp;<a href="#I:W">W</a>&nbsp;<br><a href="allclasses-index.html">All&nbsp;Classes&nbsp;and&nbsp;Interfaces</a><span class="vertical-separator">|</span><a href="allpackages-index.html">All&nbsp;Packages</a></main>

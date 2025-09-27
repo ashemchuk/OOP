@@ -76,7 +76,9 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Card</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block">Classic 52-pcs games deck card</div>
+<div class="block">Represents a playing card from a standard 52-card deck.
+ Each card has a suit, rank, and can be marked as a hole card (face down).
+ This class is commonly used in card games like blackjack.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -94,26 +96,32 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#downgrade()" class="member-name-link">downgrade</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">downgrades ace card rank</div>
+<div class="block">Downgrades an Ace card to its lower value.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getIsHole()" class="member-name-link">getIsHole</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Checks if this card is a hole card (face down).</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Rank.html" title="enum class in ru.ashemchuk">Rank</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRank()" class="member-name-link">getRank</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the rank of this card.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Card.html" title="class in ru.ashemchuk">Card</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#open()" class="member-name-link">open</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">open hole card</div>
+<div class="block">Reveals a hole card by setting its hole status to false.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns a string representation of this card.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Card.html" title="class in ru.ashemchuk">Card</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withHole()" class="member-name-link">withHole</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">hide card (for 2nd dealer's card)</div>
+<div class="block">Marks this card as a hole card (face down).</div>
 </div>
 </div>
 </div>
@@ -136,10 +144,11 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="withHole()">
 <h3>withHole</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Card.html" title="class in ru.ashemchuk">Card</a></span>&nbsp;<span class="element-name">withHole</span>()</div>
-<div class="block">hide card (for 2nd dealer's card)</div>
+<div class="block">Marks this card as a hole card (face down).
+ Typically used for the dealer's second card in blackjack.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>card with .isHole = true</dd>
+<dd>this card instance with hole status set to true</dd>
 </dl>
 </section>
 </li>
@@ -147,10 +156,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="open()">
 <h3>open</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Card.html" title="class in ru.ashemchuk">Card</a></span>&nbsp;<span class="element-name">open</span>()</div>
-<div class="block">open hole card</div>
+<div class="block">Reveals a hole card by setting its hole status to false.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>opened card</dd>
+<dd>this card instance with hole status set to false</dd>
 </dl>
 </section>
 </li>
@@ -158,9 +167,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getRank()">
 <h3>getRank</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Rank.html" title="enum class in ru.ashemchuk">Rank</a></span>&nbsp;<span class="element-name">getRank</span>()</div>
+<div class="block">Returns the rank of this card.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>rank of card</dd>
+<dd>the rank of this card</dd>
 </dl>
 </section>
 </li>
@@ -168,16 +178,19 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="downgrade()">
 <h3>downgrade</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">downgrade</span>()</div>
-<div class="block">downgrades ace card rank</div>
+<div class="block">Downgrades an Ace card to its lower value.
+ If this card is an Ace, its rank is changed to ACE_DOWNGRADED.
+ This is typically used in blackjack when an Ace should be worth 1 instead of 11.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getIsHole()">
 <h3>getIsHole</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">getIsHole</span>()</div>
+<div class="block">Checks if this card is a hole card (face down).</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>is card hole</dd>
+<dd>true if this card is a hole card, false otherwise</dd>
 </dl>
 </section>
 </li>
@@ -185,11 +198,14 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="toString()">
 <h3>toString</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">toString</span>()</div>
+<div class="block">Returns a string representation of this card.
+ If the card is a hole card, returns "hole card".
+ Otherwise, returns the card's display format including suit, rank, and point value.</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
 <dt>Returns:</dt>
-<dd>cards display string</dd>
+<dd>string representation of this card</dd>
 </dl>
 </section>
 </li>

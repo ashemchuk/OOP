@@ -76,7 +76,8 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Output</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block">User console output use-cases</div>
+<div class="block">Handles all console output operations for the card game.
+ Provides methods for displaying game state, player actions, and results.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -107,45 +108,45 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#printBadInput()" class="member-name-link">printBadInput</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Prints warning about bad input</div>
+<div class="block">Prints a warning message for invalid user input.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#printHand(ru.ashemchuk.Player)" class="member-name-link">printHand</a><wbr>(<a href="Player.html" title="class in ru.ashemchuk">Player</a>&nbsp;player)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Prints player's cards in hand</div>
+<div class="block">Prints a player's current hand of cards.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#printInputPrompt()" class="member-name-link">printInputPrompt</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Prints user action prompt</div>
+<div class="block">Prints the input prompt for the user's turn.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#printMove(ru.ashemchuk.Player,ru.ashemchuk.Card)" class="member-name-link">printMove</a><wbr>(<a href="Player.html" title="class in ru.ashemchuk">Player</a>&nbsp;player,
  <a href="Card.html" title="class in ru.ashemchuk">Card</a>&nbsp;card)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Prints player's move</div>
+<div class="block">Prints a player's move when they draw a card.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#printRoundStart(ru.ashemchuk.Game)" class="member-name-link">printRoundStart</a><wbr>(<a href="Game.html" title="class in ru.ashemchuk">Game</a>&nbsp;game)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Prints round's start preamble</div>
+<div class="block">Prints the round start announcement with the current round number.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#printScores(ru.ashemchuk.Player,ru.ashemchuk.Player)" class="member-name-link">printScores</a><wbr>(<a href="Player.html" title="class in ru.ashemchuk">Player</a>&nbsp;p1,
  <a href="Player.html" title="class in ru.ashemchuk">Player</a>&nbsp;p2)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Print both players scores</div>
+<div class="block">Prints the current scores of both players.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#printTurn(ru.ashemchuk.Player)" class="member-name-link">printTurn</a><wbr>(<a href="Player.html" title="class in ru.ashemchuk">Player</a>&nbsp;player)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Prints players turn preamble</div>
+<div class="block">Prints the turn announcement for a player.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#printWinner(ru.ashemchuk.Player,ru.ashemchuk.Player)" class="member-name-link">printWinner</a><wbr>(<a href="Player.html" title="class in ru.ashemchuk">Player</a>&nbsp;p1,
  <a href="Player.html" title="class in ru.ashemchuk">Player</a>&nbsp;p2)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Calculates and printing turn's winner</div>
+<div class="block">Determines and prints the winner of the current round.</div>
 </div>
 </div>
 </div>
@@ -182,10 +183,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="printRoundStart(ru.ashemchuk.Game)">
 <h3>printRoundStart</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">printRoundStart</span><wbr><span class="parameters">(<a href="Game.html" title="class in ru.ashemchuk">Game</a>&nbsp;game)</span></div>
-<div class="block">Prints round's start preamble</div>
+<div class="block">Prints the round start announcement with the current round number.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>game</code> - </dd>
+<dd><code>game</code> - the current game instance</dd>
 </dl>
 </section>
 </li>
@@ -193,10 +194,11 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="printHand(ru.ashemchuk.Player)">
 <h3>printHand</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">printHand</span><wbr><span class="parameters">(<a href="Player.html" title="class in ru.ashemchuk">Player</a>&nbsp;player)</span></div>
-<div class="block">Prints player's cards in hand</div>
+<div class="block">Prints a player's current hand of cards.
+ Displays the player's title and the string representation of their hand.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>player</code> - </dd>
+<dd><code>player</code> - the player whose hand to display</dd>
 </dl>
 </section>
 </li>
@@ -204,7 +206,8 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="printInputPrompt()">
 <h3>printInputPrompt</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">printInputPrompt</span>()</div>
-<div class="block">Prints user action prompt</div>
+<div class="block">Prints the input prompt for the user's turn.
+ Instructs the user to enter "1" to take a card or "0" to stop.</div>
 </section>
 </li>
 <li>
@@ -212,11 +215,12 @@ loadScripts(document, 'script');</script>
 <h3>printMove</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">printMove</span><wbr><span class="parameters">(<a href="Player.html" title="class in ru.ashemchuk">Player</a>&nbsp;player,
  <a href="Card.html" title="class in ru.ashemchuk">Card</a>&nbsp;card)</span></div>
-<div class="block">Prints player's move</div>
+<div class="block">Prints a player's move when they draw a card.
+ Shows the drawn card and updates the display of the player's hand.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>player</code> - </dd>
-<dd><code>card</code> - </dd>
+<dd><code>player</code> - the player who made the move</dd>
+<dd><code>card</code> - the card that was drawn</dd>
 </dl>
 </section>
 </li>
@@ -224,10 +228,11 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="printTurn(ru.ashemchuk.Player)">
 <h3>printTurn</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">printTurn</span><wbr><span class="parameters">(<a href="Player.html" title="class in ru.ashemchuk">Player</a>&nbsp;player)</span></div>
-<div class="block">Prints players turn preamble</div>
+<div class="block">Prints the turn announcement for a player.
+ Includes visual separation for clarity.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>player</code> - </dd>
+<dd><code>player</code> - the player whose turn is starting</dd>
 </dl>
 </section>
 </li>
@@ -235,7 +240,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="printBadInput()">
 <h3>printBadInput</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">printBadInput</span>()</div>
-<div class="block">Prints warning about bad input</div>
+<div class="block">Prints a warning message for invalid user input.</div>
 </section>
 </li>
 <li>
@@ -243,11 +248,16 @@ loadScripts(document, 'script');</script>
 <h3>printWinner</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">printWinner</span><wbr><span class="parameters">(<a href="Player.html" title="class in ru.ashemchuk">Player</a>&nbsp;p1,
  <a href="Player.html" title="class in ru.ashemchuk">Player</a>&nbsp;p2)</span></div>
-<div class="block">Calculates and printing turn's winner</div>
+<div class="block">Determines and prints the winner of the current round.
+ Updates player scores based on the outcome according to blackjack rules:
+ - Blackjack (21 points) wins automatically
+ - Player with points over 21 loses
+ - Higher point value wins if both are 21 or under
+ - Draw if point values are equal</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>p1</code> - </dd>
-<dd><code>p2</code> - </dd>
+<dd><code>p1</code> - the first player (typically the user)</dd>
+<dd><code>p2</code> - the second player (typically the dealer)</dd>
 </dl>
 </section>
 </li>
@@ -256,11 +266,12 @@ loadScripts(document, 'script');</script>
 <h3>printScores</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">printScores</span><wbr><span class="parameters">(<a href="Player.html" title="class in ru.ashemchuk">Player</a>&nbsp;p1,
  <a href="Player.html" title="class in ru.ashemchuk">Player</a>&nbsp;p2)</span></div>
-<div class="block">Print both players scores</div>
+<div class="block">Prints the current scores of both players.
+ Displays the score in the format: "Player1 Score1:Score2 Player2"</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>p1</code> - </dd>
-<dd><code>p2</code> - </dd>
+<dd><code>p1</code> - the first player</dd>
+<dd><code>p2</code> - the second player</dd>
 </dl>
 </section>
 </li>

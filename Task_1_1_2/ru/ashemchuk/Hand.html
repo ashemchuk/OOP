@@ -76,7 +76,9 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Hand</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block">Player's hand with cards</div>
+<div class="block">Represents a player's hand containing playing cards.
+ Provides functionality to manage cards, calculate hand value,
+ and display the hand's contents.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -90,7 +92,7 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E()" class="member-name-link">Hand</a>()</code></div>
 <div class="col-last even-row-color">
-<div class="block">default constructor</div>
+<div class="block">Constructs an empty hand.</div>
 </div>
 </div>
 </section>
@@ -108,21 +110,29 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Hand.html" title="class in ru.ashemchuk">Hand</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addCard(ru.ashemchuk.Card)" class="member-name-link">addCard</a><wbr>(<a href="Card.html" title="class in ru.ashemchuk">Card</a>&nbsp;card)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Adds a card to the hand.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clear()" class="member-name-link">clear</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">clears hand</div>
+<div class="block">Removes all cards from the hand, making it empty.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Card.html" title="class in ru.ashemchuk">Card</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCards()" class="member-name-link">getCards</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the list of cards currently in the hand.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTotalWorth()" class="member-name-link">getTotalWorth</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Calculates the total point value of all cards in the hand.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns a string representation of the hand.</div>
+</div>
 </div>
 </div>
 </div>
@@ -144,7 +154,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="&lt;init&gt;()">
 <h3>Hand</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Hand</span>()</div>
-<div class="block">default constructor</div>
+<div class="block">Constructs an empty hand.</div>
 </section>
 </li>
 </ul>
@@ -159,9 +169,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getCards()">
 <h3>getCards</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Card.html" title="class in ru.ashemchuk">Card</a>&gt;</span>&nbsp;<span class="element-name">getCards</span>()</div>
+<div class="block">Returns the list of cards currently in the hand.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>cards in hand</dd>
+<dd>an unmodifiable list of cards in this hand</dd>
 </dl>
 </section>
 </li>
@@ -169,11 +180,12 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="addCard(ru.ashemchuk.Card)">
 <h3>addCard</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Hand.html" title="class in ru.ashemchuk">Hand</a></span>&nbsp;<span class="element-name">addCard</span><wbr><span class="parameters">(<a href="Card.html" title="class in ru.ashemchuk">Card</a>&nbsp;card)</span></div>
+<div class="block">Adds a card to the hand.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>card</code> - to add in hand</dd>
+<dd><code>card</code> - the card to add to the hand</dd>
 <dt>Returns:</dt>
-<dd>added card</dd>
+<dd>this hand instance for method chaining</dd>
 </dl>
 </section>
 </li>
@@ -181,16 +193,18 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="clear()">
 <h3>clear</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">clear</span>()</div>
-<div class="block">clears hand</div>
+<div class="block">Removes all cards from the hand, making it empty.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getTotalWorth()">
 <h3>getTotalWorth</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getTotalWorth</span>()</div>
+<div class="block">Calculates the total point value of all cards in the hand.
+ Uses the worth value of each card's rank and sums them together.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>worth of cards in hand</dd>
+<dd>the total point value of the hand</dd>
 </dl>
 </section>
 </li>
@@ -198,11 +212,14 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="toString()">
 <h3>toString</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">toString</span>()</div>
+<div class="block">Returns a string representation of the hand.
+ If any card in the hand is a hole card (face down), only the card list is shown.
+ If all cards are face up, the total point value is also displayed.</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
 <dt>Returns:</dt>
-<dd>display string of cards in hand with worthes and holes</dd>
+<dd>string representation of the hand and its total value (if visible)</dd>
 </dl>
 </section>
 </li>

@@ -76,6 +76,9 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Deck</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">Represents a deck of playing cards from a standard 52-card deck.
+ The deck automatically refills itself when empty by creating a new set of cards.
+ Cards are drawn randomly from the deck using a random number generator.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -105,7 +108,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Card.html" title="class in ru.ashemchuk">Card</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#pull()" class="member-name-link">pull</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Draws a random card from the deck.</div>
+</div>
 </div>
 </div>
 </div>
@@ -141,6 +146,13 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="pull()">
 <h3>pull</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Card.html" title="class in ru.ashemchuk">Card</a></span>&nbsp;<span class="element-name">pull</span>()</div>
+<div class="block">Draws a random card from the deck. If the deck is empty, it will be
+ automatically refilled with a new set of 52 cards before drawing.
+ The drawn card is removed from the deck.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>a randomly selected card from the deck</dd>
+</dl>
 </section>
 </li>
 </ul>

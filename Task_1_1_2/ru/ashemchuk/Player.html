@@ -80,7 +80,9 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public abstract class </span><span class="element-name type-name-label">Player</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block">Player</div>
+<div class="block">Abstract base class representing a player in the card game.
+ Provides common functionality for both user and dealer players,
+ including hand management, score tracking, and card drawing logic.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -115,7 +117,7 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(ru.ashemchuk.Hand)" class="member-name-link">Player</a><wbr>(<a href="Hand.html" title="class in ru.ashemchuk">Hand</a>&nbsp;hand)</code></div>
 <div class="col-last even-row-color">
-<div class="block">default constructor</div>
+<div class="block">Constructs a player with the specified hand.</div>
 </div>
 </div>
 </section>
@@ -134,21 +136,27 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addScore(int)" class="member-name-link">addScore</a><wbr>(int&nbsp;amount)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">add points to player's score</div>
+<div class="block">Adds points to the player's score.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Hand.html" title="class in ru.ashemchuk">Hand</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getHand()" class="member-name-link">getHand</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the player's current hand of cards.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getScore()" class="member-name-link">getScore</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the player's current score.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>abstract <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTitle()" class="member-name-link">getTitle</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Returns the display title/name of the player.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Card.html" title="class in ru.ashemchuk">Card</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#takeCard(ru.ashemchuk.Deck)" class="member-name-link">takeCard</a><wbr>(<a href="Deck.html" title="class in ru.ashemchuk">Deck</a>&nbsp;deck)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">takes card from deck, downgrade if it needs, and pushing into hand</div>
+<div class="block">Takes a card from the deck, applies special rules if needed, and adds it to the hand.</div>
 </div>
 </div>
 </div>
@@ -197,10 +205,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="&lt;init&gt;(ru.ashemchuk.Hand)">
 <h3>Player</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Player</span><wbr><span class="parameters">(<a href="Hand.html" title="class in ru.ashemchuk">Hand</a>&nbsp;hand)</span></div>
-<div class="block">default constructor</div>
+<div class="block">Constructs a player with the specified hand.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>hand</code> - </dd>
+<dd><code>hand</code> - the initial hand for the player</dd>
 </dl>
 </section>
 </li>
@@ -216,9 +224,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getHand()">
 <h3>getHand</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Hand.html" title="class in ru.ashemchuk">Hand</a></span>&nbsp;<span class="element-name">getHand</span>()</div>
+<div class="block">Returns the player's current hand of cards.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>players' hand</dd>
+<dd>the player's hand</dd>
 </dl>
 </section>
 </li>
@@ -226,9 +235,11 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getTitle()">
 <h3>getTitle</h3>
 <div class="member-signature"><span class="modifiers">public abstract</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getTitle</span>()</div>
+<div class="block">Returns the display title/name of the player.
+ Must be implemented by concrete subclasses.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>player's name display string</dd>
+<dd>the player's title as a string</dd>
 </dl>
 </section>
 </li>
@@ -236,10 +247,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="addScore(int)">
 <h3>addScore</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addScore</span><wbr><span class="parameters">(int&nbsp;amount)</span></div>
-<div class="block">add points to player's score</div>
+<div class="block">Adds points to the player's score.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>amount</code> - - points to add</dd>
+<dd><code>amount</code> - the number of points to add to the player's score</dd>
 </dl>
 </section>
 </li>
@@ -247,9 +258,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getScore()">
 <h3>getScore</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getScore</span>()</div>
+<div class="block">Returns the player's current score.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>player's score</dd>
+<dd>the player's score</dd>
 </dl>
 </section>
 </li>
@@ -257,12 +269,14 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="takeCard(ru.ashemchuk.Deck)">
 <h3>takeCard</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Card.html" title="class in ru.ashemchuk">Card</a></span>&nbsp;<span class="element-name">takeCard</span><wbr><span class="parameters">(<a href="Deck.html" title="class in ru.ashemchuk">Deck</a>&nbsp;deck)</span></div>
-<div class="block">takes card from deck, downgrade if it needs, and pushing into hand</div>
+<div class="block">Takes a card from the deck, applies special rules if needed, and adds it to the hand.
+ If the player's hand total is over 21 and the drawn card is an Ace,
+ the Ace will be downgraded to its lower value (1 instead of 11).</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>deck</code> - </dd>
+<dd><code>deck</code> - the deck to draw from</dd>
 <dt>Returns:</dt>
-<dd>taken card</dd>
+<dd>the card that was taken from the deck</dd>
 </dl>
 </section>
 </li>

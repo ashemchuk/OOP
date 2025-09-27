@@ -78,7 +78,8 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">User</span>
 <span class="extends-implements">extends <a href="Player.html" title="class in ru.ashemchuk">Player</a></span></div>
-<div class="block">User</div>
+<div class="block">Represents the human user player in the card game.
+ Handles user input for game decisions and extends the base Player functionality.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -101,7 +102,7 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(ru.ashemchuk.Hand)" class="member-name-link">User</a><wbr>(<a href="Hand.html" title="class in ru.ashemchuk">Hand</a>&nbsp;hand)</code></div>
 <div class="col-last even-row-color">
-<div class="block">default constructor</div>
+<div class="block">Constructs a user player with the specified hand.</div>
 </div>
 </div>
 </section>
@@ -119,14 +120,13 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTitle()" class="member-name-link">getTitle</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the display title for the user.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#turn(ru.ashemchuk.Deck)" class="member-name-link">turn</a><wbr>(<a href="Deck.html" title="class in ru.ashemchuk">Deck</a>&nbsp;deck)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">do user turn:
- - promting user to input
- - awaiting user's input, then validating
- - checking hand worth</div>
+<div class="block">Executes the user's turn by prompting for input and processing the decision.</div>
 </div>
 </div>
 </div>
@@ -152,10 +152,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="&lt;init&gt;(ru.ashemchuk.Hand)">
 <h3>User</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">User</span><wbr><span class="parameters">(<a href="Hand.html" title="class in ru.ashemchuk">Hand</a>&nbsp;hand)</span></div>
-<div class="block">default constructor</div>
+<div class="block">Constructs a user player with the specified hand.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>hand</code> - </dd>
+<dd><code>hand</code> - the initial hand for the user</dd>
 </dl>
 </section>
 </li>
@@ -171,15 +171,16 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="turn(ru.ashemchuk.Deck)">
 <h3>turn</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">turn</span><wbr><span class="parameters">(<a href="Deck.html" title="class in ru.ashemchuk">Deck</a>&nbsp;deck)</span></div>
-<div class="block">do user turn:
- - promting user to input
- - awaiting user's input, then validating
- - checking hand worth</div>
+<div class="block">Executes the user's turn by prompting for input and processing the decision.
+ The user can choose to take a card (1) or stop (0). Validates input and
+ handles exceptions. The turn continues if the user chooses to take a card
+ and their hand total is less than 21.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>deck</code> - </dd>
+<dd><code>deck</code> - the deck to draw from if the user chooses to take a card</dd>
 <dt>Returns:</dt>
-<dd>user's hand worth</dd>
+<dd>true if the user can continue their turn (hand worth less 21),
+ false if the user stops or has 21 or more points</dd>
 </dl>
 </section>
 </li>
@@ -187,11 +188,12 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getTitle()">
 <h3>getTitle</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getTitle</span>()</div>
+<div class="block">Returns the display title for the user.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Player.html#getTitle()">getTitle</a></code>&nbsp;in class&nbsp;<code><a href="Player.html" title="class in ru.ashemchuk">Player</a></code></dd>
 <dt>Returns:</dt>
-<dd>user's name display string</dd>
+<dd>the string "User"</dd>
 </dl>
 </section>
 </li>
