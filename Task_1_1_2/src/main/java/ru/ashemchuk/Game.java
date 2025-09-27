@@ -4,7 +4,7 @@ package ru.ashemchuk;
  * Game-logic class
  */
 public class Game {
-    private static final Output out = new Output();
+    private Output out;
     private final Deck deck;
     private final Dealer dealer;
     private final User user;
@@ -13,10 +13,11 @@ public class Game {
     /**
      * default constructor
      */
-    public Game() {
-        this.deck = new Deck();
-        this.dealer = new Dealer(new Hand());
-        this.user = new User(new Hand());
+    public Game(Deck deck, Dealer dealer, User user, Output out) {
+        this.deck = deck;
+        this.dealer = dealer;
+        this.user = user;
+        this.out = out;
     }
 
     /**
@@ -54,7 +55,7 @@ public class Game {
         while (user.turn(deck)) {
         }
         dealer.openHoleCard();
-        if (user.hand.getTotalWorth() < 21) {
+        if (user.getHand().getTotalWorth() < 21) {
             out.printTurn(dealer);
             while (dealer.turn(deck)) {
             }
