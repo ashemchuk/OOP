@@ -15,10 +15,10 @@ public class Game {
     /**
      * Constructs a new Game with the specified components.
      *
-     * @param deck the deck of cards to use for the game
+     * @param deck   the deck of cards to use for the game
      * @param dealer the dealer participant
-     * @param user the user participant
-     * @param out the output handler for displaying game information
+     * @param user   the user participant
+     * @param out    the output handler for displaying game information
      */
     public Game(Deck deck, Dealer dealer, User user, Output out) {
         this.deck = deck;

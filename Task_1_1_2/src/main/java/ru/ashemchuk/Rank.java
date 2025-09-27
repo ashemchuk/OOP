@@ -28,7 +28,7 @@ public enum Rank {
      * Constructs a card rank with the specified display name and point value.
      *
      * @param display the human-readable name of the rank
-     * @param worth the point value of the rank in the game
+     * @param worth   the point value of the rank in the game
      */
     Rank(String display, int worth) {
         this.display = display;

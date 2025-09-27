@@ -31,7 +31,7 @@ public class Dealer extends Player {
      * If the card is marked as a hole card, it will be stored separately
      * and displayed face down until revealed.
      *
-     * @param deck the deck to draw from
+     * @param deck   the deck to draw from
      * @param isHole true if the card should be marked as a hole card, false otherwise
      */
     public void takeCard(Deck deck, boolean isHole) {
@@ -48,7 +48,7 @@ public class Dealer extends Player {
      *
      * @param deck the deck to draw from
      * @return true if the dealer should continue drawing (hand total less than 17),
-     *         false if the dealer should stop (hand total 17 or higher)
+     * false if the dealer should stop (hand total 17 or higher)
      */
     public boolean turn(Deck deck) {
         output.printMove(this, takeCard(deck));

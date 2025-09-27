@@ -39,7 +39,7 @@ public class Output {
      * Shows the drawn card and updates the display of the player's hand.
      *
      * @param player the player who made the move
-     * @param card the card that was drawn
+     * @param card   the card that was drawn
      */
     public void printMove(Player player, Card card) {
         System.out.println(player.getTitle() + " open card: " + card);

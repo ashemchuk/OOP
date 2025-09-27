@@ -25,8 +25,8 @@ public class User extends Player {
      * and their hand total is less than 21.
      *
      * @param deck the deck to draw from if the user chooses to take a card
-     * @return true if the user can continue their turn (hand worth < 21),
-     *         false if the user stops or has 21 or more points
+     * @return true if the user can continue their turn (hand worth less 21),
+     * false if the user stops or has 21 or more points
      */
     public boolean turn(Deck deck) {
         output.printInputPrompt();

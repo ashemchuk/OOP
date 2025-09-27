@@ -43,7 +43,7 @@ class OutputTest {
     void setUp() {
         output = new Output();
         System.setOut(new PrintStream(outContent));
-        
+
         when(mockPlayer1.getTitle()).thenReturn("Player1");
         when(mockPlayer2.getTitle()).thenReturn("Player2");
         when(mockPlayer1.getHand()).thenReturn(mockHand1);
@@ -60,26 +60,28 @@ class OutputTest {
         when(mockGame.getRound()).thenReturn(3);
         output.printRoundStart(mockGame);
 
-        String expectedOutput = "Round 3" + System.lineSeparator() +
-                "Dealer dealt the cards" + System.lineSeparator();
+        String expectedOutput = "Round 3" + System.lineSeparator()
+                + "Dealer dealt the cards" + System.lineSeparator();
         assertEquals(expectedOutput, outContent.toString());
     }
 
     @Test
     void testPrintHand() {
         when(mockHand1.toString()).thenReturn("[Ace of Spades, King of Hearts]");
-        
+
         output.printHand(mockPlayer1);
-        
-        String expectedOutput = "\tPlayer1, your cards: [Ace of Spades, King of Hearts]" + System.lineSeparator();
+
+        String expectedOutput = "\tPlayer1, your cards: [Ace of Spades, King of Hearts]"
+                + System.lineSeparator();
         assertEquals(expectedOutput, outContent.toString());
     }
 
     @Test
     void testPrintInputPrompt() {
         output.printInputPrompt();
-        
-        String expectedOutput = "Enter \"1\" to take a card and \"0\" to stop..." + System.lineSeparator();
+
+        String expectedOutput = "Enter \"1\" to take a card and \"0\" to stop..."
+                + System.lineSeparator();
         assertEquals(expectedOutput, outContent.toString());
     }
 
@@ -90,18 +92,18 @@ class OutputTest {
 
         output.printMove(mockPlayer1, mockCard);
 
-        String expectedOutput = "Player1 open card: Ace of Spades" + System.lineSeparator() +
-                "\tPlayer1, your cards: [Ace of Spades]" + System.lineSeparator();
+        String expectedOutput = "Player1 open card: Ace of Spades" + System.lineSeparator()
+                + "\tPlayer1, your cards: [Ace of Spades]" + System.lineSeparator();
         assertEquals(expectedOutput, outContent.toString());
     }
 
     @Test
     void testPrintTurn() {
         output.printTurn(mockPlayer1);
-        
-        String expectedOutput = "Player1, it's your turn!" + System.lineSeparator() +
-                "----------------" + System.lineSeparator() +
-                System.lineSeparator();
+
+        String expectedOutput = "Player1, it's your turn!" + System.lineSeparator()
+                + "----------------" + System.lineSeparator()
+                + System.lineSeparator();
         assertEquals(expectedOutput, outContent.toString());
     }
 
@@ -159,7 +161,8 @@ class OutputTest {
 
         output.printWinner(mockPlayer1, mockPlayer2);
 
-        String expectedOutput = "Player1, you won! Player2 has over than 21 points" + System.lineSeparator();
+        String expectedOutput = "Player1, you won! Player2 has over than 21 points"
+                + System.lineSeparator();
         assertEquals(expectedOutput, outContent.toString());
         verify(mockPlayer1).addScore(1);
         verify(mockPlayer2, never()).addScore(anyInt());
@@ -172,7 +175,8 @@ class OutputTest {
 
         output.printWinner(mockPlayer1, mockPlayer2);
 
-        String expectedOutput = "Player2, you won! Player1 has over than 21 points" + System.lineSeparator();
+        String expectedOutput = "Player2, you won! Player1 has over than 21 points"
+                + System.lineSeparator();
         assertEquals(expectedOutput, outContent.toString());
         verify(mockPlayer2).addScore(1);
         verify(mockPlayer1, never()).addScore(anyInt());
@@ -211,7 +215,8 @@ class OutputTest {
 
         output.printWinner(mockPlayer1, mockPlayer2);
 
-        String expectedOutput = "Player1, you won! Player2 has over than 21 points" + System.lineSeparator();
+        String expectedOutput = "Player1, you won! Player2 has over than 21 points"
+                + System.lineSeparator();
         assertEquals(expectedOutput, outContent.toString());
         verify(mockPlayer1).addScore(1);
         verify(mockPlayer2, never()).addScore(anyInt());

@@ -6,8 +6,8 @@ package ru.ashemchuk;
  * This class is commonly used in card games like blackjack.
  */
 public class Card {
-    private Rank rank;
     private final Suit suit;
+    private Rank rank;
     private boolean isHole = false; // 2nd dealer's card (hidden)
 
     /**
@@ -73,7 +73,7 @@ public class Card {
 
     /**
      * Returns a string representation of this card.
-     * If the card is a hole card, returns "<hole card>".
+     * If the card is a hole card, returns "hole card".
      * Otherwise, returns the card's display format including suit, rank, and point value.
      *
      * @return string representation of this card
