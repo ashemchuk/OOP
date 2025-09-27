@@ -3,26 +3,30 @@ package ru.ashemchuk;
 import java.util.Scanner;
 
 /**
- * User
+ * Represents the human user player in the card game.
+ * Handles user input for game decisions and extends the base Player functionality.
  */
 public class User extends Player {
     private final static Scanner in = new Scanner(System.in);
 
     /**
-     * default constructor
-     * @param hand
+     * Constructs a user player with the specified hand.
+     *
+     * @param hand the initial hand for the user
      */
     public User(Hand hand) {
         super(hand);
     }
 
     /**
-     * do user turn:
-     * - promting user to input
-     * - awaiting user's input, then validating
-     * - checking hand worth
-     * @param deck
-     * @return user's hand worth
+     * Executes the user's turn by prompting for input and processing the decision.
+     * The user can choose to take a card (1) or stop (0). Validates input and
+     * handles exceptions. The turn continues if the user chooses to take a card
+     * and their hand total is less than 21.
+     *
+     * @param deck the deck to draw from if the user chooses to take a card
+     * @return true if the user can continue their turn (hand worth < 21),
+     *         false if the user stops or has 21 or more points
      */
     public boolean turn(Deck deck) {
         output.printInputPrompt();
@@ -47,7 +51,9 @@ public class User extends Player {
     }
 
     /**
-     * @return user's name display string
+     * Returns the display title for the user.
+     *
+     * @return the string "User"
      */
     public String getTitle() {
         return "User";

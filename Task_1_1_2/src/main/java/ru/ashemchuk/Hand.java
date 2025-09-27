@@ -4,28 +4,34 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Player's hand with cards
+ * Represents a player's hand containing playing cards.
+ * Provides functionality to manage cards, calculate hand value,
+ * and display the hand's contents.
  */
 public class Hand {
     private final List<Card> cards;
 
     /**
-     * default constructor
+     * Constructs an empty hand.
      */
     public Hand() {
         this.cards = new ArrayList<>();
     }
 
     /**
-     * @return cards in hand
+     * Returns the list of cards currently in the hand.
+     *
+     * @return an unmodifiable list of cards in this hand
      */
     public List<Card> getCards() {
         return cards;
     }
 
     /**
-     * @param card to add in hand
-     * @return added card
+     * Adds a card to the hand.
+     *
+     * @param card the card to add to the hand
+     * @return this hand instance for method chaining
      */
     public Hand addCard(Card card) {
         cards.add(card);
@@ -33,14 +39,17 @@ public class Hand {
     }
 
     /**
-     * clears hand
+     * Removes all cards from the hand, making it empty.
      */
     public void clear() {
         cards.clear();
     }
 
     /**
-     * @return worth of cards in hand
+     * Calculates the total point value of all cards in the hand.
+     * Uses the worth value of each card's rank and sums them together.
+     *
+     * @return the total point value of the hand
      */
     public int getTotalWorth() {
         //I'm proud of this :)
@@ -51,7 +60,11 @@ public class Hand {
     }
 
     /**
-     * @return display string of cards in hand with worthes and holes
+     * Returns a string representation of the hand.
+     * If any card in the hand is a hole card (face down), only the card list is shown.
+     * If all cards are face up, the total point value is also displayed.
+     *
+     * @return string representation of the hand and its total value (if visible)
      */
     @Override
     public String toString() {

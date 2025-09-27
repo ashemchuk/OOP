@@ -1,7 +1,9 @@
 package ru.ashemchuk;
 
 /**
- * Player
+ * Abstract base class representing a player in the card game.
+ * Provides common functionality for both user and dealer players,
+ * including hand management, score tracking, and card drawing logic.
  */
 public abstract class Player {
     protected static final Output output = new Output();
@@ -9,44 +11,56 @@ public abstract class Player {
     protected int score;
 
     /**
-     * default constructor
-     * @param hand
+     * Constructs a player with the specified hand.
+     *
+     * @param hand the initial hand for the player
      */
     public Player(Hand hand) {
         this.hand = hand;
     }
 
     /**
-     * @return players' hand
+     * Returns the player's current hand of cards.
+     *
+     * @return the player's hand
      */
     public Hand getHand() {
         return this.hand;
     }
 
     /**
-     * @return player's name display string
+     * Returns the display title/name of the player.
+     * Must be implemented by concrete subclasses.
+     *
+     * @return the player's title as a string
      */
     public abstract String getTitle();
 
     /**
-     * add points to player's score
-     * @param amount - points to add
+     * Adds points to the player's score.
+     *
+     * @param amount the number of points to add to the player's score
      */
     public void addScore(int amount) {
         score += amount;
     }
 
     /**
-     * @return player's score
+     * Returns the player's current score.
+     *
+     * @return the player's score
      */
     public int getScore() {
         return score;
     }
 
     /**
-     * takes card from deck, downgrade if it needs, and pushing into hand
-     * @param deck
-     * @return taken card
+     * Takes a card from the deck, applies special rules if needed, and adds it to the hand.
+     * If the player's hand total is over 21 and the drawn card is an Ace,
+     * the Ace will be downgraded to its lower value (1 instead of 11).
+     *
+     * @param deck the deck to draw from
+     * @return the card that was taken from the deck
      */
     public Card takeCard(Deck deck) {
         Card card = deck.pull();
