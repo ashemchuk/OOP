@@ -54,9 +54,9 @@ public class Hand {
     public int getTotalWorth() {
         //I'm proud of this :)
         return cards
-                .stream()
-                .map(card -> card.getRank().getWorth())
-                .reduce(0, Integer::sum);
+            .stream()
+            .map(card -> card.getRank().getWorth())
+            .reduce(0, Integer::sum);
     }
 
     /**

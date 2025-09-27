@@ -1,5 +1,13 @@
 package ru.ashemchuk;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.anyInt;
+import static org.mockito.Mockito.never;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -8,12 +16,6 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.mockito.junit.jupiter.MockitoSettings;
 import org.mockito.quality.Strictness;
-
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 @MockitoSettings(strictness = Strictness.LENIENT)
@@ -61,7 +63,7 @@ class OutputTest {
         output.printRoundStart(mockGame);
 
         String expectedOutput = "Round 3" + System.lineSeparator()
-                + "Dealer dealt the cards" + System.lineSeparator();
+            + "Dealer dealt the cards" + System.lineSeparator();
         assertEquals(expectedOutput, outContent.toString());
     }
 
@@ -72,7 +74,7 @@ class OutputTest {
         output.printHand(mockPlayer1);
 
         String expectedOutput = "\tPlayer1, your cards: [Ace of Spades, King of Hearts]"
-                + System.lineSeparator();
+            + System.lineSeparator();
         assertEquals(expectedOutput, outContent.toString());
     }
 
@@ -81,7 +83,7 @@ class OutputTest {
         output.printInputPrompt();
 
         String expectedOutput = "Enter \"1\" to take a card and \"0\" to stop..."
-                + System.lineSeparator();
+            + System.lineSeparator();
         assertEquals(expectedOutput, outContent.toString());
     }
 
@@ -93,7 +95,7 @@ class OutputTest {
         output.printMove(mockPlayer1, mockCard);
 
         String expectedOutput = "Player1 open card: Ace of Spades" + System.lineSeparator()
-                + "\tPlayer1, your cards: [Ace of Spades]" + System.lineSeparator();
+            + "\tPlayer1, your cards: [Ace of Spades]" + System.lineSeparator();
         assertEquals(expectedOutput, outContent.toString());
     }
 
@@ -102,8 +104,8 @@ class OutputTest {
         output.printTurn(mockPlayer1);
 
         String expectedOutput = "Player1, it's your turn!" + System.lineSeparator()
-                + "----------------" + System.lineSeparator()
-                + System.lineSeparator();
+            + "----------------" + System.lineSeparator()
+            + System.lineSeparator();
         assertEquals(expectedOutput, outContent.toString());
     }
 
@@ -162,7 +164,7 @@ class OutputTest {
         output.printWinner(mockPlayer1, mockPlayer2);
 
         String expectedOutput = "Player1, you won! Player2 has over than 21 points"
-                + System.lineSeparator();
+            + System.lineSeparator();
         assertEquals(expectedOutput, outContent.toString());
         verify(mockPlayer1).addScore(1);
         verify(mockPlayer2, never()).addScore(anyInt());
@@ -176,7 +178,7 @@ class OutputTest {
         output.printWinner(mockPlayer1, mockPlayer2);
 
         String expectedOutput = "Player2, you won! Player1 has over than 21 points"
-                + System.lineSeparator();
+            + System.lineSeparator();
         assertEquals(expectedOutput, outContent.toString());
         verify(mockPlayer2).addScore(1);
         verify(mockPlayer1, never()).addScore(anyInt());
@@ -216,7 +218,7 @@ class OutputTest {
         output.printWinner(mockPlayer1, mockPlayer2);
 
         String expectedOutput = "Player1, you won! Player2 has over than 21 points"
-                + System.lineSeparator();
+            + System.lineSeparator();
         assertEquals(expectedOutput, outContent.toString());
         verify(mockPlayer1).addScore(1);
         verify(mockPlayer2, never()).addScore(anyInt());

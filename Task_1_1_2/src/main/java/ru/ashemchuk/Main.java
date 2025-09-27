@@ -13,7 +13,8 @@ public class Main {
      * @param args command-line arguments (not used in this application)
      */
     public static void main(String[] args) {
-        Game game = new Game(new Deck(), new Dealer(new Hand()), new User(new Hand()), new Output());
+        Game game =
+            new Game(new Deck(), new Dealer(new Hand()), new User(new Hand()), new Output());
         game.runGame();
     }
 }
