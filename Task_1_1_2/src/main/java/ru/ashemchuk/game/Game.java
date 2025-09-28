@@ -1,4 +1,8 @@
-package ru.ashemchuk;
+package ru.ashemchuk.game;
+
+import ru.ashemchuk.deck.Deck;
+import ru.ashemchuk.player.Dealer;
+import ru.ashemchuk.player.User;
 
 /**
  * Manages the core game logic for a card game (likely Blackjack).

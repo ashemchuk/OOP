@@ -6,6 +6,12 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
+import ru.ashemchuk.deck.Deck;
+import ru.ashemchuk.deck.card.Card;
+import ru.ashemchuk.deck.card.Rank;
+import ru.ashemchuk.deck.card.Suit;
+import ru.ashemchuk.player.Dealer;
+import ru.ashemchuk.player.Hand;
 
 class DealerTest {
 

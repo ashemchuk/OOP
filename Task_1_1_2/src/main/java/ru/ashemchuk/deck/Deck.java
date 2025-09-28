@@ -1,8 +1,11 @@
-package ru.ashemchuk;
+package ru.ashemchuk.deck;
 
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
+import ru.ashemchuk.deck.card.Card;
+import ru.ashemchuk.deck.card.Rank;
+import ru.ashemchuk.deck.card.Suit;
 
 /**
  * Represents a deck of playing cards from a standard 52-card deck.

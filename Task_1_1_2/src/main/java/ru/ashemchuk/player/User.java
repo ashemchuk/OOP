@@ -1,6 +1,7 @@
-package ru.ashemchuk;
+package ru.ashemchuk.player;
 
 import java.util.Scanner;
+import ru.ashemchuk.deck.Deck;
 
 /**
  * Represents the human user player in the card game.

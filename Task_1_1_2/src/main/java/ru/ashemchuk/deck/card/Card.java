@@ -1,4 +1,4 @@
-package ru.ashemchuk;
+package ru.ashemchuk.deck.card;
 
 /**
  * Represents a playing card from a standard 52-card deck.
@@ -16,7 +16,7 @@ public class Card {
      * @param suit the suit of the card
      * @param rank the rank of the card
      */
-    Card(Suit suit, Rank rank) {
+    public Card(Suit suit, Rank rank) {
         this.suit = suit;
         this.rank = rank;
     }

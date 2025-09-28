@@ -1,4 +1,9 @@
-package ru.ashemchuk;
+package ru.ashemchuk.player;
+
+import ru.ashemchuk.deck.Deck;
+import ru.ashemchuk.deck.card.Card;
+import ru.ashemchuk.deck.card.Rank;
+import ru.ashemchuk.game.Output;
 
 /**
  * Abstract base class representing a player in the card game.

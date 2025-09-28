@@ -3,6 +3,10 @@ package ru.ashemchuk;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
+import ru.ashemchuk.deck.card.Card;
+import ru.ashemchuk.deck.card.Rank;
+import ru.ashemchuk.deck.card.Suit;
+import ru.ashemchuk.player.Hand;
 
 class HandTest {
 

@@ -3,6 +3,7 @@ package ru.ashemchuk;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import org.junit.jupiter.api.Test;
+import ru.ashemchuk.deck.Deck;
 
 class DeckTest {
     @Test

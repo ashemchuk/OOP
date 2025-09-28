@@ -1,7 +1,8 @@
-package ru.ashemchuk;
+package ru.ashemchuk.player;
 
 import java.util.ArrayList;
 import java.util.List;
+import ru.ashemchuk.deck.card.Card;
 
 /**
  * Represents a player's hand containing playing cards.

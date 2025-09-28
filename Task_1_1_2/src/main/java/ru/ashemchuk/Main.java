@@ -1,5 +1,12 @@
 package ru.ashemchuk;
 
+import ru.ashemchuk.deck.Deck;
+import ru.ashemchuk.game.Game;
+import ru.ashemchuk.game.Output;
+import ru.ashemchuk.player.Dealer;
+import ru.ashemchuk.player.Hand;
+import ru.ashemchuk.player.User;
+
 /**
  * Main application class for the card game.
  * Serves as the entry point for the application and initializes the game components.

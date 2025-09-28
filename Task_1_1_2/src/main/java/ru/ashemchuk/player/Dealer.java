@@ -1,4 +1,7 @@
-package ru.ashemchuk;
+package ru.ashemchuk.player;
+
+import ru.ashemchuk.deck.Deck;
+import ru.ashemchuk.deck.card.Card;
 
 /**
  * Represents a dealer in a card game, extending the Player class.

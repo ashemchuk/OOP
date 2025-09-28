@@ -16,6 +16,11 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.mockito.junit.jupiter.MockitoSettings;
 import org.mockito.quality.Strictness;
+import ru.ashemchuk.deck.card.Card;
+import ru.ashemchuk.game.Game;
+import ru.ashemchuk.game.Output;
+import ru.ashemchuk.player.Hand;
+import ru.ashemchuk.player.Player;
 
 @ExtendWith(MockitoExtension.class)
 @MockitoSettings(strictness = Strictness.LENIENT)

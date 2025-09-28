@@ -1,4 +1,4 @@
-package ru.ashemchuk;
+package ru.ashemchuk.deck.card;
 
 /**
  * Represents the ranks of playing cards in a standard deck.

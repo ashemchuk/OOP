@@ -13,6 +13,12 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import ru.ashemchuk.deck.Deck;
+import ru.ashemchuk.game.Game;
+import ru.ashemchuk.game.Output;
+import ru.ashemchuk.player.Dealer;
+import ru.ashemchuk.player.Hand;
+import ru.ashemchuk.player.User;
 
 @ExtendWith(MockitoExtension.class)
 class GameTest {

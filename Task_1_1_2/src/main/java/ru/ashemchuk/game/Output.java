@@ -1,4 +1,7 @@
-package ru.ashemchuk;
+package ru.ashemchuk.game;
+
+import ru.ashemchuk.deck.card.Card;
+import ru.ashemchuk.player.Player;
 
 /**
  * Handles all console output operations for the card game.
