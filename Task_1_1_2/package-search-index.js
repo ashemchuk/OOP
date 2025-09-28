@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"ru.ashemchuk"}];updateSearchResults();
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"ru.ashemchuk"},{"l":"ru.ashemchuk.deck"},{"l":"ru.ashemchuk.deck.card"},{"l":"ru.ashemchuk.game"},{"l":"ru.ashemchuk.player"}];updateSearchResults();
