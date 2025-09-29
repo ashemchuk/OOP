@@ -14,7 +14,18 @@ import ru.ashemchuk.deck.card.Suit;
  */
 public class Deck {
     static final Random random = new Random();
-    final List<Card> cards = new LinkedList<>();
+    final List<Card> cards;
+    private final int count;
+
+    public Deck() {
+        this.cards = new LinkedList<>();
+        this.count = 1;
+    }
+
+    public Deck(int count) {
+        this.cards = new LinkedList<>();
+        this.count = count;
+    }
 
     /**
      * Draws a random card from the deck. If the deck is empty, it will be
@@ -38,9 +49,11 @@ public class Deck {
      * This method is called automatically when the deck becomes empty.
      */
     private void fill() {
-        for (Rank rank : Rank.values()) {
-            for (Suit suit : Suit.values()) {
-                cards.add(new Card(suit, rank));
+        for (int i = 0; i < count; i++) {
+            for (Rank rank : Rank.values()) {
+                for (Suit suit : Suit.values()) {
+                    cards.add(new Card(suit, rank));
+                }
             }
         }
     }

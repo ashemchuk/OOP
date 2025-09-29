@@ -1,5 +1,6 @@
 package ru.ashemchuk;
 
+import java.util.Scanner;
 import ru.ashemchuk.deck.Deck;
 import ru.ashemchuk.game.Game;
 import ru.ashemchuk.game.Output;
@@ -21,7 +22,33 @@ public class Main {
      */
     public static void main(String[] args) {
         Game game =
-            new Game(new Deck(), new Dealer(new Hand()), new User(new Hand()), new Output());
+            new Game(new Deck(getDeckCount()),
+                new Dealer(new Hand()), new User(new Hand()), new Output());
         game.runGame();
+    }
+
+    /**
+     * Prompts the user to enter the number of decks to be used in the game.
+     * Continuously requests input until a valid number between 1 and 20 is provided.
+     *
+     * @return the number of decks to be used in the game,
+     * guaranteed to be between 1 and 20 inclusive
+     */
+    public static int getDeckCount() {
+        int count;
+        Scanner in = new Scanner(System.in);
+
+        while (true) {
+            System.out.println("Enter count of decks(from 1 to 20)...");
+            try {
+                count = in.nextInt();
+                if (1 <= count && count <= 20) {
+                    return count;
+                }
+            } catch (Exception ex) {
+                in.nextLine();
+                System.out.println("Please, enter a number");
+            }
+        }
     }
 }
