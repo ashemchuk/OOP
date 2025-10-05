@@ -19,12 +19,20 @@ public class Add extends Expression {
     }
 
     @Override
-    public Expression eval(String signification) {
-        return null;
+    public Expression eval (String signification) {
+        return new Add(term1.eval(signification), term2.eval(signification));
     }
 
     @Override
     public Expression simplify() {
-        return null;
+        if (term1.getClass() == Number.class && term2.getClass() == Number.class) {
+            return new Number(((Number) term1).getNum() + ((Number) term2).getNum());
+        }
+//        if (term1.getClass() == Number.class && ((Number) term1).getNum() == 0) {
+//            return term2;
+//        }
+
+        // new??
+        return new Add (term1.simplify(), term2.simplify()).simplify();
     }
 }

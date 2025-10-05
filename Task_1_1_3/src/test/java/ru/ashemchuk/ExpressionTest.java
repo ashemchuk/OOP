@@ -24,4 +24,18 @@ class ExpressionTest {
         assertEquals("variable", multiLetter.toString());
     }
 
+    @Test
+    void testParseSignification() {
+        String input = "x = 11;    j = 1; multiple = 0; x=2";
+        Number n = new Number(0);
+        n.parseSignification(input);
+    }
+
+    @Test
+    void testEval() {
+        Expression e = new Add(new Number(3), new Mul(new Number(2), new Variable("x"))); // (3+(2*x))
+        e.print();
+        e.eval("x=10;y = 1").print();
+        e.eval("x=10;y = 1").simplify().print();
+    }
 }

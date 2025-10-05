@@ -14,17 +14,20 @@ public class Number extends Expression {
 
     @Override
     public Expression derivative (String var) {
-        return new Number(0);
+        return new Mul(new Number(0), new Variable(var));
     }
 
     @Override
     public Expression eval(String signification) {
-        return null;
+        return new Number(this.num);
     }
 
     @Override
     public Expression simplify() {
-        return null;
+        return new Number(this.num);
     }
 
+    public int getNum () {
+        return this.num;
+    }
 }

@@ -16,12 +16,18 @@ public class Sub extends Expression {
 
     @Override
     public Expression eval(String signification) {
-        return null;
+        return new Sub(term1.eval(signification), term2.eval(signification));
     }
 
     @Override
     public Expression simplify() {
-        return null;
+        if (term1.equals(term2)) {
+            return new Number(0);
+        }
+        if (term1.getClass() == Number.class && term2.getClass() == Number.class) {
+            return new Number(((Number) term1).getNum() - ((Number) term2).getNum());
+        }
+        return new Sub(term1.simplify(), term2.simplify()).simplify();
     }
 
     @Override

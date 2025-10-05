@@ -20,11 +20,16 @@ public class Variable extends Expression {
     }
 
     public Expression eval (String signification) {
-        return null;
+        parseSignification(signification);
+        Integer value = this.getValue(name);
+        if (value != null) {
+            return new Number(value);
+        }
+        return new Variable(this.name);
     }
 
     @Override
     public Expression simplify() {
-        return this;
+        return new Variable(this.name);
     }
 }

@@ -16,12 +16,26 @@ public class Mul extends Expression {
 
     @Override
     public Expression eval(String signification) {
-        return null;
+        return new Mul(term1.eval(signification), term2.eval(signification));
     }
 
     @Override
     public Expression simplify() {
-        return null;
+        if (term1.getClass() == Number.class && ((Number) term1).getNum() == 0 ||
+            term2.getClass() == Number.class && ((Number) term2).getNum() == 0) {
+                return new Number(0);
+        }
+        if (term1.getClass() == Number.class && ((Number) term1).getNum() == 1) {
+            return term2.simplify();
+        }
+        if (term2.getClass() == Number.class && ((Number) term2).getNum() == 1) {
+            return term1.simplify();
+        }
+        if (term1.getClass() == Number.class && term2.getClass() == Number.class) {
+            return new Number(((Number) term1).getNum() * ((Number) term2).getNum());
+        }
+        // return this???
+        return new Mul(term1.simplify(), term2.simplify()).simplify();
     }
 
     @Override
