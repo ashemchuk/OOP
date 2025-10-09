@@ -1,0 +1,33 @@
+package ru.ashemchuk.parser;
+
+public class Token {
+    private TokenType type;
+    private String value;
+
+    public Token (TokenType type, String value) {
+        this.type = type;
+        this.value = value;
+    }
+
+    // FIXME
+    public Token () {
+        this.type = null;
+        this.value = null;
+    }
+
+    public TokenType getType() {
+        return type;
+    }
+
+    public String getValue() {
+        return value;
+    }
+
+    public void setType(TokenType type) {
+        this.type = type;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
+    }
+}
