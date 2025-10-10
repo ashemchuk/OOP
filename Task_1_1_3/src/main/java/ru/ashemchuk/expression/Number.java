@@ -1,4 +1,4 @@
-package ru.ashemchuk;
+package ru.ashemchuk.expression;
 
 public class Number extends Expression {
     private final int num;
@@ -11,6 +11,7 @@ public class Number extends Expression {
     public String toString () {
         return Integer.toString(num);
     }
+
 
     @Override
     public Expression derivative (String var) {
@@ -30,4 +31,6 @@ public class Number extends Expression {
     public int getNum () {
         return this.num;
     }
+
+
 }

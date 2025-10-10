@@ -8,7 +8,7 @@ class TokenizerTest {
 
     @Test
     void getNextToken() {
-        Tokenizer t = new Tokenizer("21 +   (3 * xxx)");
+        Tokenizer t = new Tokenizer("21 +   (3 * xxx) ");
         Token num_21 = t.getNextToken();
         assertEquals(TokenType.NUM, num_21.getType());
         assertEquals("21", num_21.getValue());

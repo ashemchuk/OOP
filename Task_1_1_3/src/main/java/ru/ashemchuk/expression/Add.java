@@ -1,4 +1,4 @@
-package ru.ashemchuk;
+package ru.ashemchuk.expression;
 
 public class Add extends Expression {
     private final Expression term1;

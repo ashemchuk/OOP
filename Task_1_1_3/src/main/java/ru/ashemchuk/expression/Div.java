@@ -1,4 +1,4 @@
-package ru.ashemchuk;
+package ru.ashemchuk.expression;
 
 public class Div extends Expression {
     private final Expression term1;
@@ -12,7 +12,7 @@ public class Div extends Expression {
     @Override
     public Expression derivative(String var) {
         return new Div(
-            new Sub (
+            new Sub(
                 new Mul(term1.derivative(var), term2), new Mul(term1, term2.derivative(var))),
             new Mul(term2.derivative(var), term2.derivative(var))
         );

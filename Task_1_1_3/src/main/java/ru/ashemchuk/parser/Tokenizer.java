@@ -11,7 +11,8 @@ public class Tokenizer {
 
     public Token getNextToken() {
         Token t = new Token();
-        while (Character.isWhitespace(expression.charAt(position))) {
+        while (position < expression.length() &&
+            Character.isWhitespace(expression.charAt(position))) {
             position++;
         }
         if (position >= expression.length()) {
@@ -27,7 +28,8 @@ public class Tokenizer {
         }
 
         int pos_begin = position;
-        while (Character.isAlphabetic(expression.charAt(position))) {
+        while (position < expression.length() &&
+            Character.isAlphabetic(expression.charAt(position))) {
             position++;
         }
         if (position != pos_begin) {
@@ -37,7 +39,8 @@ public class Tokenizer {
         }
 
         // here pos_begin == position
-        while (Character.isDigit(expression.charAt(position))) {
+        while (position < expression.length() &&
+            Character.isDigit(expression.charAt(position))) {
             position++;
         }
         if (position != pos_begin) {

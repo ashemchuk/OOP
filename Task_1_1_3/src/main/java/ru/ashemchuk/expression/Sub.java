@@ -1,4 +1,4 @@
-package ru.ashemchuk;
+package ru.ashemchuk.expression;
 
 public class Sub extends Expression {
     private final Expression term1;
@@ -22,10 +22,10 @@ public class Sub extends Expression {
     @Override
     public Expression simplify() {
         if (term1.equals(term2)) {
-            return new Number(0);
+            return new ru.ashemchuk.expression.Number(0);
         }
-        if (term1.getClass() == Number.class && term2.getClass() == Number.class) {
-            return new Number(((Number) term1).getNum() - ((Number) term2).getNum());
+        if (term1.getClass() == ru.ashemchuk.expression.Number.class && term2.getClass() == ru.ashemchuk.expression.Number.class) {
+            return new ru.ashemchuk.expression.Number(((ru.ashemchuk.expression.Number) term1).getNum() - ((Number) term2).getNum());
         }
         return new Sub(term1.simplify(), term2.simplify()).simplify();
     }
