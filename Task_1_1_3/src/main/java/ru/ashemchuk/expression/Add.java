@@ -25,7 +25,7 @@ public class Add extends Expression {
 
     @Override
     public Expression simplify() {
-        if (term1.getClass() == Number.class && term2.getClass() == Number.class) {
+        if (term1 instanceof Number && term2 instanceof Number) {
             return new Number(((Number) term1).getNum() + ((Number) term2).getNum());
         }
 //        if (term1.getClass() == Number.class && ((Number) term1).getNum() == 0) {

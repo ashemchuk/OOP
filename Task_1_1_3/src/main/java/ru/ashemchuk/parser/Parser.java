@@ -10,6 +10,7 @@ import ru.ashemchuk.expression.Variable;
 
 public class Parser {
     private final Tokenizer tokenizer;
+
     //FIXME: invalid input string handling
     public Parser (Tokenizer tokenizer) {
         this.tokenizer = tokenizer;
@@ -85,4 +86,7 @@ public class Parser {
         }
         return  res;
     }
+
+
+
 }

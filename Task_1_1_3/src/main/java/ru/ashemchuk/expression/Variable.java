@@ -1,5 +1,7 @@
 package ru.ashemchuk.expression;
 
+import ru.ashemchuk.parser.Signification;
+
 public class Variable extends Expression {
     private final String name;
 
@@ -21,8 +23,9 @@ public class Variable extends Expression {
     }
 
     public Expression eval (String signification) {
-        parseSignification(signification);
-        Integer value = this.getValue(name);
+        Signification s = new Signification();
+        s.parseSignification(signification);
+        Integer value = s.getValue(name);
         if (value != null) {
             return new Number(value);
         }

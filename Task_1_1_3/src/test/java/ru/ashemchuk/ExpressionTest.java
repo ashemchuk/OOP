@@ -30,13 +30,6 @@ class ExpressionTest {
     }
 
     @Test
-    void testParseSignification() {
-        String input = "x = 11;    j = 1; multiple = 0; x=2";
-        ru.ashemchuk.expression.Number n = new ru.ashemchuk.expression.Number(0);
-        n.parseSignification(input);
-    }
-
-    @Test
     void testEval() {
         Expression e = new Add(new ru.ashemchuk.expression.Number(3), new Mul(new ru.ashemchuk.expression.Number(2), new Variable("x"))); // (3+(2*x))
         e.print();

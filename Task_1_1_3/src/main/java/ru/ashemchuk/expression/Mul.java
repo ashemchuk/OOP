@@ -21,17 +21,17 @@ public class Mul extends Expression {
 
     @Override
     public Expression simplify() {
-        if (term1.getClass() == Number.class && ((Number) term1).getNum() == 0 ||
-            term2.getClass() == Number.class && ((Number) term2).getNum() == 0) {
+        if (term1 instanceof Number && ((Number) term1).getNum() == 0 ||
+            term2 instanceof Number && ((Number) term2).getNum() == 0) {
                 return new Number(0);
         }
-        if (term1.getClass() == Number.class && ((Number) term1).getNum() == 1) {
+        if (term1 instanceof Number && ((Number) term1).getNum() == 1) {
             return term2.simplify();
         }
-        if (term2.getClass() == Number.class && ((Number) term2).getNum() == 1) {
+        if (term2 instanceof Number && ((Number) term2).getNum() == 1) {
             return term1.simplify();
         }
-        if (term1.getClass() == Number.class && term2.getClass() == Number.class) {
+        if (term1 instanceof Number && term2 instanceof Number) {
             return new Number(((Number) term1).getNum() * ((Number) term2).getNum());
         }
         // return this???
