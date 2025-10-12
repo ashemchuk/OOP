@@ -77,6 +77,8 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Signification</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">Represents a mapping of variable names to their integer values.
+ This class is used to store and retrieve variable significations for expression evaluation.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -89,7 +91,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E()" class="member-name-link">Signification</a>()</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Constructs a new empty Signification object.</div>
+</div>
 </div>
 </section>
 </li>
@@ -106,10 +110,14 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getValue(java.lang.String)" class="member-name-link">getValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;variable)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Retrieves the value associated with the specified variable.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#parseSignification(java.lang.String)" class="member-name-link">parseSignification</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;signification)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Parses a signification string and populates the internal mapping.</div>
+</div>
 </div>
 </div>
 </div>
@@ -131,6 +139,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="&lt;init&gt;()">
 <h3>Signification</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Signification</span>()</div>
+<div class="block">Constructs a new empty Signification object.</div>
 </section>
 </li>
 </ul>
@@ -145,10 +154,12 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="parseSignification(java.lang.String)">
 <h3>parseSignification</h3>
 <div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">parseSignification</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;signification)</span></div>
+<div class="block">Parses a signification string and populates the internal mapping.
+ The signification must be in format: "x = 1; yx = 5", with variable name, "=" and value (number),
+ separated by semicolon. Invalid records and whitespaces will be ignored.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>signification</code> - must be in format: "x = 1; yx = 5", variable name, "=" and value (number),
-       separated by semicolon, invalid records and whitespaces will be ignored</dd>
+<dd><code>signification</code> - the string containing variable assignments to parse</dd>
 </dl>
 </section>
 </li>
@@ -156,11 +167,12 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getValue(java.lang.String)">
 <h3>getValue</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;variable)</span></div>
+<div class="block">Retrieves the value associated with the specified variable.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>variable</code> - - String name of variable</dd>
+<dd><code>variable</code> - the String name of the variable to look up</dd>
 <dt>Returns:</dt>
-<dd>if variable is in signification - value, else - null</dd>
+<dd>the integer value if the variable is in the signification, null otherwise</dd>
 </dl>
 </section>
 </li>

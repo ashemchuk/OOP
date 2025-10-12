@@ -83,6 +83,8 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public enum </span><span class="element-name type-name-label">TokenType</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Enum.html" title="class or interface in java.lang" class="external-link">Enum</a>&lt;<a href="TokenType.html" title="enum class in ru.ashemchuk.parser">TokenType</a>&gt;</span></div>
+<div class="block">Enumeration representing the different types of tokens that can be identified
+ during the tokenization of mathematical expressions.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -104,13 +106,21 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Enum Constant</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code><a href="#NOT_TOKEN" class="member-name-link">NOT_TOKEN</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Represents the absence of a valid token or end of input</div>
+</div>
 <div class="col-first odd-row-color"><code><a href="#NUM" class="member-name-link">NUM</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Represents a numeric constant token</div>
+</div>
 <div class="col-first even-row-color"><code><a href="#OP" class="member-name-link">OP</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Represents an operator token (+, -, *, /, (, ))</div>
+</div>
 <div class="col-first odd-row-color"><code><a href="#VAR" class="member-name-link">VAR</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Represents a variable identifier token</div>
+</div>
 </div>
 </section>
 </li>
@@ -160,24 +170,28 @@ the order they are declared.</div>
 <section class="detail" id="NUM">
 <h3>NUM</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="TokenType.html" title="enum class in ru.ashemchuk.parser">TokenType</a></span>&nbsp;<span class="element-name">NUM</span></div>
+<div class="block">Represents a numeric constant token</div>
 </section>
 </li>
 <li>
 <section class="detail" id="VAR">
 <h3>VAR</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="TokenType.html" title="enum class in ru.ashemchuk.parser">TokenType</a></span>&nbsp;<span class="element-name">VAR</span></div>
+<div class="block">Represents a variable identifier token</div>
 </section>
 </li>
 <li>
 <section class="detail" id="OP">
 <h3>OP</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="TokenType.html" title="enum class in ru.ashemchuk.parser">TokenType</a></span>&nbsp;<span class="element-name">OP</span></div>
+<div class="block">Represents an operator token (+, -, *, /, (, ))</div>
 </section>
 </li>
 <li>
 <section class="detail" id="NOT_TOKEN">
 <h3>NOT_TOKEN</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="TokenType.html" title="enum class in ru.ashemchuk.parser">TokenType</a></span>&nbsp;<span class="element-name">NOT_TOKEN</span></div>
+<div class="block">Represents the absence of a valid token or end of input</div>
 </section>
 </li>
 </ul>

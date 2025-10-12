@@ -79,6 +79,8 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Div</span>
 <span class="extends-implements">extends <a href="Expression.html" title="class in ru.ashemchuk.expression">Expression</a></span></div>
+<div class="block">Represents a division operation between two expressions.
+ This class extends Expression to provide functionality for dividing two terms.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -92,7 +94,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(ru.ashemchuk.expression.Expression,ru.ashemchuk.expression.Expression)" class="member-name-link">Div</a><wbr>(<a href="Expression.html" title="class in ru.ashemchuk.expression">Expression</a>&nbsp;t1,
  <a href="Expression.html" title="class in ru.ashemchuk.expression">Expression</a>&nbsp;t2)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Constructs a new Div expression with the specified terms.</div>
+</div>
 </div>
 </section>
 </li>
@@ -109,22 +113,34 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expression.html" title="class in ru.ashemchuk.expression">Expression</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#derivative(java.lang.String)" class="member-name-link">derivative</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;var)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Computes the derivative of the division expression using the quotient rule.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expression.html" title="class in ru.ashemchuk.expression">Expression</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#eval(java.lang.String)" class="member-name-link">eval</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;signification)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Evaluates the division expression by evaluating both terms with the given signification.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expression.html" title="class in ru.ashemchuk.expression">Expression</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLeft()" class="member-name-link">getLeft</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the left term (numerator) of the division expression.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expression.html" title="class in ru.ashemchuk.expression">Expression</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRight()" class="member-name-link">getRight</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the right term (denominator) of the division expression.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Expression.html" title="class in ru.ashemchuk.expression">Expression</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#simplify()" class="member-name-link">simplify</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Simplifies the division expression by applying mathematical rules.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns a string representation of the division expression.</div>
+</div>
 </div>
 </div>
 </div>
@@ -150,6 +166,12 @@ loadScripts(document, 'script');</script>
 <h3>Div</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Div</span><wbr><span class="parameters">(<a href="Expression.html" title="class in ru.ashemchuk.expression">Expression</a>&nbsp;t1,
  <a href="Expression.html" title="class in ru.ashemchuk.expression">Expression</a>&nbsp;t2)</span></div>
+<div class="block">Constructs a new Div expression with the specified terms.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>t1</code> - the numerator (dividend) of the division</dd>
+<dd><code>t2</code> - the denominator (divisor) of the division</dd>
+</dl>
 </section>
 </li>
 </ul>
@@ -164,9 +186,15 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="derivative(java.lang.String)">
 <h3>derivative</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Expression.html" title="class in ru.ashemchuk.expression">Expression</a></span>&nbsp;<span class="element-name">derivative</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;var)</span></div>
+<div class="block">Computes the derivative of the division expression using the quotient rule.
+ The quotient rule states: (f/g)' = (f'g - fg') / (g^2)</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Expression.html#derivative(java.lang.String)">derivative</a></code>&nbsp;in class&nbsp;<code><a href="Expression.html" title="class in ru.ashemchuk.expression">Expression</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>var</code> - the variable with respect to which to differentiate</dd>
+<dt>Returns:</dt>
+<dd>a new Div expression representing the derivative</dd>
 </dl>
 </section>
 </li>
@@ -174,9 +202,14 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="eval(java.lang.String)">
 <h3>eval</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Expression.html" title="class in ru.ashemchuk.expression">Expression</a></span>&nbsp;<span class="element-name">eval</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;signification)</span></div>
+<div class="block">Evaluates the division expression by evaluating both terms with the given signification.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Expression.html#eval(java.lang.String)">eval</a></code>&nbsp;in class&nbsp;<code><a href="Expression.html" title="class in ru.ashemchuk.expression">Expression</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>signification</code> - the variable signification to use for evaluation</dd>
+<dt>Returns:</dt>
+<dd>a new Div expression with evaluated terms</dd>
 </dl>
 </section>
 </li>
@@ -184,9 +217,17 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="simplify()">
 <h3>simplify</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Expression.html" title="class in ru.ashemchuk.expression">Expression</a></span>&nbsp;<span class="element-name">simplify</span>()</div>
+<div class="block">Simplifies the division expression by applying mathematical rules.
+ If both terms are numbers, they are divided.
+ If the denominator is 1, the numerator is returned.
+ If the numerator is 0, returns 0.
+ If both terms are equal, returns 1.
+ Otherwise, returns a simplified Div expression.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Expression.html#simplify()">simplify</a></code>&nbsp;in class&nbsp;<code><a href="Expression.html" title="class in ru.ashemchuk.expression">Expression</a></code></dd>
+<dt>Returns:</dt>
+<dd>a simplified expression according to division rules</dd>
 </dl>
 </section>
 </li>
@@ -194,9 +235,13 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="toString()">
 <h3>toString</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">toString</span>()</div>
+<div class="block">Returns a string representation of the division expression.
+ The terms are enclosed in parentheses and separated by a division sign.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Expression.html#toString()">toString</a></code>&nbsp;in class&nbsp;<code><a href="Expression.html" title="class in ru.ashemchuk.expression">Expression</a></code></dd>
+<dt>Returns:</dt>
+<dd>a string representation of the form "(term1 / term2)"</dd>
 </dl>
 </section>
 </li>
@@ -204,12 +249,22 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getLeft()">
 <h3>getLeft</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Expression.html" title="class in ru.ashemchuk.expression">Expression</a></span>&nbsp;<span class="element-name">getLeft</span>()</div>
+<div class="block">Returns the left term (numerator) of the division expression.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the numerator (dividend)</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getRight()">
 <h3>getRight</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Expression.html" title="class in ru.ashemchuk.expression">Expression</a></span>&nbsp;<span class="element-name">getRight</span>()</div>
+<div class="block">Returns the right term (denominator) of the division expression.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the denominator (divisor)</dd>
+</dl>
 </section>
 </li>
 </ul>

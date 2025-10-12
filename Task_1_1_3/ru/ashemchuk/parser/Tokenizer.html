@@ -77,6 +77,9 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Tokenizer</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">Tokenizes mathematical expressions by breaking them down into individual tokens.
+ This class processes input strings and converts them into a sequence of tokens
+ that can be used by the parser to build expression trees.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -89,7 +92,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.lang.String)" class="member-name-link">Tokenizer</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;expression)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Constructs a new Tokenizer for the specified expression.</div>
+</div>
 </div>
 </section>
 </li>
@@ -106,10 +111,14 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Token.html" title="class in ru.ashemchuk.parser">Token</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNextToken()" class="member-name-link">getNextToken</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Retrieves the next token from the expression string.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Token.html" title="class in ru.ashemchuk.parser">Token</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#showNextToken()" class="member-name-link">showNextToken</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Peeks at the next token without consuming it.</div>
+</div>
 </div>
 </div>
 </div>
@@ -131,6 +140,11 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="&lt;init&gt;(java.lang.String)">
 <h3>Tokenizer</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Tokenizer</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;expression)</span></div>
+<div class="block">Constructs a new Tokenizer for the specified expression.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>expression</code> - the mathematical expression string to tokenize</dd>
+</dl>
 </section>
 </li>
 </ul>
@@ -145,12 +159,25 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getNextToken()">
 <h3>getNextToken</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Token.html" title="class in ru.ashemchuk.parser">Token</a></span>&nbsp;<span class="element-name">getNextToken</span>()</div>
+<div class="block">Retrieves the next token from the expression string.
+ Skips whitespace and returns the next valid token (operator, variable, or number).
+ Returns NOT_TOKEN type if the end of expression is reached.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the next Token in the expression</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="showNextToken()">
 <h3>showNextToken</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Token.html" title="class in ru.ashemchuk.parser">Token</a></span>&nbsp;<span class="element-name">showNextToken</span>()</div>
+<div class="block">Peeks at the next token without consuming it.
+ The internal position is restored after examining the next token.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the next Token in the expression without advancing the position</dd>
+</dl>
 </section>
 </li>
 </ul>
