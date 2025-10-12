@@ -1,8 +1,5 @@
 package ru.ashemchuk.expression;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public abstract class Expression {
     public abstract Expression derivative(String var);
     public abstract Expression eval(String signification);

@@ -28,7 +28,7 @@ public class Parser {
                 tokenizer.showNextToken().getValue().equals("-"))
         ) {
             Token op = tokenizer.getNextToken();
-            Expression new_expr = parseAtom();
+            Expression new_expr = parseMonome();
             if (op.getValue().equals("+")) {
                 acc_expr = new Add(acc_expr, new_expr);
             }

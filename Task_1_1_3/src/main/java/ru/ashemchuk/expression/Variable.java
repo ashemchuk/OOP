@@ -36,4 +36,8 @@ public class Variable extends Expression {
     public Expression simplify() {
         return new Variable(this.name);
     }
+
+    public String getName() {
+        return name;
+    }
 }

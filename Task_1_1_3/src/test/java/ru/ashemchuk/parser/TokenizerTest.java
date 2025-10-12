@@ -58,4 +58,36 @@ class TokenizerTest {
         assertEquals(TokenType.NUM, num_3_get.getType());
         assertEquals("3", num_3_get.getValue());
     }
+
+
+    @Test
+    void testTokenCreation() {
+        Token token = new Token();
+        token.setType(TokenType.VAR);
+        token.setValue("test");
+
+        assertEquals(TokenType.VAR, token.getType());
+        assertEquals("test", token.getValue());
+    }
+
+    @Test
+    void testTokenizerOperators() {
+        Tokenizer tokenizer = new Tokenizer("()+ - */");
+
+        assertEquals("(", tokenizer.getNextToken().getValue());
+        assertEquals(")", tokenizer.getNextToken().getValue());
+        assertEquals("+", tokenizer.getNextToken().getValue());
+        assertEquals("-", tokenizer.getNextToken().getValue());
+        assertEquals("*", tokenizer.getNextToken().getValue());
+        assertEquals("/", tokenizer.getNextToken().getValue());
+    }
+
+    @Test
+    void testTokenizerEndOfString() {
+        Tokenizer tokenizer = new Tokenizer("x");
+
+        tokenizer.getNextToken(); // get "x"
+        Token eosToken = tokenizer.getNextToken();
+        assertEquals(TokenType.NOT_TOKEN, eosToken.getType());
+    }
 }

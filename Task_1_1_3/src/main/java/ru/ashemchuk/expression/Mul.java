@@ -21,25 +21,35 @@ public class Mul extends Expression {
 
     @Override
     public Expression simplify() {
-        if (term1 instanceof Number && ((Number) term1).getNum() == 0 ||
-            term2 instanceof Number && ((Number) term2).getNum() == 0) {
+        Expression simple1 = term1.simplify();
+        Expression simple2 = term2.simplify();
+        if (simple1 instanceof Number && ((Number) simple1).getNum() == 0 ||
+            simple2 instanceof Number && ((Number) simple2).getNum() == 0) {
                 return new Number(0);
         }
-        if (term1 instanceof Number && ((Number) term1).getNum() == 1) {
-            return term2.simplify();
+        // FIXME new
+        if (simple1 instanceof Number && ((Number) simple1).getNum() == 1) {
+            return simple2.simplify();
         }
-        if (term2 instanceof Number && ((Number) term2).getNum() == 1) {
-            return term1.simplify();
+        // FIXME new
+        if (simple2 instanceof Number && ((Number) simple2).getNum() == 1) {
+            return simple1.simplify();
         }
-        if (term1 instanceof Number && term2 instanceof Number) {
-            return new Number(((Number) term1).getNum() * ((Number) term2).getNum());
+        if (simple1 instanceof Number && simple2 instanceof Number) {
+            return new Number(((Number) simple1).getNum() * ((Number) simple2).getNum());
         }
-        // return this???
-        return new Mul(term1.simplify(), term2.simplify()).simplify();
+        return new Mul(simple1, simple2);
     }
 
     @Override
     public String toString() {
         return "(" + term1.toString() + "*" + term2.toString() + ")";
+    }
+
+    public Expression getLeft() {
+        return term1;
+    }
+    public Expression getRight() {
+        return term2;
     }
 }

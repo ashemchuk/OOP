@@ -21,17 +21,27 @@ public class Sub extends Expression {
 
     @Override
     public Expression simplify() {
-        if (term1.equals(term2)) {
+        Expression simple1 = term1.simplify();
+        Expression simple2 = term2.simplify();
+
+        if (simple1.equals(simple2)) {
             return new Number(0);
         }
-        if (term1 instanceof Number && term2 instanceof Number) {
-            return new Number(((Number) term1).getNum() - ((Number) term2).getNum());
+        if (simple1 instanceof Number && simple2 instanceof Number) {
+            return new Number(((Number) simple1).getNum() - ((Number) simple2).getNum());
         }
-        return new Sub(term1.simplify(), term2.simplify()).simplify();
+        return new Sub(simple1, simple2);
     }
 
     @Override
     public String toString () {
         return "(" + term1.toString() + "-" + term2.toString() + ")";
+    }
+
+    public Expression getLeft() {
+        return term1;
+    }
+    public Expression getRight() {
+        return term2;
     }
 }

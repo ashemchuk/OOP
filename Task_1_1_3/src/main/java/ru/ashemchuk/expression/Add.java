@@ -25,14 +25,28 @@ public class Add extends Expression {
 
     @Override
     public Expression simplify() {
-        if (term1 instanceof Number && term2 instanceof Number) {
-            return new Number(((Number) term1).getNum() + ((Number) term2).getNum());
-        }
-//        if (term1.getClass() == Number.class && ((Number) term1).getNum() == 0) {
-//            return term2;
-//        }
+        Expression simple1 = term1.simplify();
+        Expression simple2 = term2.simplify();
 
-        // new??
-        return new Add (term1.simplify(), term2.simplify()).simplify();
+        if (simple1 instanceof Number && simple2 instanceof Number) {
+            return new Number(((Number) simple1).getNum() + ((Number) simple2).getNum());
+        }
+        // FIXME: new
+        if (simple1 instanceof Number && ((Number) simple1).getNum() == 0) {
+            return simple2;
+        }
+        // FIXME: new
+        if (simple2 instanceof  Number && ((Number) simple2).getNum() == 0) {
+            return simple1;
+        }
+
+        return new Add (simple1, simple2);
+    }
+
+    public Expression getLeft() {
+        return term1;
+    }
+    public Expression getRight() {
+        return term2;
     }
 }

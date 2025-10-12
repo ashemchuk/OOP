@@ -25,14 +25,34 @@ public class Div extends Expression {
 
     @Override
     public Expression simplify() {
-        if (term1 instanceof Number && term2 instanceof Number) {
-            return new Number(((Number) term1).getNum() / ((Number) term2).getNum());
+        Expression simple1 = term1.simplify();
+        Expression simple2 = term2.simplify();
+
+        if (simple1 instanceof Number && simple2 instanceof Number) {
+            return new Number(((Number) simple1).getNum() / ((Number) simple2).getNum());
         }
-        return new Div(term1.simplify(), term2.simplify()).simplify();
+        // FIXME: not new
+        if (simple2 instanceof Number && ((Number) simple2).getNum() == 1) {
+            return simple1;
+        }
+        if (simple1 instanceof Number && ((Number) simple1).getNum() == 0) {
+            return  new Number(0);
+        }
+        if (simple1.equals(simple2)) {
+            return new Number(1);
+        }
+        return new Div(simple1.simplify(), simple2.simplify()).simplify();
     }
 
     @Override
     public String toString() {
         return "(" + term1.toString() + "/" + term2.toString() + ")";
+    }
+
+    public Expression getLeft() {
+        return term1;
+    }
+    public Expression getRight() {
+        return term2;
     }
 }
