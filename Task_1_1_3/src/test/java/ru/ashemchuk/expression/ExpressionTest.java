@@ -1,6 +1,7 @@
 package ru.ashemchuk.expression;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 import org.junit.jupiter.api.Test;
 
@@ -8,7 +9,8 @@ class ExpressionTest {
     @Test
     void testEquals() {
         assertEquals(new ru.ashemchuk.expression.Number(1), new ru.ashemchuk.expression.Number(1));
-        assertNotEquals(new ru.ashemchuk.expression.Number(1), new ru.ashemchuk.expression.Number(0));
+        assertNotEquals(new ru.ashemchuk.expression.Number(1),
+            new ru.ashemchuk.expression.Number(0));
 
         assertEquals(new Variable("X"), new Variable("X"));
         assertEquals(new Variable("xyz"), new Variable("xyz"));

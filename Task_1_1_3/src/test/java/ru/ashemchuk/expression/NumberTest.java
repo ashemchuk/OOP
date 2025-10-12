@@ -1,13 +1,13 @@
 package ru.ashemchuk.expression;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
 class NumberTest {
 
     @Test
-    void testToStringNumber () {
+    void testToStringNumber() {
         ru.ashemchuk.expression.Number zero = new ru.ashemchuk.expression.Number(0);
         assertEquals("0", zero.toString());
         ru.ashemchuk.expression.Number negative = new ru.ashemchuk.expression.Number(-1);
@@ -23,6 +23,7 @@ class NumberTest {
         // d(5)/dx = 0*x
         assertEquals("(0*x)", five.derivative("x").toString());
     }
+
     @Test
     void testNumberEval() {
         Number seven = new Number(7);

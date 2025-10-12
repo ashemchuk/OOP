@@ -1,10 +1,16 @@
 package ru.ashemchuk.parser;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertInstanceOf;
 
 import org.junit.jupiter.api.Test;
-import ru.ashemchuk.expression.*;
+import ru.ashemchuk.expression.Add;
+import ru.ashemchuk.expression.Div;
+import ru.ashemchuk.expression.Expression;
+import ru.ashemchuk.expression.Mul;
 import ru.ashemchuk.expression.Number;
+import ru.ashemchuk.expression.Sub;
+import ru.ashemchuk.expression.Variable;
 
 class ParserTest {
 

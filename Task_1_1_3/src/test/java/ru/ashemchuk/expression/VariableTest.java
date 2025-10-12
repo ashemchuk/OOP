@@ -1,17 +1,18 @@
 package ru.ashemchuk.expression;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
 class VariableTest {
     @Test
-    void testToStringVariable () {
+    void testToStringVariable() {
         Variable singleLetter = new Variable("x");
         assertEquals("x", singleLetter.toString());
         Variable multiLetter = new Variable("variable");
         assertEquals("variable", multiLetter.toString());
     }
+
     @Test
     void testVariableDerivative() {
         Variable x = new Variable("x");
@@ -26,6 +27,7 @@ class VariableTest {
         // d(x)/dy = 0
         assertEquals("0", x.derivative("y").toString());
     }
+
     @Test
     void testVariableEval() {
         Variable x = new Variable("x");

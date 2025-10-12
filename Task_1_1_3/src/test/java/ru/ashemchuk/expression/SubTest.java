@@ -1,6 +1,6 @@
 package ru.ashemchuk.expression;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
@@ -19,6 +19,7 @@ class SubTest {
         Expression sub3 = new Sub(new Variable("x"), new Variable("y"));
         assertEquals("(x-y)", sub3.simplify().toString());
     }
+
     @Test
     void testSubDerivative() {
         // d(x-y)/dx = 1 - 0
@@ -26,6 +27,7 @@ class SubTest {
         Expression derivative = sub.derivative("x");
         assertEquals("(1-0)", derivative.toString());
     }
+
     @Test
     void testToStringSub() {
         Expression sub1 = new Sub(new Number(5), new Number(3));
