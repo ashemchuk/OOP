@@ -28,8 +28,8 @@ public class Tokenizer {
      */
     public Token getNextToken() {
         Token t = new Token();
-        while (position < expression.length() &&
-            Character.isWhitespace(expression.charAt(position))) {
+        while (position < expression.length()
+            && Character.isWhitespace(expression.charAt(position))) {
             position++;
         }
         if (position >= expression.length()) {
@@ -44,24 +44,24 @@ public class Tokenizer {
             return t;
         }
 
-        int pos_begin = position;
-        while (position < expression.length() &&
-            Character.isAlphabetic(expression.charAt(position))) {
+        int posBegin = position;
+        while (position < expression.length()
+            && Character.isAlphabetic(expression.charAt(position))) {
             position++;
         }
-        if (position != pos_begin) {
+        if (position != posBegin) {
             t.setType(TokenType.VAR);
-            t.setValue(expression.substring(pos_begin, position));
+            t.setValue(expression.substring(posBegin, position));
             return t;
         }
 
-        // here pos_begin == position
+        // here posBegin == position
         while (position < expression.length() && Character.isDigit(expression.charAt(position))) {
             position++;
         }
-        if (position != pos_begin) {
+        if (position != posBegin) {
             t.setType(TokenType.NUM);
-            t.setValue(expression.substring(pos_begin, position));
+            t.setValue(expression.substring(posBegin, position));
         }
         return t;
     }
@@ -83,9 +83,9 @@ public class Tokenizer {
      * @return the next Token in the expression without advancing the position
      */
     public Token showNextToken() {
-        int old_pos = position;
+        int oldPos = position;
         Token t = getNextToken();
-        position = old_pos;
+        position = oldPos;
         return t;
     }
 }

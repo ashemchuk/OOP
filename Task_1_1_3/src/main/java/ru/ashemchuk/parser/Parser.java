@@ -34,20 +34,20 @@ public class Parser {
      * @return the parsed expression tree
      */
     public Expression parseExpression() {
-        Expression acc_expr = parseMonome();
-        while (tokenizer.showNextToken().getType() == TokenType.OP &&
-            (tokenizer.showNextToken().getValue().equals("+") ||
-                tokenizer.showNextToken().getValue().equals("-"))) {
+        Expression accExpr = parseMonome();
+        while (tokenizer.showNextToken().getType() == TokenType.OP
+            && (tokenizer.showNextToken().getValue().equals("+")
+                || tokenizer.showNextToken().getValue().equals("-"))) {
             Token op = tokenizer.getNextToken();
-            Expression new_expr = parseMonome();
+            Expression newExpr = parseMonome();
             if (op.getValue().equals("+")) {
-                acc_expr = new Add(acc_expr, new_expr);
+                accExpr = new Add(accExpr, newExpr);
             }
             if (op.getValue().equals("-")) {
-                acc_expr = new Sub(acc_expr, new_expr);
+                accExpr = new Sub(accExpr, newExpr);
             }
         }
-        return acc_expr;
+        return accExpr;
     }
 
     /**
@@ -59,9 +59,9 @@ public class Parser {
      */
     public Expression parseMonome() {
         Expression acc_expr = parseAtom();
-        while (tokenizer.showNextToken().getType() == TokenType.OP &&
-            (tokenizer.showNextToken().getValue().equals("*") ||
-                tokenizer.showNextToken().getValue().equals("/"))) {
+        while (tokenizer.showNextToken().getType() == TokenType.OP
+            && (tokenizer.showNextToken().getValue().equals("*")
+                || tokenizer.showNextToken().getValue().equals("/"))) {
             Token op = tokenizer.getNextToken();
             Expression new_expr = parseAtom();
             if (op.getValue().equals("*")) {
@@ -84,8 +84,8 @@ public class Parser {
     // FIXME: unary minus
     public Expression parseAtom() {
         Expression res = null;
-        if (tokenizer.showNextToken().getType() == TokenType.OP &&
-            tokenizer.showNextToken().getValue().equals("(")) { // (Expr)
+        if (tokenizer.showNextToken().getType() == TokenType.OP
+            && tokenizer.showNextToken().getValue().equals("(")) { // (Expr)
             tokenizer.getNextToken(); // open bracket
             res = parseExpression();
             tokenizer.getNextToken(); // close bracket;

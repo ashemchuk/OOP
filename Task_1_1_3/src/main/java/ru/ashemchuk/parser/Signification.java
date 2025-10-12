@@ -8,18 +8,19 @@ import java.util.Map;
  * This class is used to store and retrieve variable significations for expression evaluation.
  */
 public class Signification {
-    private final Map<String, Integer> SF; // SF - signification
+    private final Map<String, Integer> map; // SF - signification
 
     /**
      * Constructs a new empty Signification object.
      */
     public Signification() {
-        this.SF = new HashMap<>();
+        this.map = new HashMap<>();
     }
 
     /**
      * Parses a signification string and populates the internal mapping.
-     * The signification must be in format: "x = 1; yx = 5", with variable name, "=" and value (number),
+     * The signification must be in format: "x = 1; yx = 5", with variable name,
+     * "=" and value (number),
      * separated by semicolon. Invalid records and whitespaces will be ignored.
      *
      * @param signification the string containing variable assignments to parse
@@ -38,7 +39,7 @@ public class Signification {
             } catch (Exception ex) {
                 continue;
             }
-            SF.put(var, value);
+            map.put(var, value);
         }
     }
 
@@ -49,6 +50,6 @@ public class Signification {
      * @return the integer value if the variable is in the signification, null otherwise
      */
     public Integer getValue(String variable) {
-        return SF.get(variable);
+        return map.get(variable);
     }
 }

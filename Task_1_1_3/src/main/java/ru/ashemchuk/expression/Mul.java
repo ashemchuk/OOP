@@ -33,7 +33,8 @@ public class Mul extends Expression {
     }
 
     /**
-     * Evaluates the multiplication expression by evaluating both terms with the given signification.
+     * Evaluates the multiplication expression by evaluating both terms
+     * with the given signification.
      *
      * @param signification the variable signification to use for evaluation
      * @return a new Mul expression with evaluated terms
@@ -56,8 +57,8 @@ public class Mul extends Expression {
     public Expression simplify() {
         Expression simple1 = term1.simplify();
         Expression simple2 = term2.simplify();
-        if (simple1 instanceof Number && ((Number) simple1).getNum() == 0 ||
-            simple2 instanceof Number && ((Number) simple2).getNum() == 0) {
+        if (simple1 instanceof Number && ((Number) simple1).getNum() == 0
+            || simple2 instanceof Number && ((Number) simple2).getNum() == 0) {
             return new Number(0);
         }
         // FIXME new

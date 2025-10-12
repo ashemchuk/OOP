@@ -9,9 +9,9 @@ class TokenizerTest {
     @Test
     void getNextToken() {
         Tokenizer t = new Tokenizer("21 +   (3 * xxx) ");
-        Token num_21 = t.getNextToken();
-        assertEquals(TokenType.NUM, num_21.getType());
-        assertEquals("21", num_21.getValue());
+        Token num21 = t.getNextToken();
+        assertEquals(TokenType.NUM, num21.getType());
+        assertEquals("21", num21.getValue());
 
         Token plus = t.getNextToken();
         assertEquals(TokenType.OP, plus.getType());
@@ -21,9 +21,9 @@ class TokenizerTest {
         assertEquals(TokenType.OP, bracket.getType());
         assertEquals("(", bracket.getValue());
 
-        Token num_3 = t.getNextToken();
-        assertEquals(TokenType.NUM, num_3.getType());
-        assertEquals("3", num_3.getValue());
+        Token num3 = t.getNextToken();
+        assertEquals(TokenType.NUM, num3.getType());
+        assertEquals("3", num3.getValue());
 
         Token mul = t.getNextToken();
         assertEquals(TokenType.OP, mul.getType());
@@ -42,21 +42,21 @@ class TokenizerTest {
         assertEquals(t1.getType(), t2.getType());
         assertEquals(t1.getValue(), t2.getValue());
 
-        Token num_21 = t.showNextToken();
-        assertEquals(TokenType.NUM, num_21.getType());
-        assertEquals("21", num_21.getValue());
+        Token num21 = t.showNextToken();
+        assertEquals(TokenType.NUM, num21.getType());
+        assertEquals("21", num21.getValue());
 
         t.getNextToken(); // 21
         t.getNextToken(); // +
         t.getNextToken(); // (
 
-        Token num_3 = t.showNextToken();
-        assertEquals(TokenType.NUM, num_3.getType());
-        assertEquals("3", num_3.getValue());
+        Token num3 = t.showNextToken();
+        assertEquals(TokenType.NUM, num3.getType());
+        assertEquals("3", num3.getValue());
 
-        Token num_3_get = t.getNextToken();
-        assertEquals(TokenType.NUM, num_3_get.getType());
-        assertEquals("3", num_3_get.getValue());
+        Token num3Get = t.getNextToken();
+        assertEquals(TokenType.NUM, num3Get.getType());
+        assertEquals("3", num3Get.getValue());
     }
 
 
