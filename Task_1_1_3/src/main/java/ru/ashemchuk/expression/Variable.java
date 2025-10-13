@@ -39,9 +39,9 @@ public class Variable extends Expression {
      */
     public Expression derivative(String var) {
         if (this.name.equals(var)) {
-            return new ru.ashemchuk.expression.Number(1);
+            return new Number(1);
         }
-        return new ru.ashemchuk.expression.Number(0);
+        return new Number(0);
     }
 
     /**

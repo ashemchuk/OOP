@@ -68,11 +68,9 @@ public class Add extends Expression {
         if (simple1 instanceof Number && simple2 instanceof Number) {
             return new Number(((Number) simple1).getNum() + ((Number) simple2).getNum());
         }
-        // FIXME: new
         if (simple1 instanceof Number && ((Number) simple1).getNum() == 0) {
             return simple2;
         }
-        // FIXME: new
         if (simple2 instanceof Number && ((Number) simple2).getNum() == 0) {
             return simple1;
         }

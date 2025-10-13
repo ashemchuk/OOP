@@ -62,7 +62,6 @@ public class Div extends Expression {
         if (simple1 instanceof Number && simple2 instanceof Number) {
             return new Number(((Number) simple1).getNum() / ((Number) simple2).getNum());
         }
-        // FIXME: not new
         if (simple2 instanceof Number && ((Number) simple2).getNum() == 1) {
             return simple1;
         }

@@ -61,13 +61,11 @@ public class Mul extends Expression {
             || simple2 instanceof Number && ((Number) simple2).getNum() == 0) {
             return new Number(0);
         }
-        // FIXME new
         if (simple1 instanceof Number && ((Number) simple1).getNum() == 1) {
-            return simple2.simplify();
+            return simple2;
         }
-        // FIXME new
         if (simple2 instanceof Number && ((Number) simple2).getNum() == 1) {
-            return simple1.simplify();
+            return simple1;
         }
         if (simple1 instanceof Number && simple2 instanceof Number) {
             return new Number(((Number) simple1).getNum() * ((Number) simple2).getNum());
