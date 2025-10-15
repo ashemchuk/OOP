@@ -2,6 +2,7 @@ package ru.ashemchuk.parser;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertInstanceOf;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 import org.junit.jupiter.api.Test;
 import ru.ashemchuk.expression.Add;
@@ -116,5 +117,14 @@ class ParserTest {
         Sub subExpr = (Sub) expr;
         assertInstanceOf(Add.class, subExpr.getLeft());
         assertInstanceOf(Div.class, subExpr.getRight());
+    }
+
+    @Test
+    void testParserInvalidInput() {
+        Tokenizer tokenizer = new Tokenizer("a + )");
+        Parser parser = new Parser(tokenizer);
+
+        Expression expr = parser.parseExpression();
+        assertNull(expr);
     }
 }
