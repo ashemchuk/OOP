@@ -78,7 +78,8 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Parser</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
 <div class="block">Parser for mathematical expressions that converts tokens into expression trees.
- Implements a recursive descent parser to build abstract syntax trees from token streams.</div>
+ Implements a recursive descent parser to build abstract syntax trees from token streams.
+ Returns null if parsing fails.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -172,7 +173,7 @@ loadScripts(document, 'script');</script>
  Handles addition and subtraction operations with left associativity.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the parsed expression tree</dd>
+<dd>the parsed expression tree or null if parsing fails</dd>
 </dl>
 </section>
 </li>
@@ -185,7 +186,7 @@ loadScripts(document, 'script');</script>
  Handles multiplication and division operations with left associativity.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the parsed monome expression tree</dd>
+<dd>the parsed monome expression tree or null if parsing fails</dd>
 </dl>
 </section>
 </li>
@@ -198,7 +199,7 @@ loadScripts(document, 'script');</script>
  Handles numbers, variables, and parenthesized expressions.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the parsed atom expression</dd>
+<dd>the parsed atom expression or null if parsing fails</dd>
 </dl>
 </section>
 </li>
