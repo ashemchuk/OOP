@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"ru.ashemchuk","l":"AdjacencyMatrix"},{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"ru.ashemchuk.graph","l":"Edge"},{"p":"ru.ashemchuk.graph","l":"Graph"},{"p":"ru.ashemchuk","l":"Main"},{"p":"ru.ashemchuk.graph","l":"Vertex"}];updateSearchResults();
