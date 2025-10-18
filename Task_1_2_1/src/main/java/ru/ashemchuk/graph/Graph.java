@@ -11,16 +11,16 @@ public interface Graph {
     void deleteVertex(Vertex v);
     List<Vertex> getNeighbours(Vertex v);
     int getVerticesCount();
-    Vertex[] getVertices();
+    List<Vertex> getVertices();
 
     public default List<Vertex> topSort() {
         Stack<Vertex> stack = new Stack<>();
 
         boolean[] visited = new boolean[getVerticesCount()];
-
-        for (Vertex v: getVertices()) {
-            if (!visited[v.num()]) {
-                    _topSort(v, visited, stack);
+        List<Vertex> vertices = getVertices();
+        for (Vertex v: vertices) {
+            if (!visited[vertices.indexOf(v)]) {
+                    _topSort(v, visited, stack, vertices);
             }
         }
         List<Vertex> l = new ArrayList<>();
@@ -30,11 +30,11 @@ public interface Graph {
         return l;
     }
 
-    private void _topSort(Vertex v, boolean[] visited, Stack<Vertex> stack) {
-        visited[v.num()] = true;
+    private void _topSort(Vertex v, boolean[] visited, Stack<Vertex> stack, List<Vertex> vertices) {
+        visited[vertices.indexOf(v)] = true;
         for (Vertex n : getNeighbours(v)) {
-            if (!visited[n.num()]) {
-                _topSort(n, visited, stack);
+            if (!visited[vertices.indexOf(n)]) {
+                _topSort(n, visited, stack, vertices);
             }
         }
         stack.push(v);

@@ -1,4 +1,4 @@
 package ru.ashemchuk.graph;
 
-public record Vertex(int num) {
+public record Vertex(String name) {
 }
