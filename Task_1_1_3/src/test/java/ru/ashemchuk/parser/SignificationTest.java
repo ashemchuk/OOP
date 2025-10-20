@@ -38,6 +38,10 @@ class SignificationTest {
         Signification valueNotInt = new Signification();
         valueNotInt.parseSignification("a = b");
         assertNull(valueNotInt.getValue("a"));
+
+        Signification nullString = new Signification();
+        nullString.parseSignification(null);
+        assertNull(nullString.getValue("x"));
     }
 
 }

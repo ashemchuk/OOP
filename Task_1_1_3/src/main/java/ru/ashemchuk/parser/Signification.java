@@ -26,6 +26,9 @@ public class Signification {
      * @param signification the string containing variable assignments to parse
      */
     public final void parseSignification(String signification) {
+        if (signification == null) {
+            return;
+        }
         String[] significations = signification.split(";");
         for (String s : significations) {
             String[] variableValue = s.replace(" ", "").split("=");
