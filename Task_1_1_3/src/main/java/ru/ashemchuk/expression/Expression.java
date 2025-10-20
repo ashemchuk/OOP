@@ -49,12 +49,4 @@ public abstract class Expression {
     public boolean equals(Object o) {
         return this.toString().equals(o.toString());
     }
-
-    /**
-     * Prints the string representation of this expression to the standard output.
-     * This is a convenience method for debugging and display purposes.
-     */
-    public void print() {
-        System.out.println(this);
-    }
 }
