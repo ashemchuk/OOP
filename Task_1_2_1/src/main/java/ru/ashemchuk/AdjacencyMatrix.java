@@ -1,8 +1,6 @@
 package ru.ashemchuk;
 
 import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.NoSuchElementException;
 import ru.ashemchuk.graph.*;
 import java.util.ArrayList;
@@ -40,6 +38,9 @@ public class AdjacencyMatrix implements Graph {
 
     @Override
     public void addVertex(Vertex v) {
+        if (vertices.contains(v)) {
+            return;
+        }
         vertices.add(v);
         matrix.add(new ArrayList<>(Collections.nCopies(vertices.size() - 1, false)));
 
@@ -50,6 +51,7 @@ public class AdjacencyMatrix implements Graph {
 
     @Override
     public void deleteVertex(Vertex v) {
+        //FIXME: there are not v in graph
         int idx = vertices.indexOf(v);
         for (ArrayList<Boolean> rows : matrix) {
             rows.remove(idx);
@@ -60,6 +62,7 @@ public class AdjacencyMatrix implements Graph {
 
     @Override
     public List<Vertex> getNeighbours(Vertex v) {
+        // FIXME
         List<Vertex> neighbours = new ArrayList<>();
         for (int n = 0; n < matrix.get(vertices.indexOf(v)).size(); n++) {
             if (matrix.get(vertices.indexOf(v)).get(n)) {
