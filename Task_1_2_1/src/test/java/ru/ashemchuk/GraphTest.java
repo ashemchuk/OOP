@@ -15,12 +15,52 @@ import static org.junit.jupiter.api.Assertions.*;
 abstract class GraphTest {
 
     protected Graph graph;
+    protected Graph graph1, graph2, graph3, emptyGraph;
     protected abstract Graph create();
 
     @BeforeEach
     void setUp() {
         graph = create();
-    }
+
+        // for equals test
+        graph1 = create();
+        graph2 = create();
+        graph3 = create();
+        emptyGraph = create();
+
+        // Graph 1: A -> B -> C
+        Vertex a = new Vertex("A");
+        Vertex b = new Vertex("B");
+        Vertex c = new Vertex("C");
+
+        graph1.addVertex(a);
+        graph1.addVertex(b);
+        graph1.addVertex(c);
+        graph1.addEdge(new Edge(a, b));
+        graph1.addEdge(new Edge(b, c));
+
+        // Graph 2: same structure as graph1
+        Vertex a2 = new Vertex("A");
+        Vertex b2 = new Vertex("B");
+        Vertex c2 = new Vertex("C");
+
+        graph2.addVertex(a2);
+        graph2.addVertex(b2);
+        graph2.addVertex(c2);
+        graph2.addEdge(new Edge(a2, b2));
+        graph2.addEdge(new Edge(b2, c2));
+
+        // Graph 3: different structure A -> C -> B
+        Vertex a3 = new Vertex("A");
+        Vertex b3 = new Vertex("B");
+        Vertex c3 = new Vertex("C");
+
+        graph3.addVertex(a3);
+        graph3.addVertex(b3);
+        graph3.addVertex(c3);
+        graph3.addEdge(new Edge(a3, c3));
+        graph3.addEdge(new Edge(c3, b3));
+}
 
     @Test
     void testAddVertex() {
@@ -280,5 +320,140 @@ abstract class GraphTest {
         assertTrue(result.indexOf(v4) < result.indexOf(v1));
         assertTrue(result.indexOf(v2) < result.indexOf(v3));
         assertTrue(result.indexOf(v3) < result.indexOf(v1));
+    }
+
+    @Test
+    void testEquals_SameGraphs_ReturnsTrue() {
+        Graph graph1 = this.create();
+        Graph graph2 = this.create();
+        assertTrue(graph1.equalsToGraph(graph2));
+    }
+
+    @Test
+    void testEquals_DifferentGraphs_ReturnsFalse() {
+        assertFalse(graph1.equalsToGraph(graph3));
+    }
+
+    @Test
+    void testEquals_DifferentSizes_ReturnsFalse() {
+        Graph smallGraph = create();
+        smallGraph.addVertex(new Vertex("A"));
+
+        assertFalse(graph1.equalsToGraph(smallGraph));
+    }
+
+    @Test
+    void testEquals_EmptyGraphs_ReturnsTrue() {
+        Graph anotherEmptyGraph = create();
+        assertTrue(emptyGraph.equalsToGraph(anotherEmptyGraph));
+    }
+
+    @Test
+    void testEquals_OneEmptyOneNotEmpty_ReturnsFalse() {
+        assertFalse(emptyGraph.equalsToGraph(graph1));
+    }
+
+    @Test
+    void testEquals_SameVerticesDifferentEdges_ReturnsFalse() {
+        Graph graphWithExtraEdge = create();
+        Vertex a = new Vertex("A");
+        Vertex b = new Vertex("B");
+        Vertex c = new Vertex("C");
+
+        graphWithExtraEdge.addVertex(a);
+        graphWithExtraEdge.addVertex(b);
+        graphWithExtraEdge.addVertex(c);
+        graphWithExtraEdge.addEdge(new Edge(a, b));
+        graphWithExtraEdge.addEdge(new Edge(b, c));
+        graphWithExtraEdge.addEdge(new Edge(a, c)); // Extra edge
+
+        assertFalse(graph1.equalsToGraph(graphWithExtraEdge));
+    }
+
+    @Test
+    void testEquals_SameStructureDifferentVertexNames_ReturnsFalse() {
+        Graph differentNamesGraph = create();
+        Vertex x = new Vertex("X");
+        Vertex y = new Vertex("Y");
+        Vertex z = new Vertex("Z");
+
+        differentNamesGraph.addVertex(x);
+        differentNamesGraph.addVertex(y);
+        differentNamesGraph.addVertex(z);
+        differentNamesGraph.addEdge(new Edge(x, y));
+        differentNamesGraph.addEdge(new Edge(y, z));
+
+        assertFalse(graph1.equalsToGraph(differentNamesGraph));
+    }
+
+    @Test
+    void testEquals_WithCycles_SameStructure() {
+        Graph cyclicGraph1 = create();
+        Graph cyclicGraph2 = create();
+
+        Vertex a1 = new Vertex("A");
+        Vertex b1 = new Vertex("B");
+        Vertex c1 = new Vertex("C");
+
+        cyclicGraph1.addVertex(a1);
+        cyclicGraph1.addVertex(b1);
+        cyclicGraph1.addVertex(c1);
+        cyclicGraph1.addEdge(new Edge(a1, b1));
+        cyclicGraph1.addEdge(new Edge(b1, c1));
+        cyclicGraph1.addEdge(new Edge(c1, a1));
+
+        Vertex a2 = new Vertex("A");
+        Vertex b2 = new Vertex("B");
+        Vertex c2 = new Vertex("C");
+
+        cyclicGraph2.addVertex(a2);
+        cyclicGraph2.addVertex(b2);
+        cyclicGraph2.addVertex(c2);
+        cyclicGraph2.addEdge(new Edge(a2, b2));
+        cyclicGraph2.addEdge(new Edge(b2, c2));
+        cyclicGraph2.addEdge(new Edge(c2, a2));
+
+        assertTrue(cyclicGraph1.equalsToGraph(cyclicGraph2));
+    }
+
+    @Test
+    void testEquals_IsolatedVertices_SameStructure() {
+        Graph isolatedGraph1 = create();
+        Graph isolatedGraph2 = create();
+
+        Vertex a1 = new Vertex("A");
+        Vertex b1 = new Vertex("B");
+
+        isolatedGraph1.addVertex(a1);
+        isolatedGraph1.addVertex(b1);
+        // No edges
+
+        Vertex a2 = new Vertex("A");
+        Vertex b2 = new Vertex("B");
+
+        isolatedGraph2.addVertex(a2);
+        isolatedGraph2.addVertex(b2);
+        // No edges
+
+        assertTrue(isolatedGraph1.equalsToGraph(isolatedGraph2));
+    }
+
+    @Test
+    void testEquals_NullGraph_ReturnsFalse() {
+        assertFalse(graph1.equalsToGraph(null));
+    }
+
+    @Test
+    void testEquals_Reflexivity() {
+        assertTrue(graph1.equalsToGraph(graph1));
+    }
+
+    @Test
+    void testEquals_Symmetry() {
+        // If graph1 equals graph2, then graph2 should equal graph1
+        boolean firstComparison = graph1.equalsToGraph(graph2);
+        boolean secondComparison = graph2.equalsToGraph(graph1);
+
+        assertEquals(firstComparison, secondComparison);
     }
 }
