@@ -82,6 +82,9 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">AdjacencyMatrix</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="graph/Graph.html" title="interface in ru.ashemchuk.graph">Graph</a></span></div>
+<div class="block">Represents a graph using an adjacency matrix data structure.
+ The graph is directed and uses a boolean matrix to indicate edge presence.
+ Vertices are stored in a list, and edges are represented by true values in the matrix.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -94,7 +97,9 @@ implements <a href="graph/Graph.html" title="interface in ru.ashemchuk.graph">Gr
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E()" class="member-name-link">AdjacencyMatrix</a>()</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Constructs an empty adjacency matrix graph.</div>
+</div>
 </div>
 </section>
 </li>
@@ -111,25 +116,39 @@ implements <a href="graph/Graph.html" title="interface in ru.ashemchuk.graph">Gr
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addEdge(ru.ashemchuk.graph.Edge)" class="member-name-link">addEdge</a><wbr>(<a href="graph/Edge.html" title="class in ru.ashemchuk.graph">Edge</a>&nbsp;e)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Adds a directed edge between two vertices in the graph.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addVertex(ru.ashemchuk.graph.Vertex)" class="member-name-link">addVertex</a><wbr>(<a href="graph/Vertex.html" title="class in ru.ashemchuk.graph">Vertex</a>&nbsp;v)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Adds a vertex to the graph.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#deleteEdge(ru.ashemchuk.graph.Edge)" class="member-name-link">deleteEdge</a><wbr>(<a href="graph/Edge.html" title="class in ru.ashemchuk.graph">Edge</a>&nbsp;e)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Removes a directed edge between two vertices in the graph.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#deleteVertex(ru.ashemchuk.graph.Vertex)" class="member-name-link">deleteVertex</a><wbr>(<a href="graph/Vertex.html" title="class in ru.ashemchuk.graph">Vertex</a>&nbsp;v)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Removes a vertex and all associated edges from the graph.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="graph/Vertex.html" title="class in ru.ashemchuk.graph">Vertex</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNeighbours(ru.ashemchuk.graph.Vertex)" class="member-name-link">getNeighbours</a><wbr>(<a href="graph/Vertex.html" title="class in ru.ashemchuk.graph">Vertex</a>&nbsp;v)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns a list of all vertices that are directly reachable from the given vertex.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="graph/Vertex.html" title="class in ru.ashemchuk.graph">Vertex</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVertices()" class="member-name-link">getVertices</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns a list of all vertices in the graph.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVerticesCount()" class="member-name-link">getVerticesCount</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the number of vertices in the graph.</div>
+</div>
 </div>
 </div>
 </div>
@@ -154,6 +173,7 @@ implements <a href="graph/Graph.html" title="interface in ru.ashemchuk.graph">Gr
 <section class="detail" id="&lt;init&gt;()">
 <h3>AdjacencyMatrix</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">AdjacencyMatrix</span>()</div>
+<div class="block">Constructs an empty adjacency matrix graph.</div>
 </section>
 </li>
 </ul>
@@ -167,26 +187,26 @@ implements <a href="graph/Graph.html" title="interface in ru.ashemchuk.graph">Gr
 <li>
 <section class="detail" id="addEdge(ru.ashemchuk.graph.Edge)">
 <h3>addEdge</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addEdge</span><wbr><span class="parameters">(<a href="graph/Edge.html" title="class in ru.ashemchuk.graph">Edge</a>&nbsp;e)</span>
-             throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/NoSuchElementException.html" title="class or interface in java.util" class="external-link">NoSuchElementException</a></span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addEdge</span><wbr><span class="parameters">(<a href="graph/Edge.html" title="class in ru.ashemchuk.graph">Edge</a>&nbsp;e)</span></div>
+<div class="block">Adds a directed edge between two vertices in the graph.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="graph/Graph.html#addEdge(ru.ashemchuk.graph.Edge)">addEdge</a></code>&nbsp;in interface&nbsp;<code><a href="graph/Graph.html" title="interface in ru.ashemchuk.graph">Graph</a></code></dd>
-<dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/NoSuchElementException.html" title="class or interface in java.util" class="external-link">NoSuchElementException</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>e</code> - the edge to be added</dd>
 </dl>
 </section>
 </li>
 <li>
 <section class="detail" id="deleteEdge(ru.ashemchuk.graph.Edge)">
 <h3>deleteEdge</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">deleteEdge</span><wbr><span class="parameters">(<a href="graph/Edge.html" title="class in ru.ashemchuk.graph">Edge</a>&nbsp;e)</span>
-                throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/NoSuchElementException.html" title="class or interface in java.util" class="external-link">NoSuchElementException</a></span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">deleteEdge</span><wbr><span class="parameters">(<a href="graph/Edge.html" title="class in ru.ashemchuk.graph">Edge</a>&nbsp;e)</span></div>
+<div class="block">Removes a directed edge between two vertices in the graph.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="graph/Graph.html#deleteEdge(ru.ashemchuk.graph.Edge)">deleteEdge</a></code>&nbsp;in interface&nbsp;<code><a href="graph/Graph.html" title="interface in ru.ashemchuk.graph">Graph</a></code></dd>
-<dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/NoSuchElementException.html" title="class or interface in java.util" class="external-link">NoSuchElementException</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>e</code> - the edge to be removed</dd>
 </dl>
 </section>
 </li>
@@ -194,9 +214,14 @@ implements <a href="graph/Graph.html" title="interface in ru.ashemchuk.graph">Gr
 <section class="detail" id="addVertex(ru.ashemchuk.graph.Vertex)">
 <h3>addVertex</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addVertex</span><wbr><span class="parameters">(<a href="graph/Vertex.html" title="class in ru.ashemchuk.graph">Vertex</a>&nbsp;v)</span></div>
+<div class="block">Adds a vertex to the graph.
+ If the vertex already exists, the method does nothing.
+ Expands the adjacency matrix to accommodate the new vertex.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="graph/Graph.html#addVertex(ru.ashemchuk.graph.Vertex)">addVertex</a></code>&nbsp;in interface&nbsp;<code><a href="graph/Graph.html" title="interface in ru.ashemchuk.graph">Graph</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>v</code> - the vertex to be added</dd>
 </dl>
 </section>
 </li>
@@ -204,9 +229,12 @@ implements <a href="graph/Graph.html" title="interface in ru.ashemchuk.graph">Gr
 <section class="detail" id="deleteVertex(ru.ashemchuk.graph.Vertex)">
 <h3>deleteVertex</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">deleteVertex</span><wbr><span class="parameters">(<a href="graph/Vertex.html" title="class in ru.ashemchuk.graph">Vertex</a>&nbsp;v)</span></div>
+<div class="block">Removes a vertex and all associated edges from the graph.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="graph/Graph.html#deleteVertex(ru.ashemchuk.graph.Vertex)">deleteVertex</a></code>&nbsp;in interface&nbsp;<code><a href="graph/Graph.html" title="interface in ru.ashemchuk.graph">Graph</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>v</code> - the vertex to be removed</dd>
 </dl>
 </section>
 </li>
@@ -214,9 +242,14 @@ implements <a href="graph/Graph.html" title="interface in ru.ashemchuk.graph">Gr
 <section class="detail" id="getNeighbours(ru.ashemchuk.graph.Vertex)">
 <h3>getNeighbours</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="graph/Vertex.html" title="class in ru.ashemchuk.graph">Vertex</a>&gt;</span>&nbsp;<span class="element-name">getNeighbours</span><wbr><span class="parameters">(<a href="graph/Vertex.html" title="class in ru.ashemchuk.graph">Vertex</a>&nbsp;v)</span></div>
+<div class="block">Returns a list of all vertices that are directly reachable from the given vertex.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="graph/Graph.html#getNeighbours(ru.ashemchuk.graph.Vertex)">getNeighbours</a></code>&nbsp;in interface&nbsp;<code><a href="graph/Graph.html" title="interface in ru.ashemchuk.graph">Graph</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>v</code> - the source vertex</dd>
+<dt>Returns:</dt>
+<dd>a list of neighboring vertices</dd>
 </dl>
 </section>
 </li>
@@ -224,9 +257,12 @@ implements <a href="graph/Graph.html" title="interface in ru.ashemchuk.graph">Gr
 <section class="detail" id="getVerticesCount()">
 <h3>getVerticesCount</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getVerticesCount</span>()</div>
+<div class="block">Returns the number of vertices in the graph.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="graph/Graph.html#getVerticesCount()">getVerticesCount</a></code>&nbsp;in interface&nbsp;<code><a href="graph/Graph.html" title="interface in ru.ashemchuk.graph">Graph</a></code></dd>
+<dt>Returns:</dt>
+<dd>the number of vertices</dd>
 </dl>
 </section>
 </li>
@@ -234,9 +270,12 @@ implements <a href="graph/Graph.html" title="interface in ru.ashemchuk.graph">Gr
 <section class="detail" id="getVertices()">
 <h3>getVertices</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="graph/Vertex.html" title="class in ru.ashemchuk.graph">Vertex</a>&gt;</span>&nbsp;<span class="element-name">getVertices</span>()</div>
+<div class="block">Returns a list of all vertices in the graph.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="graph/Graph.html#getVertices()">getVertices</a></code>&nbsp;in interface&nbsp;<code><a href="graph/Graph.html" title="interface in ru.ashemchuk.graph">Graph</a></code></dd>
+<dt>Returns:</dt>
+<dd>a list of vertices</dd>
 </dl>
 </section>
 </li>
