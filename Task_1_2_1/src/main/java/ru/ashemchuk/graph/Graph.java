@@ -1,6 +1,9 @@
 package ru.ashemchuk.graph;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.List;
+import java.util.Scanner;
 import ru.ashemchuk.sort.Sorter;
 import ru.ashemchuk.sort.TopSort;
 
@@ -43,5 +46,31 @@ public interface Graph {
             }
         }
         return true;
+    }
+
+    default void fromFile(String path) {
+        try (Scanner scanner = new Scanner(new File(path))) {
+            while (scanner.hasNextLine()) {
+                String line = scanner.nextLine();
+                if (!line.isEmpty()) {
+                    String [] vertices = line.split(" ");
+                    if (vertices.length != 2) {
+//                        throw
+                        continue;
+                    }
+                    Vertex v1 = new Vertex(vertices[0]);
+                    Vertex v2 = new Vertex(vertices[1]);
+                    if (!this.getVertices().contains(v1)) {
+                        this.addVertex(v1);
+                    }
+                    if (!this.getVertices().contains(v2)) {
+                        this.addVertex(v2);
+                    }
+                    this.addEdge(new Edge(v1, v2));
+                }
+            }
+        } catch (FileNotFoundException ex) {
+            System.out.println("File " + path + " is not found");
+        }
     }
 }

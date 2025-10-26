@@ -1,7 +1,12 @@
 package ru.ashemchuk;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.nio.file.Path;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.io.TempDir;
 import ru.ashemchuk.graph.Edge;
 import ru.ashemchuk.graph.Graph;
 import ru.ashemchuk.graph.Vertex;
@@ -455,5 +460,38 @@ abstract class GraphTest {
         boolean secondComparison = graph2.equalsToGraph(graph1);
 
         assertEquals(firstComparison, secondComparison);
+    }
+
+    @TempDir
+    Path tempDir;
+
+    @Test
+    void testFromFile_graph1() throws IOException {
+        File testFile = tempDir.resolve("test_file.txt").toFile();
+        try (FileWriter writer = new FileWriter(testFile)){
+            writer.write("A B\n");
+            writer.write("B C\n");
+        }
+        Graph g = create();
+        g.fromFile(testFile.getPath());
+
+        assertTrue(g.equalsToGraph(graph1));
+    }
+    @Test
+    void testFromFile_InvalidLines() throws IOException {
+        File testFile = tempDir.resolve("invalid_lines.txt").toFile();
+        try (FileWriter writer = new FileWriter(testFile)) {
+            writer.write("A B\n");           // Valid
+            writer.write("SingleVertex\n");  // Invalid - only one vertex
+            writer.write("Too Many Vertices Here\n"); // Invalid - more than 2
+            writer.write("B C\n");           // Valid
+            writer.write("\n");              // Empty line
+            writer.write("   \n");           // Whitespace line
+        }
+
+        Graph graph = create();
+        graph.fromFile(testFile.getAbsolutePath());
+
+        assertTrue(graph.equalsToGraph(graph1));
     }
 }
