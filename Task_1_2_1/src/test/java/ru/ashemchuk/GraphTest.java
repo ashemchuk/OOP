@@ -7,6 +7,7 @@ import ru.ashemchuk.graph.Graph;
 import ru.ashemchuk.graph.Vertex;
 
 import java.util.List;
+import ru.ashemchuk.sort.TopSort;
 
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -268,7 +269,7 @@ abstract class GraphTest {
         graph.addEdge(new Edge(v2, v3));
         graph.addEdge(new Edge(v3, v1));
 
-        List<Vertex> result = graph.topSort();
+        List<Vertex> result = graph.sort(new TopSort());
 
         assertNotNull(result);
         assertEquals(6, result.size());

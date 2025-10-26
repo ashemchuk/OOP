@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
+import ru.ashemchuk.sort.TopSort;
 
 @ExtendWith(MockitoExtension.class)
 class GraphTest {
@@ -47,7 +48,7 @@ class GraphTest {
         when(graph.getNeighbours(vertices.get(4))).thenReturn(Arrays.asList(vertices.get(0), vertices.get(1)));
         when(graph.getNeighbours(vertices.get(5))).thenReturn(Arrays.asList(vertices.get(0), vertices.get(2)));
 
-        List<Vertex> result = graph.topSort();
+        List<Vertex> result = graph.sort(new TopSort());
 
         assertNotNull(result);
         assertEquals(6, result.size());
@@ -68,7 +69,7 @@ class GraphTest {
         when(graph.getVerticesCount()).thenReturn(0);
         when(graph.getVertices()).thenReturn(new ArrayList<>());
 
-        List<Vertex> result = graph.topSort();
+        List<Vertex> result = graph.sort(new TopSort());
 
         assertNotNull(result);
         assertTrue(result.isEmpty());
@@ -81,7 +82,7 @@ class GraphTest {
         when(graph.getVertices()).thenReturn(vertices);
         when(graph.getNeighbours(vertices.get(0))).thenReturn(new ArrayList<>());
 
-        List<Vertex> result = graph.topSort();
+        List<Vertex> result = graph.sort(new TopSort());
 
         assertNotNull(result);
         assertEquals(1, result.size());
@@ -101,7 +102,7 @@ class GraphTest {
         when(graph.getNeighbours(vertices.get(1))).thenReturn(Arrays.asList(vertices.get(2)));
         when(graph.getNeighbours(vertices.get(2))).thenReturn(new ArrayList<>());
 
-        List<Vertex> result = graph.topSort();
+        List<Vertex> result = graph.sort(new TopSort());
 
         assertNotNull(result);
         assertEquals(3, result.size());
