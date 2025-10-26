@@ -2,7 +2,7 @@ package ru.ashemchuk;
 
 import ru.ashemchuk.graph.Graph;
 
-class AdjacencyListTest extends GraphTest{
+class AdjacencyListTest extends GraphTest {
 
     @Override
     protected Graph create() {

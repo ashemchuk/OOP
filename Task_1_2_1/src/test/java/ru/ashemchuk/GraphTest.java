@@ -1,26 +1,28 @@
 package ru.ashemchuk;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Path;
+import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 import ru.ashemchuk.graph.Edge;
 import ru.ashemchuk.graph.Graph;
 import ru.ashemchuk.graph.Vertex;
-
-import java.util.List;
 import ru.ashemchuk.sort.TopSort;
-
-
-import static org.junit.jupiter.api.Assertions.*;
 
 abstract class GraphTest {
 
     protected Graph graph;
     protected Graph graph1, graph2, graph3, emptyGraph;
+
     protected abstract Graph create();
 
     @BeforeEach
@@ -65,7 +67,7 @@ abstract class GraphTest {
         graph3.addVertex(c3);
         graph3.addEdge(new Edge(a3, c3));
         graph3.addEdge(new Edge(c3, b3));
-}
+    }
 
     @Test
     void testAddVertex() {
@@ -121,20 +123,6 @@ abstract class GraphTest {
     }
 
     @Test
-    void testAddEdgeThrowsExceptionWhenVertexNotFound() {
-        Vertex v1 = new Vertex("A");
-        Vertex v2 = new Vertex("B");
-        Vertex v3 = new Vertex("C"); // Not added to graph
-
-        graph.addVertex(v1);
-        graph.addVertex(v2);
-
-        Edge edge = new Edge(v1, v3);
-
-//        assertThrows(NoSuchElementException.class, () -> graph.addEdge(edge));
-    }
-
-    @Test
     void testDeleteEdge() {
         Vertex v1 = new Vertex("A");
         Vertex v2 = new Vertex("B");
@@ -157,20 +145,6 @@ abstract class GraphTest {
         assertEquals(1, neighbours.size());
         assertFalse(neighbours.contains(v2));
         assertTrue(neighbours.contains(v3));
-    }
-
-    @Test
-    void testDeleteEdgeThrowsExceptionWhenVertexNotFound() {
-        Vertex v1 = new Vertex("A");
-        Vertex v2 = new Vertex("B");
-        Vertex v3 = new Vertex("C"); // Not added to graph
-
-        graph.addVertex(v1);
-        graph.addVertex(v2);
-
-        Edge edge = new Edge(v1, v3);
-
-//        assertThrows(NoSuchElementException.class, () -> graph.deleteEdge(edge));
     }
 
     @Test
@@ -296,17 +270,6 @@ abstract class GraphTest {
         graph.addVertex(v4);
         graph.addVertex(v5);
 
-        /**
-         *        -> 2
-         *    /        \
-         *  5           \
-         *    \          \
-         *     ->0        ->3
-         *    /          /
-         *  4           /
-         *    \        /
-         *      -> 1 <-
-         */
         graph.addEdge(new Edge(v5, v0));
         graph.addEdge(new Edge(v5, v2));
         graph.addEdge(new Edge(v4, v0));
@@ -468,7 +431,7 @@ abstract class GraphTest {
     @Test
     void testFromFile_graph1() throws IOException {
         File testFile = tempDir.resolve("test_file.txt").toFile();
-        try (FileWriter writer = new FileWriter(testFile)){
+        try (FileWriter writer = new FileWriter(testFile)) {
             writer.write("A B\n");
             writer.write("B C\n");
         }
@@ -477,6 +440,7 @@ abstract class GraphTest {
 
         assertTrue(g.equalsToGraph(graph1));
     }
+
     @Test
     void testFromFile_InvalidLines() throws IOException {
         File testFile = tempDir.resolve("invalid_lines.txt").toFile();
