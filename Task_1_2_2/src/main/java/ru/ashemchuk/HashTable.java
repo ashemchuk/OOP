@@ -6,9 +6,13 @@ import java.util.Collections;
 import java.util.Dictionary;
 import java.util.Enumeration;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.NoSuchElementException;
 import java.util.Set;
+import java.util.ConcurrentModificationException;
+import java.util.stream.Collectors;
 
 /**
  * A hash table implementation that extends Dictionary and implements Map interface.
@@ -17,12 +21,13 @@ import java.util.Set;
  * @param <K> the type of keys maintained by this map
  * @param <V> the type of mapped values
  */
-public class HashTable<K, V> extends Dictionary<K, V> implements Map<K, V> {
+public class HashTable<K, V> extends Dictionary<K, V> implements Map<K, V>, Iterable<Node<K, V>> {
     private List<List<Node<K, V>>> list;
     private final double refillRatio = 0.75;
     private int tableSize;
     private int tableCapacity;
     private final int initSize = 256;
+    private int modCount = 0;
 
     /**
      * Constructs an empty HashTable with the default initial capacity (256).
@@ -173,6 +178,7 @@ public class HashTable<K, V> extends Dictionary<K, V> implements Map<K, V> {
         }
         list.get(idx).add(new Node<>(key, value));
         tableSize++;
+        modCount++;
         return value;
     }
 
@@ -188,6 +194,7 @@ public class HashTable<K, V> extends Dictionary<K, V> implements Map<K, V> {
         if (node != null) {
             list.get(getBucket(key)).remove(node);
             tableSize--;
+            modCount++;
             return (V) node.getValue();
         }
         return null;
@@ -210,6 +217,7 @@ public class HashTable<K, V> extends Dictionary<K, V> implements Map<K, V> {
             newList.get(idx).add(new Node<>(key, value));
         }
         list = newList;
+        modCount++;
     }
 
     /**
@@ -231,6 +239,7 @@ public class HashTable<K, V> extends Dictionary<K, V> implements Map<K, V> {
     public void clear() {
         list = new ArrayList<>(Collections.nCopies(tableCapacity, null));
         tableSize = 0;
+        modCount++;
     }
 
     /**
@@ -285,5 +294,105 @@ public class HashTable<K, V> extends Dictionary<K, V> implements Map<K, V> {
             }
         }
         return set;
+    }
+
+
+    @Override
+    public Iterator<Node<K, V>> iterator() {
+        return new Iterator<Node<K, V>>() {
+            private int expectedModCount = modCount;
+            private int currentBucket = 0;
+            private int currentIndex = -1;
+            private Node<K, V> lastReturned = null;
+            private Node<K, V> next = null;
+
+            {
+                findNext();
+            }
+
+            private void findNext() {
+                while (currentBucket < tableCapacity) {
+                    List<Node<K, V>> bucket = list.get(currentBucket);
+                    if (bucket != null && currentIndex < bucket.size() - 1) {
+                        currentIndex++;
+                        next = bucket.get(currentIndex);
+                        return;
+                    } else {
+                        currentBucket++;
+                        currentIndex = -1;
+                    }
+                }
+                next = null;
+            }
+
+            @Override
+            public boolean hasNext() {
+                checkForComodification();
+                return next != null;
+            }
+
+            @Override
+            public Node<K, V> next() {
+                checkForComodification();
+                if (!hasNext()) {
+                    throw new NoSuchElementException();
+                }
+
+                lastReturned = next;
+                findNext();
+                return lastReturned;
+            }
+
+            @Override
+            public void remove() {
+                checkForComodification();
+                if (lastReturned == null) {
+                    throw new IllegalStateException();
+                }
+
+                HashTable.this.remove(lastReturned.getKey());
+                expectedModCount = modCount;
+                lastReturned = null;
+            }
+
+            private void checkForComodification() {
+                if (modCount != expectedModCount) {
+                    throw new ConcurrentModificationException();
+                }
+            }
+        };
+    }
+
+    @Override
+    public String toString() {
+        return "HashTable("
+            + this.entrySet()
+                .stream()
+                .map(entry -> "('" + entry.getKey() + "'," + entry.getValue() + ")")
+                .collect(Collectors.joining(","))
+            + ")";
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+
+        if (!(obj instanceof HashTable<?, ?>)) {
+            return false;
+        }
+
+        HashTable<K, V> other = (HashTable<K, V>) obj;
+
+        if (this.tableSize != other.tableSize) {
+            return false;
+        }
+
+        if (this.entrySet().equals(other.entrySet())) {
+            return true;
+        }
+
+        return false;
     }
 }

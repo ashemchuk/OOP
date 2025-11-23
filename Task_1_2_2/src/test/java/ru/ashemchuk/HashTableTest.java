@@ -7,8 +7,11 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.Collection;
+import java.util.ConcurrentModificationException;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Set;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -218,5 +221,59 @@ public class HashTableTest {
         assertEquals(1, hashTable.size());
         assertNull(hashTable.get("FB"));
         assertEquals(2, hashTable.get("Ea"));
+    }
+
+    @Test
+    void testIterator() {
+        Set<String> keys = new HashSet<>();
+        Set<Integer> values = new HashSet<>();
+
+        hashTable.put("A", 1);
+        hashTable.put("B", 2);
+        hashTable.put("C", 3);
+
+        for (Node<String, Integer> entry : hashTable) {
+            keys.add(entry.getKey());
+            values.add(entry.getValue());
+        }
+
+        assertEquals(keys, Set.of("A", "B", "C"));
+        assertEquals(values, Set.of(1, 2, 3));
+    }
+
+    @Test
+    void testIteratorConcurrentModificationExceptionThrowing() {
+        assertThrows(ConcurrentModificationException.class, () -> {
+            hashTable.put("A", 1);
+            hashTable.put("B", 2);
+            hashTable.put("C", 3);
+
+            for (Node<String, Integer> entry : hashTable) {
+                if (Objects.equals(entry.getKey(), "A")) {
+                    hashTable.remove("C");
+                }
+            }
+        });
+    }
+
+    @Test
+    void testToString() {
+        hashTable.put("A", 1);
+        hashTable.put("B", 2);
+
+        assertEquals(hashTable.toString(), "HashTable(('A',1),('B',2))");
+    }
+
+    @Test
+    void testCompareHashTables() {
+        HashTable<String, Integer> table1 = new HashTable<>();
+        table1.put("A", 1);
+        table1.put("B", 2);
+
+        HashTable<String, Integer> table2 = new HashTable<>();
+        table2.put("A", 1);
+        table2.put("B", 2);
+
+        assertEquals(table1, table2);
     }
 }
