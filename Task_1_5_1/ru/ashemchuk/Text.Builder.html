@@ -82,6 +82,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public static class </span><span class="element-name type-name-label">Text.Builder</span>
 <span class="extends-implements">extends <a href="Element.AbstractBuilder.html" title="class in ru.ashemchuk">Element.AbstractBuilder</a>&lt;<a href="Text.html" title="class in ru.ashemchuk">Text</a>&gt;</span></div>
+<div class="block">A builder class for constructing <a href="Text.html" title="class in ru.ashemchuk"><code>Text</code></a> instances with optional formatting.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -111,22 +112,34 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Text.html" title="class in ru.ashemchuk">Text</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Builds a <a href="Text.html" title="class in ru.ashemchuk"><code>Text</code></a> instance.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Text.Builder.html" title="class in ru.ashemchuk">Text.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withBold()" class="member-name-link">withBold</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Applies bold formatting to the text.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Text.Builder.html" title="class in ru.ashemchuk">Text.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCode()" class="member-name-link">withCode</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Applies inline code formatting to the text.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Text.Builder.html" title="class in ru.ashemchuk">Text.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withContent(java.lang.String)" class="member-name-link">withContent</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;content)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Sets the text content.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Text.Builder.html" title="class in ru.ashemchuk">Text.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withItalic()" class="member-name-link">withItalic</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Applies italic formatting to the text.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Text.Builder.html" title="class in ru.ashemchuk">Text.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withStrike()" class="member-name-link">withStrike</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Applies strikethrough formatting to the text.</div>
+</div>
 </div>
 </div>
 </div>
@@ -162,39 +175,71 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="withContent(java.lang.String)">
 <h3>withContent</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Text.Builder.html" title="class in ru.ashemchuk">Text.Builder</a></span>&nbsp;<span class="element-name">withContent</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;content)</span></div>
+<div class="block">Sets the text content.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>content</code> - the text content</dd>
+<dt>Returns:</dt>
+<dd>this builder instance for method chaining</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="withBold()">
 <h3>withBold</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Text.Builder.html" title="class in ru.ashemchuk">Text.Builder</a></span>&nbsp;<span class="element-name">withBold</span>()</div>
+<div class="block">Applies bold formatting to the text.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>this builder instance for method chaining</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="withItalic()">
 <h3>withItalic</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Text.Builder.html" title="class in ru.ashemchuk">Text.Builder</a></span>&nbsp;<span class="element-name">withItalic</span>()</div>
+<div class="block">Applies italic formatting to the text.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>this builder instance for method chaining</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="withCode()">
 <h3>withCode</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Text.Builder.html" title="class in ru.ashemchuk">Text.Builder</a></span>&nbsp;<span class="element-name">withCode</span>()</div>
+<div class="block">Applies inline code formatting to the text.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>this builder instance for method chaining</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="withStrike()">
 <h3>withStrike</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Text.Builder.html" title="class in ru.ashemchuk">Text.Builder</a></span>&nbsp;<span class="element-name">withStrike</span>()</div>
+<div class="block">Applies strikethrough formatting to the text.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>this builder instance for method chaining</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Text.html" title="class in ru.ashemchuk">Text</a></span>&nbsp;<span class="element-name">build</span>()</div>
+<div class="block">Builds a <a href="Text.html" title="class in ru.ashemchuk"><code>Text</code></a> instance.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Element.AbstractBuilder.html#build()">build</a></code>&nbsp;in class&nbsp;<code><a href="Element.AbstractBuilder.html" title="class in ru.ashemchuk">Element.AbstractBuilder</a>&lt;<a href="Text.html" title="class in ru.ashemchuk">Text</a>&gt;</code></dd>
+<dt>Returns:</dt>
+<dd>a new <a href="Text.html" title="class in ru.ashemchuk"><code>Text</code></a> with the configured content and formatting</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a></code> - if content is not set</dd>
 </dl>
 </section>
 </li>

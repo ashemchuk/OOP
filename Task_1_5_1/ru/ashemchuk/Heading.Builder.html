@@ -82,6 +82,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public static class </span><span class="element-name type-name-label">Heading.Builder</span>
 <span class="extends-implements">extends <a href="Element.AbstractBuilder.html" title="class in ru.ashemchuk">Element.AbstractBuilder</a>&lt;<a href="Heading.html" title="class in ru.ashemchuk">Heading</a>&gt;</span></div>
+<div class="block">A builder class for constructing <a href="Heading.html" title="class in ru.ashemchuk"><code>Heading</code></a> instances.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -111,13 +112,19 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Heading.html" title="class in ru.ashemchuk">Heading</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Builds a <a href="Heading.html" title="class in ru.ashemchuk"><code>Heading</code></a> instance.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Heading.Builder.html" title="class in ru.ashemchuk">Heading.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withLevel(int)" class="member-name-link">withLevel</a><wbr>(int&nbsp;level)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Sets the heading level (1-6).</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Heading.Builder.html" title="class in ru.ashemchuk">Heading.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withText(java.lang.String)" class="member-name-link">withText</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;text)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Sets the heading text.</div>
+</div>
 </div>
 </div>
 </div>
@@ -153,21 +160,40 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="withText(java.lang.String)">
 <h3>withText</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Heading.Builder.html" title="class in ru.ashemchuk">Heading.Builder</a></span>&nbsp;<span class="element-name">withText</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;text)</span></div>
+<div class="block">Sets the heading text.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>text</code> - the heading text</dd>
+<dt>Returns:</dt>
+<dd>this builder instance for method chaining</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="withLevel(int)">
 <h3>withLevel</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Heading.Builder.html" title="class in ru.ashemchuk">Heading.Builder</a></span>&nbsp;<span class="element-name">withLevel</span><wbr><span class="parameters">(int&nbsp;level)</span></div>
+<div class="block">Sets the heading level (1-6).</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>level</code> - the heading level</dd>
+<dt>Returns:</dt>
+<dd>this builder instance for method chaining</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Heading.html" title="class in ru.ashemchuk">Heading</a></span>&nbsp;<span class="element-name">build</span>()</div>
+<div class="block">Builds a <a href="Heading.html" title="class in ru.ashemchuk"><code>Heading</code></a> instance.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Element.AbstractBuilder.html#build()">build</a></code>&nbsp;in class&nbsp;<code><a href="Element.AbstractBuilder.html" title="class in ru.ashemchuk">Element.AbstractBuilder</a>&lt;<a href="Heading.html" title="class in ru.ashemchuk">Heading</a>&gt;</code></dd>
+<dt>Returns:</dt>
+<dd>a new <a href="Heading.html" title="class in ru.ashemchuk"><code>Heading</code></a> with the configured text and level</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a></code> - if text is null or empty</dd>
 </dl>
 </section>
 </li>

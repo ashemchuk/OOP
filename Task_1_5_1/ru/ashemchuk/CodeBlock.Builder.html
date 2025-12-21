@@ -82,6 +82,8 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public static class </span><span class="element-name type-name-label">CodeBlock.Builder</span>
 <span class="extends-implements">extends <a href="Element.AbstractBuilder.html" title="class in ru.ashemchuk">Element.AbstractBuilder</a>&lt;<a href="CodeBlock.html" title="class in ru.ashemchuk">CodeBlock</a>&gt;</span></div>
+<div class="block">A builder class for constructing <a href="CodeBlock.html" title="class in ru.ashemchuk"><code>CodeBlock</code></a> instances.
+ Provides methods to set the language and add code lines.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -111,16 +113,24 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CodeBlock.Builder.html" title="class in ru.ashemchuk">CodeBlock.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addLine(java.lang.String)" class="member-name-link">addLine</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;line)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Adds a single line of code to the code block.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CodeBlock.Builder.html" title="class in ru.ashemchuk">CodeBlock.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addMultiline(java.lang.String)" class="member-name-link">addMultiline</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;code)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Adds multiple lines of code from a multiline string.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CodeBlock.html" title="class in ru.ashemchuk">CodeBlock</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Builds a <a href="CodeBlock.html" title="class in ru.ashemchuk"><code>CodeBlock</code></a> instance.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CodeBlock.Builder.html" title="class in ru.ashemchuk">CodeBlock.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withLanguage(java.lang.String)" class="member-name-link">withLanguage</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;language)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Sets the programming language for the code block.</div>
+</div>
 </div>
 </div>
 </div>
@@ -156,27 +166,54 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="withLanguage(java.lang.String)">
 <h3>withLanguage</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CodeBlock.Builder.html" title="class in ru.ashemchuk">CodeBlock.Builder</a></span>&nbsp;<span class="element-name">withLanguage</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;language)</span></div>
+<div class="block">Sets the programming language for the code block.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>language</code> - the language identifier (e.g., "java", "python")</dd>
+<dt>Returns:</dt>
+<dd>this builder instance for method chaining</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="addLine(java.lang.String)">
 <h3>addLine</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CodeBlock.Builder.html" title="class in ru.ashemchuk">CodeBlock.Builder</a></span>&nbsp;<span class="element-name">addLine</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;line)</span></div>
+<div class="block">Adds a single line of code to the code block.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>line</code> - the line of code to add</dd>
+<dt>Returns:</dt>
+<dd>this builder instance for method chaining</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="addMultiline(java.lang.String)">
 <h3>addMultiline</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CodeBlock.Builder.html" title="class in ru.ashemchuk">CodeBlock.Builder</a></span>&nbsp;<span class="element-name">addMultiline</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;code)</span></div>
+<div class="block">Adds multiple lines of code from a multiline string.
+ Clears any previously added lines before adding new ones.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>code</code> - the multiline code string</dd>
+<dt>Returns:</dt>
+<dd>this builder instance for method chaining</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CodeBlock.html" title="class in ru.ashemchuk">CodeBlock</a></span>&nbsp;<span class="element-name">build</span>()</div>
+<div class="block">Builds a <a href="CodeBlock.html" title="class in ru.ashemchuk"><code>CodeBlock</code></a> instance.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Element.AbstractBuilder.html#build()">build</a></code>&nbsp;in class&nbsp;<code><a href="Element.AbstractBuilder.html" title="class in ru.ashemchuk">Element.AbstractBuilder</a>&lt;<a href="CodeBlock.html" title="class in ru.ashemchuk">CodeBlock</a>&gt;</code></dd>
+<dt>Returns:</dt>
+<dd>a new <a href="CodeBlock.html" title="class in ru.ashemchuk"><code>CodeBlock</code></a> with the configured properties</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a></code> - if no code lines have been added</dd>
 </dl>
 </section>
 </li>

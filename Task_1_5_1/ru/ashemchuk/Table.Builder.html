@@ -82,6 +82,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public static class </span><span class="element-name type-name-label">Table.Builder</span>
 <span class="extends-implements">extends <a href="Element.AbstractBuilder.html" title="class in ru.ashemchuk">Element.AbstractBuilder</a>&lt;<a href="Table.html" title="class in ru.ashemchuk">Table</a>&gt;</span></div>
+<div class="block">A builder class for constructing <a href="Table.html" title="class in ru.ashemchuk"><code>Table</code></a> instances.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -111,16 +112,24 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Table.Builder.html" title="class in ru.ashemchuk">Table.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addRow(java.lang.Object...)" class="member-name-link">addRow</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;cells)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Adds a row to the table.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Table.html" title="class in ru.ashemchuk">Table</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Builds a <a href="Table.html" title="class in ru.ashemchuk"><code>Table</code></a> instance.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Table.Builder.html" title="class in ru.ashemchuk">Table.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withAlignments(java.lang.String...)" class="member-name-link">withAlignments</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;alignments)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Sets the column alignments for the table.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Table.Builder.html" title="class in ru.ashemchuk">Table.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withRowLimit(int)" class="member-name-link">withRowLimit</a><wbr>(int&nbsp;rowLimit)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Sets a limit on the number of rows to render.</div>
+</div>
 </div>
 </div>
 </div>
@@ -156,27 +165,59 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="withAlignments(java.lang.String...)">
 <h3>withAlignments</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Table.Builder.html" title="class in ru.ashemchuk">Table.Builder</a></span>&nbsp;<span class="element-name">withAlignments</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;alignments)</span></div>
+<div class="block">Sets the column alignments for the table.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>alignments</code> - the alignment values (must be <a href="Table.html#ALIGN_LEFT"><code>Table.ALIGN_LEFT</code></a>, <a href="Table.html#ALIGN_CENTER"><code>Table.ALIGN_CENTER</code></a>, or <a href="Table.html#ALIGN_RIGHT"><code>Table.ALIGN_RIGHT</code></a>)</dd>
+<dt>Returns:</dt>
+<dd>this builder instance for method chaining</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if an invalid alignment is provided</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="withRowLimit(int)">
 <h3>withRowLimit</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Table.Builder.html" title="class in ru.ashemchuk">Table.Builder</a></span>&nbsp;<span class="element-name">withRowLimit</span><wbr><span class="parameters">(int&nbsp;rowLimit)</span></div>
+<div class="block">Sets a limit on the number of rows to render.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>rowLimit</code> - the maximum number of rows to include in the output</dd>
+<dt>Returns:</dt>
+<dd>this builder instance for method chaining</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="addRow(java.lang.Object...)">
 <h3>addRow</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Table.Builder.html" title="class in ru.ashemchuk">Table.Builder</a></span>&nbsp;<span class="element-name">addRow</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;cells)</span></div>
+<div class="block">Adds a row to the table.
+ Cells can be <a href="Element.html" title="class in ru.ashemchuk"><code>Element</code></a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link"><code>String</code></a>, or <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Number.html" title="class or interface in java.lang" class="external-link"><code>Number</code></a> instances.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>cells</code> - the cells of the row</dd>
+<dt>Returns:</dt>
+<dd>this builder instance for method chaining</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if an unsupported cell type is provided</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Table.html" title="class in ru.ashemchuk">Table</a></span>&nbsp;<span class="element-name">build</span>()</div>
+<div class="block">Builds a <a href="Table.html" title="class in ru.ashemchuk"><code>Table</code></a> instance.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Element.AbstractBuilder.html#build()">build</a></code>&nbsp;in class&nbsp;<code><a href="Element.AbstractBuilder.html" title="class in ru.ashemchuk">Element.AbstractBuilder</a>&lt;<a href="Table.html" title="class in ru.ashemchuk">Table</a>&gt;</code></dd>
+<dt>Returns:</dt>
+<dd>a new <a href="Table.html" title="class in ru.ashemchuk"><code>Table</code></a> with the configured rows and alignments</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a></code> - if no rows have been added</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a></code> - if rows have inconsistent column counts</dd>
 </dl>
 </section>
 </li>

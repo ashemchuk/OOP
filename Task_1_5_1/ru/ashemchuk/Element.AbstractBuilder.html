@@ -74,6 +74,10 @@ loadScripts(document, 'script');</script>
 </div>
 <section class="class-description" id="class-description">
 <dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><code>T</code> - the type of element being built</dd>
+</dl>
+<dl class="notes">
 <dt>Direct Known Subclasses:</dt>
 <dd><code><a href="CodeBlock.Builder.html" title="class in ru.ashemchuk">CodeBlock.Builder</a></code>, <code><a href="Heading.Builder.html" title="class in ru.ashemchuk">Heading.Builder</a></code>, <code><a href="Image.Builder.html" title="class in ru.ashemchuk">Image.Builder</a></code>, <code><a href="Link.Builder.html" title="class in ru.ashemchuk">Link.Builder</a></code>, <code><a href="List.Builder.html" title="class in ru.ashemchuk">List.Builder</a></code>, <code><a href="Quote.Builder.html" title="class in ru.ashemchuk">Quote.Builder</a></code>, <code><a href="Table.Builder.html" title="class in ru.ashemchuk">Table.Builder</a></code>, <code><a href="Task.Builder.html" title="class in ru.ashemchuk">Task.Builder</a></code>, <code><a href="Task.TaskList.Builder.html" title="class in ru.ashemchuk">Task.TaskList.Builder</a></code>, <code><a href="Text.Builder.html" title="class in ru.ashemchuk">Text.Builder</a></code></dd>
 </dl>
@@ -84,6 +88,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public abstract static class </span><span class="element-name type-name-label">Element.AbstractBuilder&lt;T extends <a href="Element.html" title="class in ru.ashemchuk">Element</a>&gt;</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">Abstract builder class for constructing <a href="Element.html" title="class in ru.ashemchuk"><code>Element</code></a> instances.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -113,7 +118,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>abstract <a href="Element.AbstractBuilder.html" title="type parameter in Element.AbstractBuilder">T</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Builds the element instance.</div>
+</div>
 </div>
 </div>
 </div>
@@ -149,6 +156,11 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="build()">
 <h3>build</h3>
 <div class="member-signature"><span class="modifiers">public abstract</span>&nbsp;<span class="return-type"><a href="Element.AbstractBuilder.html" title="type parameter in Element.AbstractBuilder">T</a></span>&nbsp;<span class="element-name">build</span>()</div>
+<div class="block">Builds the element instance.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>a new instance of the element</dd>
+</dl>
 </section>
 </li>
 </ul>

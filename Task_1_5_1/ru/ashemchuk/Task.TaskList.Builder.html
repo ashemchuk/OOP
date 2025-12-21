@@ -82,6 +82,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public static class </span><span class="element-name type-name-label">Task.TaskList.Builder</span>
 <span class="extends-implements">extends <a href="Element.AbstractBuilder.html" title="class in ru.ashemchuk">Element.AbstractBuilder</a>&lt;<a href="Task.TaskList.html" title="class in ru.ashemchuk">Task.TaskList</a>&gt;</span></div>
+<div class="block">A builder class for constructing <a href="Task.TaskList.html" title="class in ru.ashemchuk"><code>Task.TaskList</code></a> instances.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -112,13 +113,19 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Task.TaskList.Builder.html" title="class in ru.ashemchuk">Task.TaskList.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addTask(java.lang.String,boolean)" class="member-name-link">addTask</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;description,
  boolean&nbsp;completed)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Adds a task to the list.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Task.TaskList.Builder.html" title="class in ru.ashemchuk">Task.TaskList.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addTask(ru.ashemchuk.Task)" class="member-name-link">addTask</a><wbr>(<a href="Task.html" title="class in ru.ashemchuk">Task</a>&nbsp;task)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Adds a pre-built <a href="Task.html" title="class in ru.ashemchuk"><code>Task</code></a> to the list.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Task.TaskList.html" title="class in ru.ashemchuk">Task.TaskList</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Builds a <a href="Task.TaskList.html" title="class in ru.ashemchuk"><code>Task.TaskList</code></a> instance.</div>
+</div>
 </div>
 </div>
 </div>
@@ -155,21 +162,41 @@ loadScripts(document, 'script');</script>
 <h3>addTask</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Task.TaskList.Builder.html" title="class in ru.ashemchuk">Task.TaskList.Builder</a></span>&nbsp;<span class="element-name">addTask</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;description,
  boolean&nbsp;completed)</span></div>
+<div class="block">Adds a task to the list.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>description</code> - the task description</dd>
+<dd><code>completed</code> - true if the task is completed, false otherwise</dd>
+<dt>Returns:</dt>
+<dd>this builder instance for method chaining</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="addTask(ru.ashemchuk.Task)">
 <h3>addTask</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Task.TaskList.Builder.html" title="class in ru.ashemchuk">Task.TaskList.Builder</a></span>&nbsp;<span class="element-name">addTask</span><wbr><span class="parameters">(<a href="Task.html" title="class in ru.ashemchuk">Task</a>&nbsp;task)</span></div>
+<div class="block">Adds a pre-built <a href="Task.html" title="class in ru.ashemchuk"><code>Task</code></a> to the list.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>task</code> - the task to add</dd>
+<dt>Returns:</dt>
+<dd>this builder instance for method chaining</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Task.TaskList.html" title="class in ru.ashemchuk">Task.TaskList</a></span>&nbsp;<span class="element-name">build</span>()</div>
+<div class="block">Builds a <a href="Task.TaskList.html" title="class in ru.ashemchuk"><code>Task.TaskList</code></a> instance.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Element.AbstractBuilder.html#build()">build</a></code>&nbsp;in class&nbsp;<code><a href="Element.AbstractBuilder.html" title="class in ru.ashemchuk">Element.AbstractBuilder</a>&lt;<a href="Task.TaskList.html" title="class in ru.ashemchuk">Task.TaskList</a>&gt;</code></dd>
+<dt>Returns:</dt>
+<dd>a new <a href="Task.TaskList.html" title="class in ru.ashemchuk"><code>Task.TaskList</code></a> containing the configured tasks</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a></code> - if no tasks have been added</dd>
 </dl>
 </section>
 </li>
