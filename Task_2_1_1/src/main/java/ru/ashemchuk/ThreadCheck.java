@@ -12,6 +12,7 @@ public class ThreadCheck implements Checker{
     }
     private static volatile boolean ans = false;
     public boolean isAllPrime(int[] n, int threadsCount) {
+        ans = false;
         List<Thread> threads = new ArrayList<>();
         int step = n.length / threadsCount;
         for (int i = 0; i < threadsCount; i++) {
@@ -31,6 +32,14 @@ public class ThreadCheck implements Checker{
 
         for (var t: threads) {
             t.start();
+        }
+        for (var t: threads) {
+            try {
+                t.join();
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                throw new RuntimeException("Thread interrupted", e);
+            }
         }
         return ans;
     }
