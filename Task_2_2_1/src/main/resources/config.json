@@ -1,0 +1,32 @@
+{
+  "workingTime": 1500,
+  "warehouseCapacity": 20,
+  "bakers":
+  [
+    {
+      "id": 1,
+      "workingTime": 20
+    },
+    {
+      "id": 2,
+      "workingTime": 15
+    },
+    {
+      "id": 3,
+      "workingTime": 12
+    }
+  ],
+  "couriers":
+  [
+    {
+      "id": 1,
+      "deliveryTime": 35,
+      "trunkCapacity": 3
+    },
+    {
+      "id": 2,
+      "deliveryTime": 27,
+      "trunkCapacity": 5
+    }
+  ]
+}
