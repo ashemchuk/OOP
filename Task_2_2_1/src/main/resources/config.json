@@ -1,32 +1,13 @@
 {
-  "workingTime": 1500,
+  "workingTime": 30000,
   "warehouseCapacity": 20,
-  "bakers":
-  [
-    {
-      "id": 1,
-      "workingTime": 20
-    },
-    {
-      "id": 2,
-      "workingTime": 15
-    },
-    {
-      "id": 3,
-      "workingTime": 12
-    }
+  "bakers": [
+    {"id": 1, "workingTime": 2000},
+    {"id": 2, "workingTime": 1500},
+    {"id": 3, "workingTime": 1200}
   ],
-  "couriers":
-  [
-    {
-      "id": 1,
-      "deliveryTime": 35,
-      "trunkCapacity": 3
-    },
-    {
-      "id": 2,
-      "deliveryTime": 27,
-      "trunkCapacity": 5
-    }
+  "couriers": [
+    {"id": 1, "deliveryTime": 3500, "trunkCapacity": 3},
+    {"id": 2, "deliveryTime": 2700, "trunkCapacity": 5}
   ]
 }
