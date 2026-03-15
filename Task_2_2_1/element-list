@@ -1,6 +1,6 @@
 ru.ashemchuk
-ru.ashemchuk.Config
-ru.ashemchuk.OrderQueue
-ru.ashemchuk.OrderQueue.Order
-ru.ashemchuk.Utils
-ru.ashemchuk.Worker
+ru.ashemchuk.config
+ru.ashemchuk.queue
+ru.ashemchuk.queue.order
+ru.ashemchuk.utils
+ru.ashemchuk.worker

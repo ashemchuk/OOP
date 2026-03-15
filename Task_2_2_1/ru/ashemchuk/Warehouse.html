@@ -92,7 +92,7 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(ru.ashemchuk.Utils.ThreadSafeQueue)" class="member-name-link">Warehouse</a><wbr>(<a href="Utils/ThreadSafeQueue.html" title="class in ru.ashemchuk.Utils">ThreadSafeQueue</a>&lt;<a href="OrderQueue/Order/Order.html" title="class in ru.ashemchuk.OrderQueue.Order">Order</a>&gt;&nbsp;queue)</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(ru.ashemchuk.utils.ThreadSafeQueue)" class="member-name-link">Warehouse</a><wbr>(<a href="utils/ThreadSafeQueue.html" title="class in ru.ashemchuk.utils">ThreadSafeQueue</a>&lt;<a href="queue/order/Order.html" title="class in ru.ashemchuk.queue.order">Order</a>&gt;&nbsp;queue)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Constructs a new Warehouse with the specified queue.</div>
 </div>
@@ -111,7 +111,7 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addOrder(ru.ashemchuk.OrderQueue.Order.Order)" class="member-name-link">addOrder</a><wbr>(<a href="OrderQueue/Order/Order.html" title="class in ru.ashemchuk.OrderQueue.Order">Order</a>&nbsp;order)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addOrder(ru.ashemchuk.queue.order.Order)" class="member-name-link">addOrder</a><wbr>(<a href="queue/order/Order.html" title="class in ru.ashemchuk.queue.order">Order</a>&nbsp;order)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Adds an order to the warehouse.</div>
 </div>
@@ -120,7 +120,7 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Sets the maximum capacity of the warehouse.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="OrderQueue/Order/Order.html" title="class in ru.ashemchuk.OrderQueue.Order">Order</a>&gt;</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="queue/order/Order.html" title="class in ru.ashemchuk.queue.order">Order</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#takeOrders(int)" class="member-name-link">takeOrders</a><wbr>(int&nbsp;maxCount)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Takes up to maxCount orders from the warehouse.</div>
@@ -143,9 +143,9 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(ru.ashemchuk.Utils.ThreadSafeQueue)">
+<section class="detail" id="&lt;init&gt;(ru.ashemchuk.utils.ThreadSafeQueue)">
 <h3>Warehouse</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Warehouse</span><wbr><span class="parameters">(<a href="Utils/ThreadSafeQueue.html" title="class in ru.ashemchuk.Utils">ThreadSafeQueue</a>&lt;<a href="OrderQueue/Order/Order.html" title="class in ru.ashemchuk.OrderQueue.Order">Order</a>&gt;&nbsp;queue)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Warehouse</span><wbr><span class="parameters">(<a href="utils/ThreadSafeQueue.html" title="class in ru.ashemchuk.utils">ThreadSafeQueue</a>&lt;<a href="queue/order/Order.html" title="class in ru.ashemchuk.queue.order">Order</a>&gt;&nbsp;queue)</span></div>
 <div class="block">Constructs a new Warehouse with the specified queue.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -176,9 +176,9 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="addOrder(ru.ashemchuk.OrderQueue.Order.Order)">
+<section class="detail" id="addOrder(ru.ashemchuk.queue.order.Order)">
 <h3>addOrder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addOrder</span><wbr><span class="parameters">(<a href="OrderQueue/Order/Order.html" title="class in ru.ashemchuk.OrderQueue.Order">Order</a>&nbsp;order)</span>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addOrder</span><wbr><span class="parameters">(<a href="queue/order/Order.html" title="class in ru.ashemchuk.queue.order">Order</a>&nbsp;order)</span>
               throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/InterruptedException.html" title="class or interface in java.lang" class="external-link">InterruptedException</a></span></div>
 <div class="block">Adds an order to the warehouse.
  If the warehouse is full, the calling thread waits until space becomes available.
@@ -195,7 +195,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="takeOrders(int)">
 <h3>takeOrders</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="OrderQueue/Order/Order.html" title="class in ru.ashemchuk.OrderQueue.Order">Order</a>&gt;</span>&nbsp;<span class="element-name">takeOrders</span><wbr><span class="parameters">(int&nbsp;maxCount)</span>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="queue/order/Order.html" title="class in ru.ashemchuk.queue.order">Order</a>&gt;</span>&nbsp;<span class="element-name">takeOrders</span><wbr><span class="parameters">(int&nbsp;maxCount)</span>
                        throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/InterruptedException.html" title="class or interface in java.lang" class="external-link">InterruptedException</a></span></div>
 <div class="block">Takes up to maxCount orders from the warehouse.
  If the warehouse is empty, the calling thread waits until orders become available.

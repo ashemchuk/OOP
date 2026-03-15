@@ -5,7 +5,7 @@
 <title>Courier (Task_2_2_1 1.0-SNAPSHOT API)</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="description" content="declaration: package: ru.ashemchuk.Worker, class: Courier">
+<meta name="description" content="declaration: package: ru.ashemchuk.worker, class: Courier">
 <meta name="generator" content="javadoc/ClassWriterImpl">
 <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
 <link rel="stylesheet" type="text/css" href="../../../script-dir/jquery-ui.min.css" title="Style">
@@ -67,12 +67,12 @@ loadScripts(document, 'script');</script>
 <main role="main">
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
-<div class="sub-title"><span class="package-label-in-type">Package</span>&nbsp;<a href="package-summary.html">ru.ashemchuk.Worker</a></div>
+<div class="sub-title"><span class="package-label-in-type">Package</span>&nbsp;<a href="package-summary.html">ru.ashemchuk.worker</a></div>
 <h1 title="Class Courier" class="title">Class Courier</h1>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
-<div class="inheritance"><a href="Worker.html" title="class in ru.ashemchuk.Worker">ru.ashemchuk.Worker.Worker</a>
-<div class="inheritance">ru.ashemchuk.Worker.Courier</div>
+<div class="inheritance"><a href="Worker.html" title="class in ru.ashemchuk.worker">ru.ashemchuk.worker.Worker</a>
+<div class="inheritance">ru.ashemchuk.worker.Courier</div>
 </div>
 </div>
 <section class="class-description" id="class-description">
@@ -82,7 +82,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Courier</span>
-<span class="extends-implements">extends <a href="Worker.html" title="class in ru.ashemchuk.Worker">Worker</a></span></div>
+<span class="extends-implements">extends <a href="Worker.html" title="class in ru.ashemchuk.worker">Worker</a></span></div>
 <div class="block">Represents a courier worker in the pizzeria system.
  Couriers are responsible for picking up cooked orders from the warehouse
  and delivering them to customers.
@@ -90,9 +90,9 @@ loadScripts(document, 'script');</script>
  <p>The courier's workflow:
  <ol>
    <li>Take up to trunk capacity orders from warehouse (blocks if no orders available)</li>
-   <li>Change all picked orders state to <a href="../OrderQueue/Order/OrderState.html#DELIVERING"><code>OrderState.DELIVERING</code></a></li>
+   <li>Change all picked orders state to <a href="../queue/order/OrderState.html#DELIVERING"><code>OrderState.DELIVERING</code></a></li>
    <li>Simulate delivery time by sleeping for configured duration</li>
-   <li>Change all delivered orders state to <a href="../OrderQueue/Order/OrderState.html#DONE"><code>OrderState.DONE</code></a></li>
+   <li>Change all delivered orders state to <a href="../queue/order/OrderState.html#DONE"><code>OrderState.DONE</code></a></li>
  </ol>
 
  <p>Couriers can deliver multiple orders in one trip, up to their trunk capacity.</div>
@@ -100,8 +100,8 @@ loadScripts(document, 'script');</script>
 <dt>See Also:</dt>
 <dd>
 <ul class="see-list">
-<li><a href="Worker.html" title="class in ru.ashemchuk.Worker"><code>Worker</code></a></li>
-<li><a href="../Config/CourierConfig.html" title="class in ru.ashemchuk.Config"><code>CourierConfig</code></a></li>
+<li><a href="Worker.html" title="class in ru.ashemchuk.worker"><code>Worker</code></a></li>
+<li><a href="../config/CourierConfig.html" title="class in ru.ashemchuk.config"><code>CourierConfig</code></a></li>
 <li><a href="../Warehouse.html" title="class in ru.ashemchuk"><code>Warehouse</code></a></li>
 </ul>
 </dd>
@@ -117,7 +117,7 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(ru.ashemchuk.Config.CourierConfig,ru.ashemchuk.Warehouse)" class="member-name-link">Courier</a><wbr>(<a href="../Config/CourierConfig.html" title="class in ru.ashemchuk.Config">CourierConfig</a>&nbsp;cfg,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(ru.ashemchuk.config.CourierConfig,ru.ashemchuk.Warehouse)" class="member-name-link">Courier</a><wbr>(<a href="../config/CourierConfig.html" title="class in ru.ashemchuk.config">CourierConfig</a>&nbsp;cfg,
  <a href="../Warehouse.html" title="class in ru.ashemchuk">Warehouse</a>&nbsp;warehouse)</code></div>
 <div class="col-last even-row-color">
 <div class="block">Constructs a new Courier with the specified configuration and warehouse.</div>
@@ -150,7 +150,7 @@ loadScripts(document, 'script');</script>
 </div>
 </div>
 <div class="inherited-list">
-<h3 id="methods-inherited-from-class-ru.ashemchuk.Worker.Worker">Methods inherited from class&nbsp;ru.ashemchuk.Worker.<a href="Worker.html" title="class in ru.ashemchuk.Worker">Worker</a></h3>
+<h3 id="methods-inherited-from-class-ru.ashemchuk.worker.Worker">Methods inherited from class&nbsp;ru.ashemchuk.worker.<a href="Worker.html" title="class in ru.ashemchuk.worker">Worker</a></h3>
 <code><a href="Worker.html#run()">run</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
@@ -167,9 +167,9 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(ru.ashemchuk.Config.CourierConfig,ru.ashemchuk.Warehouse)">
+<section class="detail" id="&lt;init&gt;(ru.ashemchuk.config.CourierConfig,ru.ashemchuk.Warehouse)">
 <h3>Courier</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Courier</span><wbr><span class="parameters">(<a href="../Config/CourierConfig.html" title="class in ru.ashemchuk.Config">CourierConfig</a>&nbsp;cfg,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Courier</span><wbr><span class="parameters">(<a href="../config/CourierConfig.html" title="class in ru.ashemchuk.config">CourierConfig</a>&nbsp;cfg,
  <a href="../Warehouse.html" title="class in ru.ashemchuk">Warehouse</a>&nbsp;warehouse)</span></div>
 <div class="block">Constructs a new Courier with the specified configuration and warehouse.</div>
 <dl class="notes">
@@ -211,7 +211,7 @@ loadScripts(document, 'script');</script>
  without performing delivery simulation.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="Worker.html#work()">work</a></code>&nbsp;in class&nbsp;<code><a href="Worker.html" title="class in ru.ashemchuk.Worker">Worker</a></code></dd>
+<dd><code><a href="Worker.html#work()">work</a></code>&nbsp;in class&nbsp;<code><a href="Worker.html" title="class in ru.ashemchuk.worker">Worker</a></code></dd>
 <dt>Throws:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/InterruptedException.html" title="class or interface in java.lang" class="external-link">InterruptedException</a></code> - if the thread is interrupted during delivery or warehouse operations</dd>
 </dl>
