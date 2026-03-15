@@ -77,6 +77,26 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Order</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">Represents an order in the pizzeria system.
+ Each order has a unique identifier and a state that tracks its progress
+ through the order lifecycle from creation to delivery.
+
+ <p>The order lifecycle follows these states:
+ <ul>
+   <li><a href="OrderState.html#WAITING"><code>OrderState.WAITING</code></a> - Order created, waiting to be picked up by baker
+   <li><a href="OrderState.html#COOKING"><code>OrderState.COOKING</code></a> - Order is being prepared by a baker
+   <li><a href="OrderState.html#COOKED"><code>OrderState.COOKED</code></a> - Order is cooked and waiting in warehouse
+   <li><a href="OrderState.html#DELIVERING"><code>OrderState.DELIVERING</code></a> - Order is picked up by courier for delivery
+   <li><a href="OrderState.html#DONE"><code>OrderState.DONE</code></a> - Order successfully delivered to customer
+ </ul></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="OrderState.html" title="enum class in ru.ashemchuk.OrderQueue.Order"><code>OrderState</code></a></li>
+</ul>
+</dd>
+</dl>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -90,7 +110,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(int,ru.ashemchuk.OrderQueue.Order.OrderState)" class="member-name-link">Order</a><wbr>(int&nbsp;id,
  <a href="OrderState.html" title="enum class in ru.ashemchuk.OrderQueue.Order">OrderState</a>&nbsp;state)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Constructs a new Order with the specified ID and initial state.</div>
+</div>
 </div>
 </section>
 </li>
@@ -107,13 +129,19 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getId()" class="member-name-link">getId</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the unique identifier of this order.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderState.html" title="enum class in ru.ashemchuk.OrderQueue.Order">OrderState</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getState()" class="member-name-link">getState</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the current state of this order.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setState(ru.ashemchuk.OrderQueue.Order.OrderState)" class="member-name-link">setState</a><wbr>(<a href="OrderState.html" title="enum class in ru.ashemchuk.OrderQueue.Order">OrderState</a>&nbsp;state)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Updates the state of this order.</div>
+</div>
 </div>
 </div>
 </div>
@@ -136,6 +164,12 @@ loadScripts(document, 'script');</script>
 <h3>Order</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Order</span><wbr><span class="parameters">(int&nbsp;id,
  <a href="OrderState.html" title="enum class in ru.ashemchuk.OrderQueue.Order">OrderState</a>&nbsp;state)</span></div>
+<div class="block">Constructs a new Order with the specified ID and initial state.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>id</code> - the unique identifier for this order</dd>
+<dd><code>state</code> - the initial state of the order (typically <a href="OrderState.html#WAITING"><code>OrderState.WAITING</code></a>)</dd>
+</dl>
 </section>
 </li>
 </ul>
@@ -150,18 +184,35 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getId()">
 <h3>getId</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getId</span>()</div>
+<div class="block">Returns the unique identifier of this order.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the order ID</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getState()">
 <h3>getState</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderState.html" title="enum class in ru.ashemchuk.OrderQueue.Order">OrderState</a></span>&nbsp;<span class="element-name">getState</span>()</div>
+<div class="block">Returns the current state of this order.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the current <a href="OrderState.html" title="enum class in ru.ashemchuk.OrderQueue.Order"><code>OrderState</code></a></dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="setState(ru.ashemchuk.OrderQueue.Order.OrderState)">
 <h3>setState</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setState</span><wbr><span class="parameters">(<a href="OrderState.html" title="enum class in ru.ashemchuk.OrderQueue.Order">OrderState</a>&nbsp;state)</span></div>
+<div class="block">Updates the state of this order.
+ This method is typically called by bakers and couriers as the order
+ progresses through its lifecycle.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>state</code> - the new state for this order</dd>
+</dl>
 </section>
 </li>
 </ul>

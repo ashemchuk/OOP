@@ -76,9 +76,57 @@ loadScripts(document, 'script');</script>
 </div>
 </div>
 <section class="class-description" id="class-description">
+<dl class="notes">
+<dt>Record Components:</dt>
+<dd><code><span id="param-workingTime">workingTime</span></code> - total simulation time in milliseconds</dd>
+<dd><code><span id="param-warehouseCapacity">warehouseCapacity</span></code> - maximum capacity of the finished orders warehouse</dd>
+<dd><code><span id="param-bakers">bakers</span></code> - list of configurations for all bakers</dd>
+<dd><code><span id="param-couriers">couriers</span></code> - list of configurations for all couriers</dd>
+</dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">PizzeriaConfig</span>(int&nbsp;workingTime, int&nbsp;warehouseCapacity, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BakerConfig.html" title="class in ru.ashemchuk.Config">BakerConfig</a>&gt;&nbsp;bakers, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CourierConfig.html" title="class in ru.ashemchuk.Config">CourierConfig</a>&gt;&nbsp;couriers)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
+<div class="block">Main configuration record for the entire pizzeria system.
+ This record aggregates all configuration parameters needed to set up and run
+ a pizzeria simulation instance.
+
+ <p>The configuration includes:
+ <ul>
+   <li>workingTime - Total simulation duration in milliseconds</li>
+   <li>warehouseCapacity - Maximum number of cooked orders that can be stored</li>
+   <li>bakers - List of individual baker configurations</li>
+   <li>couriers - List of individual courier configurations</li>
+ </ul>
+
+ <p>This configuration is typically loaded from an external source (JSON, YAML, properties file)
+ and used by <a href="../Pizzeria.html" title="class in ru.ashemchuk"><code>Pizzeria</code></a> to initialize all components of the system.
+
+ <p>Example configuration:
+ <pre>
+ {
+   "workingTime": 60000,
+   "warehouseCapacity": 10,
+   "bakers": [
+     {"id": 1, "workingTime": 3000},
+     {"id": 2, "workingTime": 4000}
+   ],
+   "couriers": [
+     {"id": 1, "trunkCapacity": 3, "deliveryTime": 5000},
+     {"id": 2, "trunkCapacity": 5, "deliveryTime": 7000}
+   ]
+ }
+ </pre></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="BakerConfig.html" title="class in ru.ashemchuk.Config"><code>BakerConfig</code></a></li>
+<li><a href="CourierConfig.html" title="class in ru.ashemchuk.Config"><code>CourierConfig</code></a></li>
+<li><a href="../Pizzeria.html" title="class in ru.ashemchuk"><code>Pizzeria</code></a></li>
+<li><a href="../ConfigurationLoadingException.html" title="class in ru.ashemchuk"><code>ConfigurationLoadingException</code></a></li>
+</ul>
+</dd>
+</dl>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -114,12 +162,12 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BakerConfig.html" title="class in ru.ashemchuk.Config">BakerConfig</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#bakers()" class="member-name-link">bakers</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>bakers</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-bakers"><code>bakers</code></a> record component.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CourierConfig.html" title="class in ru.ashemchuk.Config">CourierConfig</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#couriers()" class="member-name-link">couriers</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>couriers</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-couriers"><code>couriers</code></a> record component.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
@@ -139,12 +187,12 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#warehouseCapacity()" class="member-name-link">warehouseCapacity</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>warehouseCapacity</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-warehouseCapacity"><code>warehouseCapacity</code></a> record component.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#workingTime()" class="member-name-link">workingTime</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>workingTime</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-workingTime"><code>workingTime</code></a> record component.</div>
 </div>
 </div>
 </div>
@@ -173,10 +221,10 @@ loadScripts(document, 'script');</script>
 <div class="block">Creates an instance of a <code>PizzeriaConfig</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>workingTime</code> - the value for the <code>workingTime</code> record component</dd>
-<dd><code>warehouseCapacity</code> - the value for the <code>warehouseCapacity</code> record component</dd>
-<dd><code>bakers</code> - the value for the <code>bakers</code> record component</dd>
-<dd><code>couriers</code> - the value for the <code>couriers</code> record component</dd>
+<dd><code>workingTime</code> - the value for the <a href="#param-workingTime"><code>workingTime</code></a> record component</dd>
+<dd><code>warehouseCapacity</code> - the value for the <a href="#param-warehouseCapacity"><code>warehouseCapacity</code></a> record component</dd>
+<dd><code>bakers</code> - the value for the <a href="#param-bakers"><code>bakers</code></a> record component</dd>
+<dd><code>couriers</code> - the value for the <a href="#param-couriers"><code>couriers</code></a> record component</dd>
 </dl>
 </section>
 </li>
@@ -233,10 +281,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="workingTime()">
 <h3>workingTime</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">workingTime</span>()</div>
-<div class="block">Returns the value of the <code>workingTime</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-workingTime"><code>workingTime</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>workingTime</code> record component</dd>
+<dd>the value of the <a href="#param-workingTime"><code>workingTime</code></a> record component</dd>
 </dl>
 </section>
 </li>
@@ -244,10 +292,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="warehouseCapacity()">
 <h3>warehouseCapacity</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">warehouseCapacity</span>()</div>
-<div class="block">Returns the value of the <code>warehouseCapacity</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-warehouseCapacity"><code>warehouseCapacity</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>warehouseCapacity</code> record component</dd>
+<dd>the value of the <a href="#param-warehouseCapacity"><code>warehouseCapacity</code></a> record component</dd>
 </dl>
 </section>
 </li>
@@ -255,10 +303,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="bakers()">
 <h3>bakers</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BakerConfig.html" title="class in ru.ashemchuk.Config">BakerConfig</a>&gt;</span>&nbsp;<span class="element-name">bakers</span>()</div>
-<div class="block">Returns the value of the <code>bakers</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-bakers"><code>bakers</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>bakers</code> record component</dd>
+<dd>the value of the <a href="#param-bakers"><code>bakers</code></a> record component</dd>
 </dl>
 </section>
 </li>
@@ -266,10 +314,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="couriers()">
 <h3>couriers</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CourierConfig.html" title="class in ru.ashemchuk.Config">CourierConfig</a>&gt;</span>&nbsp;<span class="element-name">couriers</span>()</div>
-<div class="block">Returns the value of the <code>couriers</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-couriers"><code>couriers</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>couriers</code> record component</dd>
+<dd>the value of the <a href="#param-couriers"><code>couriers</code></a> record component</dd>
 </dl>
 </section>
 </li>

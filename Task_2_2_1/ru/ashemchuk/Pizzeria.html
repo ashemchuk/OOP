@@ -77,6 +77,10 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Pizzeria</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">Main controller class for the pizzeria simulation.
+ Manages the configuration, initialization, and lifecycle of all pizzeria components.
+ Creates and coordinates threads for customers, bakers, and couriers.
+ Handles graceful shutdown of all worker threads when the simulation ends.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -89,7 +93,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(ru.ashemchuk.Config.PizzeriaConfig)" class="member-name-link">Pizzeria</a><wbr>(<a href="Config/PizzeriaConfig.html" title="class in ru.ashemchuk.Config">PizzeriaConfig</a>&nbsp;cfg)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Constructs a new Pizzeria with the specified configuration.</div>
+</div>
 </div>
 </section>
 </li>
@@ -106,10 +112,14 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#configure()" class="member-name-link">configure</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Configures the pizzeria based on the provided configuration.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#startSimulate()" class="member-name-link">startSimulate</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Starts the pizzeria simulation.</div>
+</div>
 </div>
 </div>
 </div>
@@ -131,6 +141,12 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="&lt;init&gt;(ru.ashemchuk.Config.PizzeriaConfig)">
 <h3>Pizzeria</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Pizzeria</span><wbr><span class="parameters">(<a href="Config/PizzeriaConfig.html" title="class in ru.ashemchuk.Config">PizzeriaConfig</a>&nbsp;cfg)</span></div>
+<div class="block">Constructs a new Pizzeria with the specified configuration.
+ Initializes all required data structures but does not configure or start the simulation.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>cfg</code> - the configuration settings for the pizzeria</dd>
+</dl>
 </section>
 </li>
 </ul>
@@ -145,12 +161,24 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="configure()">
 <h3>configure</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">configure</span>()</div>
+<div class="block">Configures the pizzeria based on the provided configuration.
+ Sets up warehouse capacity, creates baker and courier instances,
+ and initializes the customer.
+ This method must be called before startSimulate().</div>
+<dl class="notes">
+<dt>Throws:</dt>
+<dd><code><a href="ConfigurationLoadingException.html" title="class in ru.ashemchuk">ConfigurationLoadingException</a></code> - if configuration loading fails</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="startSimulate()">
 <h3>startSimulate</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">startSimulate</span>()</div>
+<div class="block">Starts the pizzeria simulation.
+ Launches threads for all bakers, couriers, and the customer.
+ Runs for the configured working time, then initiates shutdown.
+ This method blocks until the simulation completes.</div>
 </section>
 </li>
 </ul>

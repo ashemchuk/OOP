@@ -83,6 +83,29 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Baker</span>
 <span class="extends-implements">extends <a href="Worker.html" title="class in ru.ashemchuk.Worker">Worker</a></span></div>
+<div class="block">Represents a baker worker in the pizzeria system.
+ Bakers are responsible for taking orders from the queue, cooking them,
+ and placing finished orders in the warehouse.
+
+ <p>The baker's workflow:
+ <ol>
+   <li>Take an order from the order queue (blocks if none available)</li>
+   <li>Change order state to <a href="../OrderQueue/Order/OrderState.html#COOKING"><code>OrderState.COOKING</code></a></li>
+   <li>Simulate cooking time by sleeping for configured duration</li>
+   <li>Change order state to <a href="../OrderQueue/Order/OrderState.html#COOKED"><code>OrderState.COOKED</code></a></li>
+   <li>Place the cooked order in the warehouse (blocks if warehouse is full)</li>
+ </ol></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="Worker.html" title="class in ru.ashemchuk.Worker"><code>Worker</code></a></li>
+<li><a href="../Config/BakerConfig.html" title="class in ru.ashemchuk.Config"><code>BakerConfig</code></a></li>
+<li><a href="../OrderQueue/OrderQueue.html" title="class in ru.ashemchuk.OrderQueue"><code>OrderQueue</code></a></li>
+<li><a href="../Warehouse.html" title="class in ru.ashemchuk"><code>Warehouse</code></a></li>
+</ul>
+</dd>
+</dl>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -97,7 +120,9 @@ loadScripts(document, 'script');</script>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(ru.ashemchuk.Config.BakerConfig,ru.ashemchuk.OrderQueue.OrderQueue,ru.ashemchuk.Warehouse)" class="member-name-link">Baker</a><wbr>(<a href="../Config/BakerConfig.html" title="class in ru.ashemchuk.Config">BakerConfig</a>&nbsp;cfg,
  <a href="../OrderQueue/OrderQueue.html" title="class in ru.ashemchuk.OrderQueue">OrderQueue</a>&nbsp;queue,
  <a href="../Warehouse.html" title="class in ru.ashemchuk">Warehouse</a>&nbsp;warehouse)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Constructs a new Baker with the specified configuration and dependencies.</div>
+</div>
 </div>
 </section>
 </li>
@@ -114,10 +139,14 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getId()" class="member-name-link">getId</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the unique identifier of this baker.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#work()" class="member-name-link">work</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Performs a single work cycle for the baker.</div>
+</div>
 </div>
 </div>
 </div>
@@ -144,6 +173,13 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Baker</span><wbr><span class="parameters">(<a href="../Config/BakerConfig.html" title="class in ru.ashemchuk.Config">BakerConfig</a>&nbsp;cfg,
  <a href="../OrderQueue/OrderQueue.html" title="class in ru.ashemchuk.OrderQueue">OrderQueue</a>&nbsp;queue,
  <a href="../Warehouse.html" title="class in ru.ashemchuk">Warehouse</a>&nbsp;warehouse)</span></div>
+<div class="block">Constructs a new Baker with the specified configuration and dependencies.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>cfg</code> - the baker configuration containing ID and cooking time</dd>
+<dd><code>queue</code> - the order queue to take orders from</dd>
+<dd><code>warehouse</code> - the warehouse to place cooked orders in</dd>
+</dl>
 </section>
 </li>
 </ul>
@@ -158,6 +194,11 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getId()">
 <h3>getId</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getId</span>()</div>
+<div class="block">Returns the unique identifier of this baker.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the baker ID</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -165,11 +206,14 @@ loadScripts(document, 'script');</script>
 <h3>work</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">work</span>()
           throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/InterruptedException.html" title="class or interface in java.lang" class="external-link">InterruptedException</a></span></div>
+<div class="block">Performs a single work cycle for the baker.
+ Takes an order, cooks it, and places it in the warehouse.
+ This method is called repeatedly by the <a href="Worker.html#run()"><code>Worker.run()</code></a> method.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Worker.html#work()">work</a></code>&nbsp;in class&nbsp;<code><a href="Worker.html" title="class in ru.ashemchuk.Worker">Worker</a></code></dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/InterruptedException.html" title="class or interface in java.lang" class="external-link">InterruptedException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/InterruptedException.html" title="class or interface in java.lang" class="external-link">InterruptedException</a></code> - if the thread is interrupted during cooking or warehouse operations</dd>
 </dl>
 </section>
 </li>

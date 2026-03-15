@@ -86,6 +86,25 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public abstract class </span><span class="element-name type-name-label">Worker</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a></span></div>
+<div class="block">Abstract base class for all workers in the pizzeria system.
+ Provides common functionality for both bakers and couriers,
+ including thread management and logging capabilities.
+
+ <p>This class implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link"><code>Runnable</code></a> to allow workers to run in separate threads.
+ The main execution loop continuously calls the abstract <a href="#work()"><code>work()</code></a> method
+ until the thread is interrupted.
+
+ <p>Concrete worker classes must implement the <a href="#work()"><code>work()</code></a> method to define
+ their specific job responsibilities.</div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="Baker.html" title="class in ru.ashemchuk.Worker"><code>Baker</code></a></li>
+<li><a href="Courier.html" title="class in ru.ashemchuk.Worker"><code>Courier</code></a></li>
+</ul>
+</dd>
+</dl>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -115,10 +134,14 @@ implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#run()" class="member-name-link">run</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">The main execution loop for the worker thread.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>abstract void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#work()" class="member-name-link">work</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Performs a single unit of work specific to the worker type.</div>
+</div>
 </div>
 </div>
 </div>
@@ -155,9 +178,17 @@ implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base
 <h3>work</h3>
 <div class="member-signature"><span class="modifiers">public abstract</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">work</span>()
                    throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/InterruptedException.html" title="class or interface in java.lang" class="external-link">InterruptedException</a></span></div>
+<div class="block">Performs a single unit of work specific to the worker type.
+ This method is called repeatedly by the <a href="#run()"><code>run()</code></a> method.
+
+ <p>Implementations should define the specific workflow for:
+ <ul>
+   <li><a href="Baker.html" title="class in ru.ashemchuk.Worker"><code>Baker</code></a> - Cooking orders</li>
+   <li><a href="Courier.html" title="class in ru.ashemchuk.Worker"><code>Courier</code></a> - Delivering orders</li>
+ </ul></div>
 <dl class="notes">
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/InterruptedException.html" title="class or interface in java.lang" class="external-link">InterruptedException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/InterruptedException.html" title="class or interface in java.lang" class="external-link">InterruptedException</a></code> - if the thread is interrupted during work operation</dd>
 </dl>
 </section>
 </li>
@@ -165,6 +196,10 @@ implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base
 <section class="detail" id="run()">
 <h3>run</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">run</span>()</div>
+<div class="block">The main execution loop for the worker thread.
+ Continuously calls <a href="#work()"><code>work()</code></a> until the thread is interrupted.
+ Handles interruption gracefully by preserving the interrupt status
+ and logging the interruption event.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html#run()" title="class or interface in java.lang" class="external-link">run</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a></code></dd>

@@ -77,6 +77,10 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Warehouse</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">Represents a warehouse for storing finished orders before courier pickup.
+ Provides thread-safe operations for adding and taking orders with capacity limits.
+ Uses wait-notify mechanism to manage producer-consumer relationships between
+ bakers (producers) and couriers (consumers).</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -89,7 +93,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(ru.ashemchuk.Utils.ThreadSafeQueue)" class="member-name-link">Warehouse</a><wbr>(<a href="Utils/ThreadSafeQueue.html" title="class in ru.ashemchuk.Utils">ThreadSafeQueue</a>&lt;<a href="OrderQueue/Order/Order.html" title="class in ru.ashemchuk.OrderQueue.Order">Order</a>&gt;&nbsp;queue)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Constructs a new Warehouse with the specified queue.</div>
+</div>
 </div>
 </section>
 </li>
@@ -106,13 +112,19 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addOrder(ru.ashemchuk.OrderQueue.Order.Order)" class="member-name-link">addOrder</a><wbr>(<a href="OrderQueue/Order/Order.html" title="class in ru.ashemchuk.OrderQueue.Order">Order</a>&nbsp;order)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Adds an order to the warehouse.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCapacity(int)" class="member-name-link">setCapacity</a><wbr>(int&nbsp;capacity)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Sets the maximum capacity of the warehouse.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="OrderQueue/Order/Order.html" title="class in ru.ashemchuk.OrderQueue.Order">Order</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#takeOrders(int)" class="member-name-link">takeOrders</a><wbr>(int&nbsp;maxCount)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Takes up to maxCount orders from the warehouse.</div>
+</div>
 </div>
 </div>
 </div>
@@ -134,6 +146,11 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="&lt;init&gt;(ru.ashemchuk.Utils.ThreadSafeQueue)">
 <h3>Warehouse</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Warehouse</span><wbr><span class="parameters">(<a href="Utils/ThreadSafeQueue.html" title="class in ru.ashemchuk.Utils">ThreadSafeQueue</a>&lt;<a href="OrderQueue/Order/Order.html" title="class in ru.ashemchuk.OrderQueue.Order">Order</a>&gt;&nbsp;queue)</span></div>
+<div class="block">Constructs a new Warehouse with the specified queue.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>queue</code> - the thread-safe queue to use for order storage</dd>
+</dl>
 </section>
 </li>
 </ul>
@@ -148,6 +165,14 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setCapacity(int)">
 <h3>setCapacity</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setCapacity</span><wbr><span class="parameters">(int&nbsp;capacity)</span></div>
+<div class="block">Sets the maximum capacity of the warehouse.
+ Capacity must be positive.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>capacity</code> - the maximum number of orders the warehouse can hold</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if capacity is less than or equal to 0</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -155,9 +180,15 @@ loadScripts(document, 'script');</script>
 <h3>addOrder</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addOrder</span><wbr><span class="parameters">(<a href="OrderQueue/Order/Order.html" title="class in ru.ashemchuk.OrderQueue.Order">Order</a>&nbsp;order)</span>
               throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/InterruptedException.html" title="class or interface in java.lang" class="external-link">InterruptedException</a></span></div>
+<div class="block">Adds an order to the warehouse.
+ If the warehouse is full, the calling thread waits until space becomes available.
+ This method is thread-safe and uses wait-notify for synchronization.</div>
 <dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>order</code> - the order to add to the warehouse</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/InterruptedException.html" title="class or interface in java.lang" class="external-link">InterruptedException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/InterruptedException.html" title="class or interface in java.lang" class="external-link">InterruptedException</a></code> - if the thread is interrupted while waiting</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a></code> - if warehouse capacity hasn't been set</dd>
 </dl>
 </section>
 </li>
@@ -166,9 +197,17 @@ loadScripts(document, 'script');</script>
 <h3>takeOrders</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="OrderQueue/Order/Order.html" title="class in ru.ashemchuk.OrderQueue.Order">Order</a>&gt;</span>&nbsp;<span class="element-name">takeOrders</span><wbr><span class="parameters">(int&nbsp;maxCount)</span>
                        throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/InterruptedException.html" title="class or interface in java.lang" class="external-link">InterruptedException</a></span></div>
+<div class="block">Takes up to maxCount orders from the warehouse.
+ If the warehouse is empty, the calling thread waits until orders become available.
+ Always takes at least one order (blocks until one is available).
+ Then attempts to take additional orders up to maxCount without blocking.</div>
 <dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>maxCount</code> - the maximum number of orders to take</dd>
+<dt>Returns:</dt>
+<dd>a list containing the taken orders (size between 1 and maxCount)</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/InterruptedException.html" title="class or interface in java.lang" class="external-link">InterruptedException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/InterruptedException.html" title="class or interface in java.lang" class="external-link">InterruptedException</a></code> - if the thread is interrupted while waiting</dd>
 </dl>
 </section>
 </li>

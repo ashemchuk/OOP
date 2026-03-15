@@ -76,9 +76,34 @@ loadScripts(document, 'script');</script>
 </div>
 </div>
 <section class="class-description" id="class-description">
+<dl class="notes">
+<dt>Record Components:</dt>
+<dd><code><span id="param-id">id</span></code> - the unique identifier for this baker</dd>
+<dd><code><span id="param-workingTime">workingTime</span></code> - the cooking time in milliseconds for a single order</dd>
+</dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">BakerConfig</span>(int&nbsp;id, int&nbsp;workingTime)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
+<div class="block">Configuration record for a baker in the pizzeria system.
+ This record encapsulates all settings needed to initialize and configure a baker worker.
+
+ <p>Baker configuration includes:
+ <ul>
+   <li><b>id</b> - Unique identifier for the baker</li>
+   <li><b>workingTime</b> - Time in milliseconds that the baker takes to cook a single order</li>
+ </ul>
+
+ <p>This record is typically created from JSON/YAML configuration files
+ and used by the <a href="../Pizzeria.html" title="class in ru.ashemchuk"><code>Pizzeria</code></a> class during initialization.</div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../Worker/Baker.html" title="class in ru.ashemchuk.Worker"><code>Baker</code></a></li>
+<li><a href="PizzeriaConfig.html" title="class in ru.ashemchuk.Config"><code>PizzeriaConfig</code></a></li>
+</ul>
+</dd>
+</dl>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -122,7 +147,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#id()" class="member-name-link">id</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>id</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-id"><code>id</code></a> record component.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
@@ -132,7 +157,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#workingTime()" class="member-name-link">workingTime</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>workingTime</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-workingTime"><code>workingTime</code></a> record component.</div>
 </div>
 </div>
 </div>
@@ -159,8 +184,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Creates an instance of a <code>BakerConfig</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>id</code> - the value for the <code>id</code> record component</dd>
-<dd><code>workingTime</code> - the value for the <code>workingTime</code> record component</dd>
+<dd><code>id</code> - the value for the <a href="#param-id"><code>id</code></a> record component</dd>
+<dd><code>workingTime</code> - the value for the <a href="#param-workingTime"><code>workingTime</code></a> record component</dd>
 </dl>
 </section>
 </li>
@@ -217,10 +242,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="id()">
 <h3>id</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">id</span>()</div>
-<div class="block">Returns the value of the <code>id</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-id"><code>id</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>id</code> record component</dd>
+<dd>the value of the <a href="#param-id"><code>id</code></a> record component</dd>
 </dl>
 </section>
 </li>
@@ -228,10 +253,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="workingTime()">
 <h3>workingTime</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">workingTime</span>()</div>
-<div class="block">Returns the value of the <code>workingTime</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-workingTime"><code>workingTime</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>workingTime</code> record component</dd>
+<dd>the value of the <a href="#param-workingTime"><code>workingTime</code></a> record component</dd>
 </dl>
 </section>
 </li>

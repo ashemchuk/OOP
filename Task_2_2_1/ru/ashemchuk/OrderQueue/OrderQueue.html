@@ -77,6 +77,21 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">OrderQueue</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">A thread-safe wrapper for the order queue that manages the flow of orders
+ in the pizzeria system. This class provides basic operations for adding
+ and retrieving orders, delegating the actual thread-safe operations to
+ the underlying ThreadSafeQueue.
+ Orders are stored in FIFO (First-In-First-Out) order, ensuring that
+ older orders are processed before newer ones.</div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../Utils/ThreadSafeQueue.html" title="class in ru.ashemchuk.Utils"><code>ThreadSafeQueue</code></a></li>
+<li><a href="Order/Order.html" title="class in ru.ashemchuk.OrderQueue.Order"><code>Order</code></a></li>
+</ul>
+</dd>
+</dl>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -89,7 +104,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(ru.ashemchuk.Utils.ThreadSafeQueue)" class="member-name-link">OrderQueue</a><wbr>(<a href="../Utils/ThreadSafeQueue.html" title="class in ru.ashemchuk.Utils">ThreadSafeQueue</a>&lt;<a href="Order/Order.html" title="class in ru.ashemchuk.OrderQueue.Order">Order</a>&gt;&nbsp;queue)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Constructs a new OrderQueue with the specified thread-safe queue.</div>
+</div>
 </div>
 </section>
 </li>
@@ -106,10 +123,14 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addOrder(ru.ashemchuk.OrderQueue.Order.Order)" class="member-name-link">addOrder</a><wbr>(<a href="Order/Order.html" title="class in ru.ashemchuk.OrderQueue.Order">Order</a>&nbsp;order)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Adds a new order to the end of the queue.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Order/Order.html" title="class in ru.ashemchuk.OrderQueue.Order">Order</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#takeOrder()" class="member-name-link">takeOrder</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Retrieves and removes the oldest order from the queue.</div>
+</div>
 </div>
 </div>
 </div>
@@ -131,6 +152,13 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="&lt;init&gt;(ru.ashemchuk.Utils.ThreadSafeQueue)">
 <h3>OrderQueue</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">OrderQueue</span><wbr><span class="parameters">(<a href="../Utils/ThreadSafeQueue.html" title="class in ru.ashemchuk.Utils">ThreadSafeQueue</a>&lt;<a href="Order/Order.html" title="class in ru.ashemchuk.OrderQueue.Order">Order</a>&gt;&nbsp;queue)</span></div>
+<div class="block">Constructs a new OrderQueue with the specified thread-safe queue.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>queue</code> - the thread-safe queue instance to use for order storage</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/NullPointerException.html" title="class or interface in java.lang" class="external-link">NullPointerException</a></code> - if the provided queue is null</dd>
+</dl>
 </section>
 </li>
 </ul>
@@ -145,6 +173,14 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="addOrder(ru.ashemchuk.OrderQueue.Order.Order)">
 <h3>addOrder</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addOrder</span><wbr><span class="parameters">(<a href="Order/Order.html" title="class in ru.ashemchuk.OrderQueue.Order">Order</a>&nbsp;order)</span></div>
+<div class="block">Adds a new order to the end of the queue.
+ This operation is thread-safe and non-blocking.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>order</code> - the order to be added to the queue</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/NullPointerException.html" title="class or interface in java.lang" class="external-link">NullPointerException</a></code> - if the provided order is null</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -152,9 +188,14 @@ loadScripts(document, 'script');</script>
 <h3>takeOrder</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Order/Order.html" title="class in ru.ashemchuk.OrderQueue.Order">Order</a></span>&nbsp;<span class="element-name">takeOrder</span>()
                 throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/InterruptedException.html" title="class or interface in java.lang" class="external-link">InterruptedException</a></span></div>
+<div class="block">Retrieves and removes the oldest order from the queue.
+ If the queue is empty, this method blocks until an order becomes available.
+ This operation is thread-safe.</div>
 <dl class="notes">
+<dt>Returns:</dt>
+<dd>the oldest order from the queue</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/InterruptedException.html" title="class or interface in java.lang" class="external-link">InterruptedException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/InterruptedException.html" title="class or interface in java.lang" class="external-link">InterruptedException</a></code> - if the current thread is interrupted while waiting</dd>
 </dl>
 </section>
 </li>

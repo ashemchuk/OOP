@@ -74,9 +74,39 @@ loadScripts(document, 'script');</script>
 <div class="inheritance">ru.ashemchuk.Utils.ThreadSafeQueue&lt;T&gt;</div>
 </div>
 <section class="class-description" id="class-description">
+<dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><code>T</code> - the type of elements held in this queue</dd>
+</dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">ThreadSafeQueue&lt;T&gt;</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">A thread-safe queue implementation that provides synchronized access to an underlying
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/LinkedList.html" title="class or interface in java.util" class="external-link"><code>LinkedList</code></a>. This class is designed for producer-consumer scenarios where
+ multiple threads need to safely add and remove elements.
+
+ <p>Key features:
+ <ul>
+   <li>Thread safety - All methods are synchronized to prevent concurrent modification</li>
+   <li>Blocking pop - <a href="#pop()"><code>pop()</code></a> blocks until an element becomes available</li>
+   <li>Non-blocking poll - <a href="#poll()"><code>poll()</code></a> returns null immediately if queue is empty</li>
+   <li>Wait-notify - Uses <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link"><code>Object.wait()</code></a> and <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link"><code>Object.notifyAll()</code></a> for efficient blocking</li>
+ </ul>
+
+ <p>This queue is used throughout the pizzeria system:
+ <ul>
+   <li><a href="../OrderQueue/OrderQueue.html" title="class in ru.ashemchuk.OrderQueue"><code>OrderQueue</code></a> - For waiting orders</li>
+   <li><a href="../Warehouse.html" title="class in ru.ashemchuk"><code>Warehouse</code></a> - For cooked orders storage</li>
+ </ul></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Queue.html" title="class or interface in java.util" class="external-link"><code>Queue</code></a></li>
+<li><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/LinkedList.html" title="class or interface in java.util" class="external-link"><code>LinkedList</code></a></li>
+</ul>
+</dd>
+</dl>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -106,22 +136,36 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#add(T)" class="member-name-link">add</a><wbr>(<a href="ThreadSafeQueue.html" title="type parameter in ThreadSafeQueue">T</a>&nbsp;item)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Adds an element to the end of the queue.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clear()" class="member-name-link">clear</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Removes all elements from the queue.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isEmpty()" class="member-name-link">isEmpty</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Checks if the queue is empty.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ThreadSafeQueue.html" title="type parameter in ThreadSafeQueue">T</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#poll()" class="member-name-link">poll</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Retrieves and removes the head of the queue, or returns <code>null</code>
+ if the queue is empty.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ThreadSafeQueue.html" title="type parameter in ThreadSafeQueue">T</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#pop()" class="member-name-link">pop</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Retrieves and removes the head of the queue, waiting if necessary
+ until an element becomes available.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#size()" class="member-name-link">size</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the number of elements in the queue.</div>
+</div>
 </div>
 </div>
 </div>
@@ -157,6 +201,13 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="add(T)">
 <h3 id="add(java.lang.Object)">add</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">add</span><wbr><span class="parameters">(<a href="ThreadSafeQueue.html" title="type parameter in ThreadSafeQueue">T</a>&nbsp;item)</span></div>
+<div class="block">Adds an element to the end of the queue.
+ This method is synchronized and notifies any waiting threads that
+ a new element is available.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>item</code> - the element to add to the queue</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -164,9 +215,19 @@ loadScripts(document, 'script');</script>
 <h3>pop</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ThreadSafeQueue.html" title="type parameter in ThreadSafeQueue">T</a></span>&nbsp;<span class="element-name">pop</span>()
       throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/InterruptedException.html" title="class or interface in java.lang" class="external-link">InterruptedException</a></span></div>
+<div class="block">Retrieves and removes the head of the queue, waiting if necessary
+ until an element becomes available.
+
+ <p>This method blocks indefinitely until:
+ <ul>
+   <li>An element is added to the queue (by <a href="#add(T)"><code>add(T)</code></a>)</li>
+   <li>The thread is interrupted</li>
+ </ul></div>
 <dl class="notes">
+<dt>Returns:</dt>
+<dd>the head of the queue</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/InterruptedException.html" title="class or interface in java.lang" class="external-link">InterruptedException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/InterruptedException.html" title="class or interface in java.lang" class="external-link">InterruptedException</a></code> - if the current thread is interrupted while waiting</dd>
 </dl>
 </section>
 </li>
@@ -174,24 +235,42 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="poll()">
 <h3>poll</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ThreadSafeQueue.html" title="type parameter in ThreadSafeQueue">T</a></span>&nbsp;<span class="element-name">poll</span>()</div>
+<div class="block">Retrieves and removes the head of the queue, or returns <code>null</code>
+ if the queue is empty. This method does not block.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the head of the queue, or <code>null</code> if the queue is empty</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="isEmpty()">
 <h3>isEmpty</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isEmpty</span>()</div>
+<div class="block">Checks if the queue is empty.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd><code>true</code> if the queue contains no elements, <code>false</code> otherwise</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="size()">
 <h3>size</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">size</span>()</div>
+<div class="block">Returns the number of elements in the queue.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the current size of the queue</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="clear()">
 <h3>clear</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">clear</span>()</div>
+<div class="block">Removes all elements from the queue.
+ The queue will be empty after this call returns.</div>
 </section>
 </li>
 </ul>

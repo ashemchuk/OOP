@@ -82,6 +82,9 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Customer</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a></span></div>
+<div class="block">Represents a customer that generates orders and adds them to the order queue.
+ This class implements Runnable to allow continuous order generation in a separate thread.
+ Orders are created at random intervals between 50 and 200 milliseconds.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -94,7 +97,9 @@ implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(ru.ashemchuk.OrderQueue.OrderQueue)" class="member-name-link">Customer</a><wbr>(<a href="OrderQueue/OrderQueue.html" title="class in ru.ashemchuk.OrderQueue">OrderQueue</a>&nbsp;queue)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Constructs a new Customer with the specified order queue.</div>
+</div>
 </div>
 </section>
 </li>
@@ -111,7 +116,9 @@ implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#run()" class="member-name-link">run</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">The main execution method for the customer thread.</div>
+</div>
 </div>
 </div>
 </div>
@@ -133,6 +140,11 @@ implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base
 <section class="detail" id="&lt;init&gt;(ru.ashemchuk.OrderQueue.OrderQueue)">
 <h3>Customer</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Customer</span><wbr><span class="parameters">(<a href="OrderQueue/OrderQueue.html" title="class in ru.ashemchuk.OrderQueue">OrderQueue</a>&nbsp;queue)</span></div>
+<div class="block">Constructs a new Customer with the specified order queue.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>queue</code> - the order queue where generated orders will be added</dd>
+</dl>
 </section>
 </li>
 </ul>
@@ -147,6 +159,11 @@ implements <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base
 <section class="detail" id="run()">
 <h3>run</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">run</span>()</div>
+<div class="block">The main execution method for the customer thread.
+ Continuously generates new orders and adds them to the queue at random intervals.
+ Each order is initialized with WAITING state.
+ The loop continues until the thread is interrupted.
+ Order generation interval: 50-200 milliseconds (50 + random up to 150)</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html#run()" title="class or interface in java.lang" class="external-link">run</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html" title="class or interface in java.lang" class="external-link">Runnable</a></code></dd>

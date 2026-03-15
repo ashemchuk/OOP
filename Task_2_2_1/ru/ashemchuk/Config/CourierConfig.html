@@ -76,9 +76,36 @@ loadScripts(document, 'script');</script>
 </div>
 </div>
 <section class="class-description" id="class-description">
+<dl class="notes">
+<dt>Record Components:</dt>
+<dd><code><span id="param-id">id</span></code> - the unique identifier for this courier</dd>
+<dd><code><span id="param-trunkCapacity">trunkCapacity</span></code> - the maximum number of orders this courier can deliver at once</dd>
+<dd><code><span id="param-deliveryTime">deliveryTime</span></code> - the delivery time in milliseconds for a single trip</dd>
+</dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public record </span><span class="element-name type-name-label">CourierConfig</span>(int&nbsp;id, int&nbsp;trunkCapacity, int&nbsp;deliveryTime)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
+<div class="block">Configuration record for a courier in the pizzeria system.
+ This record encapsulates all settings needed to initialize and configure a courier worker.
+
+ <p>Courier configuration includes:
+ <ul>
+   <li>id - Unique identifier for the courier</li>
+   <li>trunkCapacity - Maximum number of orders the courier can carry in one delivery trip</li>
+   <li>deliveryTime - Time in milliseconds that the courier takes to complete a delivery</li>
+ </ul>
+
+ <p>The trunk capacity determines how many orders a courier can pick up from the warehouse
+ in a single trip. The delivery time is applied to the entire batch of orders being delivered.</div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../Worker/Courier.html" title="class in ru.ashemchuk.Worker"><code>Courier</code></a></li>
+<li><a href="PizzeriaConfig.html" title="class in ru.ashemchuk.Config"><code>PizzeriaConfig</code></a></li>
+</ul>
+</dd>
+</dl>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -113,7 +140,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#deliveryTime()" class="member-name-link">deliveryTime</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>deliveryTime</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-deliveryTime"><code>deliveryTime</code></a> record component.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
@@ -128,7 +155,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#id()" class="member-name-link">id</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>id</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-id"><code>id</code></a> record component.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
@@ -138,7 +165,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#trunkCapacity()" class="member-name-link">trunkCapacity</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>trunkCapacity</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-trunkCapacity"><code>trunkCapacity</code></a> record component.</div>
 </div>
 </div>
 </div>
@@ -166,9 +193,9 @@ loadScripts(document, 'script');</script>
 <div class="block">Creates an instance of a <code>CourierConfig</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>id</code> - the value for the <code>id</code> record component</dd>
-<dd><code>trunkCapacity</code> - the value for the <code>trunkCapacity</code> record component</dd>
-<dd><code>deliveryTime</code> - the value for the <code>deliveryTime</code> record component</dd>
+<dd><code>id</code> - the value for the <a href="#param-id"><code>id</code></a> record component</dd>
+<dd><code>trunkCapacity</code> - the value for the <a href="#param-trunkCapacity"><code>trunkCapacity</code></a> record component</dd>
+<dd><code>deliveryTime</code> - the value for the <a href="#param-deliveryTime"><code>deliveryTime</code></a> record component</dd>
 </dl>
 </section>
 </li>
@@ -225,10 +252,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="id()">
 <h3>id</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">id</span>()</div>
-<div class="block">Returns the value of the <code>id</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-id"><code>id</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>id</code> record component</dd>
+<dd>the value of the <a href="#param-id"><code>id</code></a> record component</dd>
 </dl>
 </section>
 </li>
@@ -236,10 +263,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="trunkCapacity()">
 <h3>trunkCapacity</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">trunkCapacity</span>()</div>
-<div class="block">Returns the value of the <code>trunkCapacity</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-trunkCapacity"><code>trunkCapacity</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>trunkCapacity</code> record component</dd>
+<dd>the value of the <a href="#param-trunkCapacity"><code>trunkCapacity</code></a> record component</dd>
 </dl>
 </section>
 </li>
@@ -247,10 +274,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="deliveryTime()">
 <h3>deliveryTime</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">deliveryTime</span>()</div>
-<div class="block">Returns the value of the <code>deliveryTime</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-deliveryTime"><code>deliveryTime</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>deliveryTime</code> record component</dd>
+<dd>the value of the <a href="#param-deliveryTime"><code>deliveryTime</code></a> record component</dd>
 </dl>
 </section>
 </li>
