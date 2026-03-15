@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"ru.ashemchuk"},{"l":"ru.ashemchuk.Config"},{"l":"ru.ashemchuk.OrderQueue"},{"l":"ru.ashemchuk.OrderQueue.Order"},{"l":"ru.ashemchuk.Utils"},{"l":"ru.ashemchuk.Worker"}];updateSearchResults();
