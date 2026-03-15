@@ -23,7 +23,7 @@ public class Customer implements Runnable {
                 Thread.sleep(50 + random.nextInt(150));
             }
         } catch (InterruptedException e) {
-            System.out.println("Прием заказов остановлен. Всего создано заказов: " + ordersCreated);
+            System.out.println("Orders have been created: " + ordersCreated);
             Thread.currentThread().interrupt();
         }
     }

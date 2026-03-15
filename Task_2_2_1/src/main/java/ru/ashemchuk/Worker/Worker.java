@@ -3,8 +3,6 @@ package ru.ashemchuk.Worker;
 import ru.ashemchuk.OrderQueue.Order.Order;
 
 public abstract class Worker implements Runnable{
-    //FIXME: state for logging
-    protected Order currentOrder;
 
     public abstract void work() throws InterruptedException;
     public void run() {
@@ -14,14 +12,15 @@ public abstract class Worker implements Runnable{
             }
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
+            System.out.printf("[%s][was interrupted]\n", Thread.currentThread().getName());
         }
     }
-    synchronized void log() {
-        if (currentOrder != null) {
+    void log(Order o) {
+        if (o != null) {
             System.out.printf("[%s][order %d][%s]%n",
                 Thread.currentThread().getName(),
-                currentOrder.getId(),
-                currentOrder.getState().name());
+                o.getId(),
+                o.getState().name());
         }
     }
 }

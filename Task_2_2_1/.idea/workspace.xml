@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b376d649-a170-4b29-b1c1-15ceee35622c" name="Changes" comment="fixes">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ashemchuk/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ashemchuk/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ashemchuk/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ashemchuk/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ashemchuk/OrderQueue/OrderQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ashemchuk/OrderQueue/OrderQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ashemchuk/Pizzeria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ashemchuk/Pizzeria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ashemchuk/Warehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ashemchuk/Warehouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ashemchuk/Worker/Baker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ashemchuk/Worker/Baker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ashemchuk/Worker/Courier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ashemchuk/Worker/Courier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ashemchuk/Worker/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ashemchuk/Worker/Worker.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ashemchuk&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:ashemchuk/OOP.git&quot;,
+    &quot;accountId&quot;: &quot;c5b12b88-2e44-4a95-9a9d-c894e0dae6cd&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="3AsMXUbdIwsRhhRrTs6rt1KijT7" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Task_2_2_1 [:ru.ashemchuk.Main.main()].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "#11 on Task__2__2__1",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b376d649-a170-4b29-b1c1-15ceee35622c" name="Changes" comment="Task_1_4_1: WIP" />
+      <created>1773376864740</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1773376864740</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
+  </component>
+</project>

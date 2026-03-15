@@ -16,26 +16,28 @@ public class Warehouse {
 
     public void setCapacity(int capacity) {
         if (capacity <= 0) {
-            throw new IllegalArgumentException("Вместимость склада должна быть положительной, а не " + capacity);
+            throw new IllegalArgumentException("Capacity must be more than 0");
         }
         this.capacity = capacity;
-        System.out.println("=== Warehouse capacity set to " + capacity + " ===");
+        System.out.println("Warehouse capacity set to " + capacity);
     }
 
     public void addOrder(Order order) throws InterruptedException {
         synchronized (monitor) {
-            // Защита от неправильной конфигурации
             if (capacity <= 0) {
-                throw new IllegalStateException("Вместимость склада не установлена! capacity=" + capacity);
+                throw new IllegalStateException("Warehouse capacity isn't set");
             }
 
             while (queue.size() >= capacity) {
-                System.out.println(Thread.currentThread().getName() + " ждет место на складе. Текущий размер: " + queue.size() + "/" + capacity);
+                System.out.printf(
+                    "[%s][is waiting for place][busy %d / %d]\n",
+                    Thread.currentThread().getName(),queue.size(), capacity);
                 monitor.wait();
             }
             queue.add(order);
-            System.out.println(Thread.currentThread().getName() + " ПОЛОЖИЛ НА СКЛАД order " + order.getId() +
-                ". Теперь на складе: " + queue.size() + "/" + capacity);
+            System.out.printf(
+                "[%s][put order %d][busy %d / %d]\n",
+                Thread.currentThread().getName(),order.getId(), queue.size(), capacity);
             monitor.notifyAll();
         }
     }
@@ -45,15 +47,14 @@ public class Warehouse {
 
         synchronized (monitor) {
             while (queue.isEmpty()) {
-                System.out.println(Thread.currentThread().getName() + " ждет заказы на складе. Склад пуст");
+                System.out.printf("[%s][is waiting for orders][warehouse is empty]\n",
+                    Thread.currentThread().getName());
                 monitor.wait();
             }
 
-            // Берем первый заказ
             Order first = queue.pop();
             orders.add(first);
 
-            // Пытаемся взять еще
             for (int i = 1; i < maxCount; i++) {
                 Order order = queue.poll();
                 if (order != null) {
@@ -62,12 +63,19 @@ public class Warehouse {
                     break;
                 }
             }
+            var ordersEnum = orders
+                .stream()
+                .map(o -> String.valueOf(o.getId()))
+                .reduce((a, b) -> a + "," + b)
+                .orElse("");
+            System.out.printf("[%s][take %d orders: %s][busy %d / %d]\n",
+                Thread.currentThread().getName(),
+                orders.size(),
+                ordersEnum,
+                queue.size(),
+                capacity);
 
-            System.out.println(Thread.currentThread().getName() + " ВЗЯЛ СО СКЛАДА " + orders.size() +
-                " заказов: " + orders.stream().map(o -> String.valueOf(o.getId())).reduce((a, b) -> a + "," + b).orElse("") +
-                ". Осталось на складе: " + queue.size() + "/" + capacity);
-
-            monitor.notifyAll(); // Уведомляем пекарей, что освободилось место
+            monitor.notifyAll();
         }
 
         return orders;

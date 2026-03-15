@@ -1,5 +1,5 @@
 {
-  "workingTime": 30000,
+  "workingTime": 3000,
   "warehouseCapacity": 20,
   "bakers": [
     {"id": 1, "workingTime": 2000},

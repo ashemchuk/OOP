@@ -22,28 +22,22 @@ public class Courier extends Worker {
 
     @Override
     public void work() throws InterruptedException {
-        // Получаем заказы со склада
         trunk = warehouse.takeOrders(cfg.trunkCapacity());
 
         if (trunk.isEmpty()) {
             return;
         }
 
-        // Отмечаем пиццы как доставляемые
         for (Order o : trunk) {
             o.setState(OrderState.DELIVERING);
-            currentOrder = o;
-            log();
+            log(o);
         }
 
-        // Доставка
         Thread.sleep(cfg.deliveryTime());
 
-        // Отмечаем пиццы как доставленные
         for (Order o : trunk) {
             o.setState(OrderState.DONE);
-            currentOrder = o;
-            log();
+            log(o);
         }
     }
 }

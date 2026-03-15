@@ -24,15 +24,14 @@ public class Baker extends Worker {
     @Override
     public void work() throws InterruptedException {
         Order o = queue.takeOrder();
-        currentOrder = o;
 
         o.setState(OrderState.COOKING);
-        log();
+        log(o);
 
         Thread.sleep(cfg.workingTime());
 
         o.setState(OrderState.COOKED);
-        log();
+        log(o);
 
         warehouse.addOrder(o);
     }
