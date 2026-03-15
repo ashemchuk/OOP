@@ -1,17 +1,17 @@
-package ru.ashemchuk.Worker;
+package ru.ashemchuk.worker;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import ru.ashemchuk.Config.CourierConfig;
-import ru.ashemchuk.OrderQueue.Order.Order;
-import ru.ashemchuk.OrderQueue.Order.OrderState;
-import ru.ashemchuk.Utils.ThreadSafeQueue;
 import ru.ashemchuk.Warehouse;
-
-import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
+import ru.ashemchuk.config.CourierConfig;
+import ru.ashemchuk.queue.order.Order;
+import ru.ashemchuk.queue.order.OrderState;
+import ru.ashemchuk.utils.ThreadSafeQueue;
 
 class CourierTest {
     private Courier courier;

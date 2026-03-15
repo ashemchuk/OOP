@@ -1,14 +1,18 @@
 package ru.ashemchuk;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import ru.ashemchuk.OrderQueue.Order.Order;
-import ru.ashemchuk.OrderQueue.Order.OrderState;
-import ru.ashemchuk.Utils.ThreadSafeQueue;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
 
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import ru.ashemchuk.queue.order.Order;
+import ru.ashemchuk.queue.order.OrderState;
+import ru.ashemchuk.utils.ThreadSafeQueue;
 
 class WarehouseTest {
     private Warehouse warehouse;

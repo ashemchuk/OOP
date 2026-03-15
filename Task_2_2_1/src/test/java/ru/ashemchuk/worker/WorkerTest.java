@@ -1,13 +1,13 @@
-package ru.ashemchuk.Worker;
+package ru.ashemchuk.worker;
 
-import org.junit.jupiter.api.Test;
-import ru.ashemchuk.OrderQueue.Order.Order;
-import ru.ashemchuk.OrderQueue.Order.OrderState;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+import ru.ashemchuk.queue.order.Order;
+import ru.ashemchuk.queue.order.OrderState;
 
 class WorkerTest {
 

@@ -1,16 +1,19 @@
-package ru.ashemchuk.Worker;
+package ru.ashemchuk.worker;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import ru.ashemchuk.Config.BakerConfig;
-import ru.ashemchuk.OrderQueue.Order.Order;
-import ru.ashemchuk.OrderQueue.Order.OrderState;
-import ru.ashemchuk.OrderQueue.OrderQueue;
-import ru.ashemchuk.Utils.ThreadSafeQueue;
 import ru.ashemchuk.Warehouse;
-
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
+import ru.ashemchuk.config.BakerConfig;
+import ru.ashemchuk.queue.OrderQueue;
+import ru.ashemchuk.queue.order.Order;
+import ru.ashemchuk.queue.order.OrderState;
+import ru.ashemchuk.utils.ThreadSafeQueue;
 
 class BakerTest {
     private Baker baker;

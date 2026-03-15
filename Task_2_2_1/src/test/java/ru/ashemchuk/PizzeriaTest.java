@@ -1,17 +1,19 @@
 package ru.ashemchuk;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.Timeout;
-import ru.ashemchuk.Config.BakerConfig;
-import ru.ashemchuk.Config.CourierConfig;
-import ru.ashemchuk.Config.PizzeriaConfig;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Timeout;
+import ru.ashemchuk.config.BakerConfig;
+import ru.ashemchuk.config.CourierConfig;
+import ru.ashemchuk.config.PizzeriaConfig;
 
 class PizzeriaTest {
     private PizzeriaConfig config;
