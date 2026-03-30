@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b376d649-a170-4b29-b1c1-15ceee35622c" name="Changes" comment="javadoc-comments">
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ashemchuk/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ashemchuk/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ashemchuk/utils/ThreadSafeQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ashemchuk/utils/ThreadSafeQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ashemchuk/worker/Baker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ashemchuk/worker/Baker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ashemchuk/worker/Courier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ashemchuk/worker/Courier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/ashemchuk/CustomerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/ashemchuk/CustomerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/ashemchuk/PizzeriaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/ashemchuk/PizzeriaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/ashemchuk/WarehouseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/ashemchuk/WarehouseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/ashemchuk/utils/ThreadSafeQueueTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/ashemchuk/utils/ThreadSafeQueueTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/ashemchuk/worker/BakerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/ashemchuk/worker/BakerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/ashemchuk/worker/CourierTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/ashemchuk/worker/CourierTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/ashemchuk/worker/WorkerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/ashemchuk/worker/WorkerTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ashemchuk&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:ashemchuk/OOP.git&quot;,
+    &quot;accountId&quot;: &quot;c5b12b88-2e44-4a95-9a9d-c894e0dae6cd&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="3AsMXUbdIwsRhhRrTs6rt1KijT7" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.BakerTest.executor": "Run",
+    "Gradle.CourierTest.executor": "Run",
+    "Gradle.CourierTest.testCourierDeliversOrders.executor": "Run",
+    "Gradle.CourierTest.testCourierId.executor": "Run",
+    "Gradle.CourierTest.testCourierTakesUpToTrunkCapacity.executor": "Run",
+    "Gradle.CourierTest.testCourierWaitsForOrders.executor": "Run",
+    "Gradle.CourierTest.testOrderStateTransitions.executor": "Debug",
+    "Gradle.CustomerTest.executor": "Run",
+    "Gradle.CustomerTest.testCustomerInterruption.executor": "Run",
+    "Gradle.CustomerTest.testMultipleOrdersCreation.executor": "Debug",
+    "Gradle.PizzeriaIntegrationTest.executor": "Run",
+    "Gradle.PizzeriaTest.executor": "Run",
+    "Gradle.Task_2_2_1 [:ru.ashemchuk.Main.main()].executor": "Run",
+    "Gradle.Task_2_2_1 [dependencies].executor": "Run",
+    "Gradle.Task_2_2_1 [jacocoTestReport].executor": "Run",
+    "Gradle.ThreadSafeQueueTest.executor": "Run",
+    "Gradle.ThreadSafeQueueTest.testSizeConsistency.executor": "Run",
+    "Gradle.WarehouseTest.executor": "Run",
+    "Gradle.WorkerTest.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
+    "git-widget-placeholder": "#11 on Task__2__2__1",
+    "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="ru.ashemchuk" />
+      <recent name="ru.ashemchuk.Utils" />
+      <recent name="ru.ashemchuk.Worker" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.ThreadSafeQueueTest.testSizeConsistency">
+    <configuration name="CourierTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ru.ashemchuk.Worker.CourierTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="PizzeriaIntegrationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ru.ashemchuk.PizzeriaIntegrationTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="PizzeriaTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ru.ashemchuk.PizzeriaTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="Task_2_2_1 [jacocoTestReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jacocoTestReport" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="ThreadSafeQueueTest.testSizeConsistency" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ru.ashemchuk.Utils.ThreadSafeQueueTest.testSizeConsistency&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.ThreadSafeQueueTest.testSizeConsistency" />
+        <item itemvalue="Gradle.PizzeriaTest" />
+        <item itemvalue="Gradle.Task_2_2_1 [jacocoTestReport]" />
+        <item itemvalue="Gradle.CourierTest" />
+        <item itemvalue="Gradle.PizzeriaIntegrationTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b376d649-a170-4b29-b1c1-15ceee35622c" name="Changes" comment="Task_1_4_1: WIP" />
+      <created>1773376864740</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1773376864740</updated>
+    </task>
+    <task id="LOCAL-00001" summary="fixes">
+      <option name="closed" value="true" />
+      <created>1773587174310</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1773587174310</updated>
+    </task>
+    <task id="LOCAL-00002" summary="tests">
+      <option name="closed" value="true" />
+      <created>1773588776014</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1773588776014</updated>
+    </task>
+    <task id="LOCAL-00003" summary="tests">
+      <option name="closed" value="true" />
+      <created>1773589046166</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1773589046166</updated>
+    </task>
+    <task id="LOCAL-00004" summary="tests">
+      <option name="closed" value="true" />
+      <created>1773589063124</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1773589063124</updated>
+    </task>
+    <task id="LOCAL-00005" summary="javadoc-comments">
+      <option name="closed" value="true" />
+      <created>1773590692491</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1773590692491</updated>
+    </task>
+    <task id="LOCAL-00006" summary="javadoc-comments">
+      <option name="closed" value="true" />
+      <created>1773591143111</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1773591143111</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fixes" />
+    <MESSAGE value="tests" />
+    <MESSAGE value="javadoc-comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="javadoc-comments" />
+  </component>
+</project>
