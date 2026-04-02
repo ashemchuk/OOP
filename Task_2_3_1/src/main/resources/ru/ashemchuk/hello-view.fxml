@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="ru.ashemchuk.GameController">
+    <BorderPane>
+        <top>
+            <HBox spacing="20" alignment="CENTER" style="-fx-background-color: lightgray;">
+                <padding>
+                    <Insets top="10" bottom="10" left="10" right="10"/>
+                </padding>
+                <Label text="Score:"/>
+                <Label fx:id="scoreLabel" text="0"/>
+                <Label text="|"/>
+                <Label text="Length:"/>
+                <Label fx:id="lengthLabel" text="1"/>
+                <Label text="|"/>
+                <Label text="Level:"/>
+                <Label fx:id="levelLabel" text="1"/>
+                <Label text="|"/>
+                <Label fx:id="statusLabel" text="Playing"/>
+            </HBox>
+        </top>
+        <center>
+            <GridPane fx:id="gameGrid" gridLinesVisible="false" hgap="1" vgap="1"
+                      alignment="CENTER" maxWidth="Infinity" maxHeight="Infinity">
+                <!-- Cells will be added dynamically -->
+            </GridPane>
+        </center>
+        <bottom>
+            <HBox spacing="10" alignment="CENTER">
+                <padding>
+                    <Insets top="10" bottom="10" left="10" right="10"/>
+                </padding>
+                <Button fx:id="startButton" text="Start" onAction="#handleStart"
+                        focusTraversable="false"/>
+                <Button fx:id="pauseButton" text="Pause" onAction="#handlePause"
+                        focusTraversable="false"/>
+                <Button fx:id="restartButton" text="Restart" onAction="#handleRestart"
+                        focusTraversable="false"/>
+            </HBox>
+        </bottom>
+    </BorderPane>
+
+    <!-- Start screen overlay (semi-transparent) -->
+    <VBox fx:id="startOverlay" alignment="CENTER" spacing="20"
+          style="-fx-background-color: rgba(0,0,0,0.7);" visible="false">
+        <Label text="Snake Game" style="-fx-text-fill: white; -fx-font-size: 36;"/>
+        <Label text="Press SPACE or click Start to begin"
+               style="-fx-text-fill: white; -fx-font-size: 18;"/>
+        <Button text="Start Game" onAction="#handleStart" style="-fx-font-size: 16;"
+                focusTraversable="false"/>
+    </VBox>
+
+    <!-- Pause screen overlay -->
+    <VBox fx:id="pauseOverlay" alignment="CENTER" spacing="20"
+          style="-fx-background-color: rgba(0,0,0,0.7);" visible="false">
+        <Label text="Game Paused" style="-fx-text-fill: white; -fx-font-size: 36;"/>
+        <Label text="Press SPACE or click Start to resume"
+               style="-fx-text-fill: white; -fx-font-size: 18;"/>
+        <Button text="Resume" onAction="#handleStart" style="-fx-font-size: 16;"
+                focusTraversable="false"/>
+    </VBox>
+
+    <!-- Win screen overlay -->
+    <VBox fx:id="winOverlay" alignment="CENTER" spacing="20"
+          style="-fx-background-color: rgba(0,0,0,0.7);" visible="false">
+        <Label text="You Win!" style="-fx-text-fill: white; -fx-font-size: 36;"/>
+        <Label text="Congratulations! You completed the level."
+               style="-fx-text-fill: white; -fx-font-size: 18;"/>
+        <Button text="Restart" onAction="#handleRestart" style="-fx-font-size: 16;"
+                focusTraversable="false"/>
+    </VBox>
+
+    <!-- Game over screen overlay -->
+    <VBox fx:id="gameOverOverlay" alignment="CENTER" spacing="20"
+          style="-fx-background-color: rgba(0,0,0,0.7);" visible="false">
+        <Label text="Game Over" style="-fx-text-fill: white; -fx-font-size: 36;"/>
+        <Label text="You lost. Try again?" style="-fx-text-fill: white; -fx-font-size: 18;"/>
+        <Button text="Restart" onAction="#handleRestart" style="-fx-font-size: 16;"
+                focusTraversable="false"/>
+    </VBox>
+</StackPane>
