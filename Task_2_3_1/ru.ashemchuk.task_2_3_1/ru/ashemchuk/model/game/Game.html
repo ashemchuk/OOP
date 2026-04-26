@@ -92,7 +92,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.util.List)" class="member-name-link">Game</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../level/Level.html" title="class in ru.ashemchuk.model.level">Level</a>&gt;&nbsp;levels)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Constructs a game with the given list of levels.</div>
+</div>
 <div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(ru.ashemchuk.model.level.Level)" class="member-name-link">Game</a><wbr>(<a href="../level/Level.html" title="class in ru.ashemchuk.model.level">Level</a>&nbsp;level)</code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 </div>
@@ -132,7 +134,9 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="GameState.html" title="class in ru.ashemchuk.model.game">GameState</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getState()" class="member-name-link">getState</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Creates a snapshot of the current game state.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasNextLevel()" class="member-name-link">hasNextLevel</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
@@ -144,13 +148,19 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#nextLevel()" class="member-name-link">nextLevel</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Advances to the next level, if available.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLevel(int)" class="member-name-link">setLevel</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Jumps to the specified level index, resetting the game state for that level.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#update()" class="member-name-link">update</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Advances the game by one tick.</div>
+</div>
 </div>
 </div>
 </div>
@@ -178,6 +188,13 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="&lt;init&gt;(java.util.List)">
 <h3>Game</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Game</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../level/Level.html" title="class in ru.ashemchuk.model.level">Level</a>&gt;&nbsp;levels)</span></div>
+<div class="block">Constructs a game with the given list of levels.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>levels</code> - the levels to play; must not be empty</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if levels is empty</dd>
+</dl>
 </section>
 </li>
 </ul>
@@ -192,6 +209,9 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="update()">
 <h3>update</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">update</span>()</div>
+<div class="block">Advances the game by one tick.
+ Moves all snakes, checks collisions, updates score, and determines win/lose state.
+ If the game is already over or won, does nothing.</div>
 </section>
 </li>
 <li>
@@ -204,12 +224,24 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="nextLevel()">
 <h3>nextLevel</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">nextLevel</span>()</div>
+<div class="block">Advances to the next level, if available.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>true if the level was advanced, false if there is no next level</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="setLevel(int)">
 <h3>setLevel</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setLevel</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block">Jumps to the specified level index, resetting the game state for that level.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>index</code> - the zero‑based index of the level to switch to</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if the index is out of bounds</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -270,6 +302,11 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getState()">
 <h3>getState</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GameState.html" title="class in ru.ashemchuk.model.game">GameState</a></span>&nbsp;<span class="element-name">getState</span>()</div>
+<div class="block">Creates a snapshot of the current game state.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>an immutable <a href="GameState.html" title="class in ru.ashemchuk.model.game"><code>GameState</code></a> object representing the current game</dd>
+</dl>
 </section>
 </li>
 </ul>
