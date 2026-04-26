@@ -1,0 +1,9 @@
+module:ru.ashemchuk.task_2_3_1
+ru.ashemchuk
+ru.ashemchuk.engine
+ru.ashemchuk.model
+ru.ashemchuk.model.food
+ru.ashemchuk.model.game
+ru.ashemchuk.model.level
+ru.ashemchuk.model.snake
+ru.ashemchuk.view
