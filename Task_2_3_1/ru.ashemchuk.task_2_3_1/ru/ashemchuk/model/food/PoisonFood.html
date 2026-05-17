@@ -102,7 +102,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(ru.ashemchuk.model.Point)" class="member-name-link">PoisonFood</a><wbr>(<a href="../Point.html" title="class in ru.ashemchuk.model">Point</a>&nbsp;position)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Creates a poison food item at the specified position.</div>
+</div>
 </div>
 </section>
 </li>
@@ -120,17 +122,17 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#eat()" class="member-name-link">eat</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Called when food is removed from the field (eaten).</div>
+<div class="block">Removes the poison from the field.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#effect(ru.ashemchuk.model.snake.Snake)" class="member-name-link">effect</a><wbr>(<a href="../snake/Snake.html" title="class in ru.ashemchuk.model.snake">Snake</a>&nbsp;snake)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Called when food is eaten by a snake.</div>
+<div class="block">Poison shrinks the player snake by one segment.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#post()" class="member-name-link">post</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Called when food is placed on the field.</div>
+<div class="block">Places the poison on the field.</div>
 </div>
 </div>
 </div>
@@ -156,6 +158,11 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="&lt;init&gt;(ru.ashemchuk.model.Point)">
 <h3>PoisonFood</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">PoisonFood</span><wbr><span class="parameters">(<a href="../Point.html" title="class in ru.ashemchuk.model">Point</a>&nbsp;position)</span></div>
+<div class="block">Creates a poison food item at the specified position.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>position</code> - the position of the poison on the game field</dd>
+</dl>
 </section>
 </li>
 </ul>
@@ -170,12 +177,13 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="effect(ru.ashemchuk.model.snake.Snake)">
 <h3>effect</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">effect</span><wbr><span class="parameters">(<a href="../snake/Snake.html" title="class in ru.ashemchuk.model.snake">Snake</a>&nbsp;snake)</span></div>
-<div class="block"><span class="descfrm-type-label">Description copied from class:&nbsp;<code><a href="Food.html#effect(ru.ashemchuk.model.snake.Snake)">Food</a></code></span></div>
-<div class="block">Called when food is eaten by a snake.
- Performs the effect on the snake.</div>
+<div class="block">Poison shrinks the player snake by one segment.
+ Has no effect on robot snakes.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Food.html#effect(ru.ashemchuk.model.snake.Snake)">effect</a></code>&nbsp;in class&nbsp;<code><a href="Food.html" title="class in ru.ashemchuk.model.food">Food</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>snake</code> - the snake that ate the poison</dd>
 </dl>
 </section>
 </li>
@@ -183,8 +191,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="eat()">
 <h3>eat</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">eat</span>()</div>
-<div class="block"><span class="descfrm-type-label">Description copied from class:&nbsp;<code><a href="Food.html#eat()">Food</a></code></span></div>
-<div class="block">Called when food is removed from the field (eaten).</div>
+<div class="block">Removes the poison from the field.</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="Food.html#eat()">eat</a></code>&nbsp;in class&nbsp;<code><a href="Food.html" title="class in ru.ashemchuk.model.food">Food</a></code></dd>
@@ -195,8 +202,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="post()">
 <h3>post</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">post</span>()</div>
-<div class="block"><span class="descfrm-type-label">Description copied from class:&nbsp;<code><a href="Food.html#post()">Food</a></code></span></div>
-<div class="block">Called when food is placed on the field.</div>
+<div class="block">Places the poison on the field.</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="Food.html#post()">post</a></code>&nbsp;in class&nbsp;<code><a href="Food.html" title="class in ru.ashemchuk.model.food">Food</a></code></dd>

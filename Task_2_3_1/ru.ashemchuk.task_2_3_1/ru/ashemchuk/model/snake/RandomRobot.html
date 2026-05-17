@@ -130,7 +130,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#decideDirection()" class="member-name-link">decideDirection</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">AI decision method to be implemented by subclasses.</div>
+<div class="block">Randomly changes direction with 30% probability each move; otherwise keeps the current direction.</div>
 </div>
 </div>
 </div>
@@ -140,7 +140,7 @@ loadScripts(document, 'script');</script>
 <code><a href="RobotSnake.html#calculateNewHead(ru.ashemchuk.model.Point,ru.ashemchuk.model.Direction)">calculateNewHead</a>, <a href="RobotSnake.html#die()">die</a>, <a href="RobotSnake.html#eat(ru.ashemchuk.model.food.Food)">eat</a>, <a href="RobotSnake.html#isAlive()">isAlive</a>, <a href="RobotSnake.html#isGrowing()">isGrowing</a>, <a href="RobotSnake.html#move()">move</a>, <a href="RobotSnake.html#setAlive(boolean)">setAlive</a>, <a href="RobotSnake.html#turn(ru.ashemchuk.model.Direction)">turn</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-ru.ashemchuk.model.snake.Snake">Methods inherited from class&nbsp;ru.ashemchuk.model.snake.<a href="Snake.html" title="class in ru.ashemchuk.model.snake">Snake</a></h3>
-<code><a href="Snake.html#getBody()">getBody</a>, <a href="Snake.html#getDirection()">getDirection</a>, <a href="Snake.html#getSpeed()">getSpeed</a>, <a href="Snake.html#setBody(java.util.List)">setBody</a>, <a href="Snake.html#setDirection(ru.ashemchuk.model.Direction)">setDirection</a>, <a href="Snake.html#setSpeed(int)">setSpeed</a></code></div>
+<code><a href="Snake.html#applySpeedBoost(long)">applySpeedBoost</a>, <a href="Snake.html#getBody()">getBody</a>, <a href="Snake.html#getDirection()">getDirection</a>, <a href="Snake.html#getSpeed()">getSpeed</a>, <a href="Snake.html#setBody(java.util.List)">setBody</a>, <a href="Snake.html#setDirection(ru.ashemchuk.model.Direction)">setDirection</a>, <a href="Snake.html#setSpeed(int)">setSpeed</a>, <a href="Snake.html#updateBoost()">updateBoost</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
@@ -182,9 +182,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="decideDirection()">
 <h3>decideDirection</h3>
 <div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">decideDirection</span>()</div>
-<div class="block"><span class="descfrm-type-label">Description copied from class:&nbsp;<code><a href="RobotSnake.html#decideDirection()">RobotSnake</a></code></span></div>
-<div class="block">AI decision method to be implemented by subclasses.
- Determines the next direction the robot snake should move.</div>
+<div class="block">Randomly changes direction with 30% probability each move; otherwise keeps the current direction.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="RobotSnake.html#decideDirection()">decideDirection</a></code>&nbsp;in class&nbsp;<code><a href="RobotSnake.html" title="class in ru.ashemchuk.model.snake">RobotSnake</a></code></dd>

@@ -115,7 +115,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(ru.ashemchuk.model.Point,ru.ashemchuk.model.food.FoodSpec.FoodType)" class="member-name-link">Food</a><wbr>(<a href="../Point.html" title="class in ru.ashemchuk.model">Point</a>&nbsp;position,
  <a href="FoodSpec.FoodType.html" title="enum class in ru.ashemchuk.model.food">FoodSpec.FoodType</a>&nbsp;type)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Constructs a food item at the specified position with the given type.</div>
+</div>
 </div>
 </section>
 </li>
@@ -142,10 +144,14 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../Point.html" title="class in ru.ashemchuk.model">Point</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPosition()" class="member-name-link">getPosition</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the current position of this food item.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="FoodSpec.FoodType.html" title="enum class in ru.ashemchuk.model.food">FoodSpec.FoodType</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the type of this food item.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#post()" class="member-name-link">post</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -153,7 +159,9 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPosition(ru.ashemchuk.model.Point)" class="member-name-link">setPosition</a><wbr>(<a href="../Point.html" title="class in ru.ashemchuk.model">Point</a>&nbsp;position)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Sets a new position for this food item.</div>
+</div>
 </div>
 </div>
 </div>
@@ -196,6 +204,12 @@ loadScripts(document, 'script');</script>
 <h3>Food</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Food</span><wbr><span class="parameters">(<a href="../Point.html" title="class in ru.ashemchuk.model">Point</a>&nbsp;position,
  <a href="FoodSpec.FoodType.html" title="enum class in ru.ashemchuk.model.food">FoodSpec.FoodType</a>&nbsp;type)</span></div>
+<div class="block">Constructs a food item at the specified position with the given type.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>position</code> - the position of the food on the game field</dd>
+<dd><code>type</code> - the type of food (apple, grapes, poison)</dd>
+</dl>
 </section>
 </li>
 </ul>
@@ -210,18 +224,33 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getPosition()">
 <h3>getPosition</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../Point.html" title="class in ru.ashemchuk.model">Point</a></span>&nbsp;<span class="element-name">getPosition</span>()</div>
+<div class="block">Returns the current position of this food item.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the position</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="setPosition(ru.ashemchuk.model.Point)">
 <h3>setPosition</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setPosition</span><wbr><span class="parameters">(<a href="../Point.html" title="class in ru.ashemchuk.model">Point</a>&nbsp;position)</span></div>
+<div class="block">Sets a new position for this food item.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>position</code> - the new position</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getType()">
 <h3>getType</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="FoodSpec.FoodType.html" title="enum class in ru.ashemchuk.model.food">FoodSpec.FoodType</a></span>&nbsp;<span class="element-name">getType</span>()</div>
+<div class="block">Returns the type of this food item.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the food type</dd>
+</dl>
 </section>
 </li>
 <li>

@@ -109,7 +109,9 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Food.html" title="class in ru.ashemchuk.model.food">Food</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#spawn(ru.ashemchuk.model.Point,ru.ashemchuk.model.level.Level)" class="member-name-link">spawn</a><wbr>(<a href="../Point.html" title="class in ru.ashemchuk.model">Point</a>&nbsp;position,
  <a href="../level/Level.html" title="class in ru.ashemchuk.model.level">Level</a>&nbsp;level)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Spawns a food item at the given position according to the level's food specifications.</div>
+</div>
 </div>
 </div>
 </div>
@@ -146,6 +148,16 @@ loadScripts(document, 'script');</script>
 <h3>spawn</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Food.html" title="class in ru.ashemchuk.model.food">Food</a></span>&nbsp;<span class="element-name">spawn</span><wbr><span class="parameters">(<a href="../Point.html" title="class in ru.ashemchuk.model">Point</a>&nbsp;position,
  <a href="../level/Level.html" title="class in ru.ashemchuk.model.level">Level</a>&nbsp;level)</span></div>
+<div class="block">Spawns a food item at the given position according to the level's food specifications.
+ Uses weighted random selection based on the weights defined in <a href="FoodSpec.html" title="class in ru.ashemchuk.model.food"><code>FoodSpec</code></a>.
+ If the level has no food specifications, defaults to an apple.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>position</code> - the position where the food should appear</dd>
+<dd><code>level</code> - the level containing food specifications</dd>
+<dt>Returns:</dt>
+<dd>a newly created food item</dd>
+</dl>
 </section>
 </li>
 </ul>

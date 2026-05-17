@@ -114,6 +114,16 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>double</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCellSize()" class="member-name-link">getCellSize</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the current cell size.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resizeCells(double)" class="member-name-link">resizeCells</a><wbr>(double&nbsp;newCellSize)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Resizes all grid cells to a new size (in pixels).</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setupGrid(int,int)" class="member-name-link">setupGrid</a><wbr>(int&nbsp;width,
  int&nbsp;height)</code></div>
@@ -176,12 +186,31 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setupGrid</span><wbr><span class="parameters">(int&nbsp;width,
  int&nbsp;height)</span></div>
 <div class="block">Clears and reinitializes the grid with a given width and height.
- Creates a rectangular cell for each grid position.</div>
+ Creates a rectangular cell for each grid position and sets column/row constraints.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>width</code> - number of columns</dd>
 <dd><code>height</code> - number of rows</dd>
 </dl>
+</section>
+</li>
+<li>
+<section class="detail" id="resizeCells(double)">
+<h3>resizeCells</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">resizeCells</span><wbr><span class="parameters">(double&nbsp;newCellSize)</span></div>
+<div class="block">Resizes all grid cells to a new size (in pixels).
+ Updates the stored cell size, adjusts column/row constraints and each rectangle's width and height.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>newCellSize</code> - the new cell size (must be positive)</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getCellSize()">
+<h3>getCellSize</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">getCellSize</span>()</div>
+<div class="block">Returns the current cell size.</div>
 </section>
 </li>
 <li>

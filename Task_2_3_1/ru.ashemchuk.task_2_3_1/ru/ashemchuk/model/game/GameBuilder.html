@@ -108,16 +108,24 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Game.html" title="class in ru.ashemchuk.model.game">Game</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Constructs a <a href="Game.html" title="class in ru.ashemchuk.model.game"><code>Game</code></a> instance with the accumulated levels.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="GameBuilder.html" title="class in ru.ashemchuk.model.game">GameBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearLevels()" class="member-name-link">clearLevels</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Removes all levels from the builder.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="GameBuilder.html" title="class in ru.ashemchuk.model.game">GameBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#level(ru.ashemchuk.model.level.Level)" class="member-name-link">level</a><wbr>(<a href="../level/Level.html" title="class in ru.ashemchuk.model.level">Level</a>&nbsp;level)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Adds a single level to the builder.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="GameBuilder.html" title="class in ru.ashemchuk.model.game">GameBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#levels(java.util.List)" class="member-name-link">levels</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../level/Level.html" title="class in ru.ashemchuk.model.level">Level</a>&gt;&nbsp;levels)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Replaces the current level list with the provided list.</div>
+</div>
 </div>
 </div>
 </div>
@@ -153,24 +161,50 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="level(ru.ashemchuk.model.level.Level)">
 <h3>level</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GameBuilder.html" title="class in ru.ashemchuk.model.game">GameBuilder</a></span>&nbsp;<span class="element-name">level</span><wbr><span class="parameters">(<a href="../level/Level.html" title="class in ru.ashemchuk.model.level">Level</a>&nbsp;level)</span></div>
+<div class="block">Adds a single level to the builder.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>level</code> - the level to add</dd>
+<dt>Returns:</dt>
+<dd>this builder for chaining</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="levels(java.util.List)">
 <h3>levels</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GameBuilder.html" title="class in ru.ashemchuk.model.game">GameBuilder</a></span>&nbsp;<span class="element-name">levels</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../level/Level.html" title="class in ru.ashemchuk.model.level">Level</a>&gt;&nbsp;levels)</span></div>
+<div class="block">Replaces the current level list with the provided list.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>levels</code> - the new list of levels</dd>
+<dt>Returns:</dt>
+<dd>this builder for chaining</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="clearLevels()">
 <h3>clearLevels</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GameBuilder.html" title="class in ru.ashemchuk.model.game">GameBuilder</a></span>&nbsp;<span class="element-name">clearLevels</span>()</div>
+<div class="block">Removes all levels from the builder.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>this builder for chaining</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Game.html" title="class in ru.ashemchuk.model.game">Game</a></span>&nbsp;<span class="element-name">build</span>()</div>
+<div class="block">Constructs a <a href="Game.html" title="class in ru.ashemchuk.model.game"><code>Game</code></a> instance with the accumulated levels.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>a new Game instance</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalStateException.html" title="class or interface in java.lang" class="external-link">IllegalStateException</a></code> - if no levels have been added</dd>
+</dl>
 </section>
 </li>
 </ul>
