@@ -1,0 +1,56 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'jacoco'
+    id 'org.openjfx.javafxplugin' version '0.1.0'
+}
+
+group = "ru.ashemchuk"
+version = "1.0-SNAPSHOT"
+
+repositories {
+    mavenCentral()
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+test {
+    useJUnitPlatform()
+    finalizedBy jacocoTestReport
+}
+
+
+application {
+    mainModule.set("ru.ashemchuk.task_2_3_1")
+    mainClass.set("ru.ashemchuk.SnakeGameApplication")
+}
+
+javafx {
+    version = "21.0.2"
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
+
+jacocoTestReport {
+    dependsOn test
+    reports {
+        xml.required = true
+        html.required = true
+    }
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation 'org.mockito:mockito-core:5.11.0'
+    testImplementation 'org.mockito:mockito-junit-jupiter:5.11.0'
+    testImplementation 'org.testfx:openjfx-monocle:jdk-12.0.1+2'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+// dependencies {
+//     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
+//     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+// }
